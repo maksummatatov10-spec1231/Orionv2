@@ -1,0 +1,1686 @@
+{
+  "version": "textures-v0.4",
+  "targets": 240,
+  "files": {
+    "stone_block_4.png": {
+      "sha256": "3e57fbfd2d48badc86478f770b8687bbb34b86706ad64edc08ee12b7a389deb6",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "sand_block_16.png": {
+      "sha256": "8ac4aa56efad0480b949f80f84d4ad50fb11570f95b100d6028b262188e850f7",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "grass_block_18.png": {
+      "sha256": "5031660e5fbcbfa543917f1d4a9040362abbf821b497f83d37bff4bc9d7b75ab",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "cobblestone_block_75.png": {
+      "sha256": "ff91c5563484407db7e02676c8bdcfe0554375044677dd22896174e53665d524",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "stone_icon_atlas_259.png": {
+      "sha256": "223f770710cb04f762a86a53875bfbc889e8477820673f0fdf18e0e601282206",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "stone_icon_ui_259.png": {
+      "sha256": "b16e77ebb6ebafec2779d3f66ad90e2ff346d9c9b51fa07dd01030ab31f025f1",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "sand_icon_atlas_271.png": {
+      "sha256": "a62b7eaac223fe215fec30e224818afba8661fdefaf6c359d5c534d12ec157b7",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "sand_icon_ui_271.png": {
+      "sha256": "f4efc39ca4bc9807a4dd4752cc7375b95a743e74a409ee0e707537ed969edd5a",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "grass_icon_atlas_273.png": {
+      "sha256": "6135b7fb6b211f9a11077d1dccd7675e129776d794617aaacf89e10c29370950",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "grass_icon_ui_273.png": {
+      "sha256": "e2fb1848094cb266862fabd46702230ea0e536e2282cb40eea3d1177282f6b58",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "cobblestone_icon_atlas_325.png": {
+      "sha256": "233ebe9a68edc399ac4f967d2f0353d701e81be2c25d011a4708dfa801a970c4",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "cobblestone_icon_ui_325.png": {
+      "sha256": "fedfbbb2dd1e37f74c5ecaa7f19b91d521ab8f0007cea8370d8da298978abc49",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "dirt_icon_atlas_269.png": {
+      "sha256": "2c7738f6f19fc5c7c7fca83887af955db3dd031a9f32ff1091c404d60f081738",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "dirt_icon_ui_269.png": {
+      "sha256": "76e031258270a9d0613996855058a79b000ccde0c93ebabf331a80d05df600e4",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "hit_dirt.png": {
+      "sha256": "9b7985139a5b6e93210a99a4c6a0b89ddcf98dd2a8b1467315f07f254f90ef9c",
+      "size": [
+        10,
+        10
+      ]
+    },
+    "hit_stone.png": {
+      "sha256": "8ad745e44a1e8e2b84700460f8ce4515d6d73fc06285283ca68795f20b7e96cc",
+      "size": [
+        10,
+        10
+      ]
+    },
+    "hit_sand.png": {
+      "sha256": "a5167f2f39fc2911ed5edd2003c316298009c71dad2ead17c8e6b370926aea2e",
+      "size": [
+        10,
+        10
+      ]
+    },
+    "hit_plant.png": {
+      "sha256": "627db8f06ab9d4d146e2fe684c3209b6b7734d6c8db7d2c344c6e1ae81b955dc",
+      "size": [
+        7,
+        7
+      ]
+    },
+    "dirt_block_14.png": {
+      "sha256": "7fdd19e3da79043a844dc0edff714cd899984a479c150f498a67fb009ae10a0f",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "tallgrass_block_19.png": {
+      "sha256": "3d56be1c5a40e520b39978ff19fa4cdb91e08b8d6b5f0e3967cebfd2b5b6dade",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "clay_block_17.png": {
+      "sha256": "4669f0ca91225268464880f7762ce0e69b6aa46cc9e6aca5bb16a2b75f343683",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "wood_block_29.png": {
+      "sha256": "c6c782e5c5065014e8d986b168cbc3e95528ab423016e46c1cb7326b8f43cede",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "wood_planks_block_114.png": {
+      "sha256": "56b82801399380fd42a6c196241bbfcc1586d0424d9303be2c75a46547f6b235",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "wall_stone_4.png": {
+      "sha256": "d5b7523f146f7fbccf1a46aa9ee941f58cf11036dfaa515b5f1b57220e653349",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "wall_dirt_5.png": {
+      "sha256": "bccc1a30424e3c02c6ea2f2616c4ce1e06a43ce1e41b02bbff3f24fe2f8a56cf",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "wall_wood_6.png": {
+      "sha256": "a4f3c353a7681b10ac00f270d103390b50d4c49509488d958d0b7737d3223f37",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "tree_trunk_26.png": {
+      "sha256": "59b2bac85370d7a0a1ccfd890a086e74bc56955d8755477b5fa448be62912f57",
+      "size": [
+        131,
+        197
+      ]
+    },
+    "leaves_block_28.png": {
+      "sha256": "61f98041f59a4649a0d0a17e065650959610b69819ca80cc845f8b04494621ae",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "tree_branch_165.png": {
+      "sha256": "8e082ce5ba1ff5c0d54930ba2878e5fa4e1d9a9522b98672674db2108cb0688f",
+      "size": [
+        98,
+        65
+      ]
+    },
+    "tree_branch_168.png": {
+      "sha256": "8f4b232a7bde6547a5ae2393d1f19fdefb13fc1ede0afbf9ac561b1988c62dff",
+      "size": [
+        296,
+        197
+      ]
+    },
+    "tree_branch_169.png": {
+      "sha256": "83c15f0fdbc11be5b38da879aeb0c0f9e9845d7107664e08e0358044c294db6e",
+      "size": [
+        98,
+        65
+      ]
+    },
+    "tree_branch_170.png": {
+      "sha256": "ba7132f235f4deba65d627c55abaa1789621a87f3bb1c90c42e2f79b3eb2c9aa",
+      "size": [
+        296,
+        197
+      ]
+    },
+    "tree_branch_171.png": {
+      "sha256": "d36ea06fbb5fea72888e250e8a3191e7d10d7dae4b4ff1eb77b1e8372cc71411",
+      "size": [
+        296,
+        198
+      ]
+    },
+    "tree_branch_172.png": {
+      "sha256": "7aee0a948a24dd759ff93166f546228ea496fce42803e16a3cd999d990cc107d",
+      "size": [
+        296,
+        198
+      ]
+    },
+    "tree_branch_173.png": {
+      "sha256": "6b3e89ecf5a03373134a9c926828eaba5e1db39c69619222f2525326348bef7f",
+      "size": [
+        131,
+        98
+      ]
+    },
+    "tree_branch_174.png": {
+      "sha256": "f674c814e2b9a1453161c3fc6ac56e53c011c01bac5b5bd1becff9144111eaf0",
+      "size": [
+        131,
+        98
+      ]
+    },
+    "tree_branch_175.png": {
+      "sha256": "de1afec75ce9e29df4e8f1742384424c8f9f14750d527236f31f96972f60f4e0",
+      "size": [
+        98,
+        98
+      ]
+    },
+    "tree_branch_176.png": {
+      "sha256": "d97805655d15f31e803c790a6f65c9021a85b024ca4fb8844f8903ef62c1edea",
+      "size": [
+        98,
+        98
+      ]
+    },
+    "tree_branch_177.png": {
+      "sha256": "35a2ec4e9f8def16f5851c9e38c31e81b010c5e20bfe3a110d78c088e693d939",
+      "size": [
+        131,
+        131
+      ]
+    },
+    "tree_branch_178.png": {
+      "sha256": "83e0601a07809b252fafe0d9a18e3fdd7a3b6614d2afff28c64ef7bec542ee8e",
+      "size": [
+        131,
+        131
+      ]
+    },
+    "tree_branch_179.png": {
+      "sha256": "95aabaabffe02c99cc34c54fe238e1799e0716781b9e3c24080de9e5c76480fc",
+      "size": [
+        98,
+        65
+      ]
+    },
+    "tree_branch_180.png": {
+      "sha256": "f6957889c85332398f1ce39cbc97e76fba0625ab1856ea2e5642dc66b242d91d",
+      "size": [
+        98,
+        65
+      ]
+    },
+    "tree_branch_181.png": {
+      "sha256": "bd689c5f08f1595240d9e1b9d52bf052d4af1ec21cbcbf11e44aa3e6e491a7fb",
+      "size": [
+        131,
+        98
+      ]
+    },
+    "tree_branch_182.png": {
+      "sha256": "cb00c5831f04c482b919e9c8539fd49ae75a98820496d4a1ea4dccf100d5f7b7",
+      "size": [
+        131,
+        98
+      ]
+    },
+    "tree_branch_183.png": {
+      "sha256": "b80b4d999fe7cefbe8931555b62614581a90411e49f4cc190668cb673a0b9bc1",
+      "size": [
+        98,
+        98
+      ]
+    },
+    "tree_branch_184.png": {
+      "sha256": "ba9149fb204b8c2ae1aa1f4e4ca2d35293126f6b34cc8ab084516df5bc6bed37",
+      "size": [
+        98,
+        98
+      ]
+    },
+    "tree_branch_185.png": {
+      "sha256": "531c126aa41b11fcd180ac524ac0f346e74b1d8342ca608a12daae8e8af2be6d",
+      "size": [
+        131,
+        131
+      ]
+    },
+    "tree_branch_186.png": {
+      "sha256": "46862e5803bf2cfb7f6d33f7766c50e3de58ef251a1c8dae6150733be5354c4c",
+      "size": [
+        131,
+        131
+      ]
+    },
+    "workbench_block_44.png": {
+      "sha256": "a569f08be56925b6e24880476f08e655976a8925d9a1d7dbc4434390568a454b",
+      "size": [
+        65,
+        32
+      ]
+    },
+    "ladder_block_52.png": {
+      "sha256": "70a6a00e526026194be105f5844d3b9ecf9351c48d706a40df9162d07dfacd4e",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "chair_block_64.png": {
+      "sha256": "1393c5408ead172d9f43d900f223a86e33329d9fb285386b93f688c07f13b0f0",
+      "size": [
+        65,
+        65
+      ]
+    },
+    "table_block_65.png": {
+      "sha256": "638fc9dfff039cd7efd9d7e78983c67acde73328236b3429c077da2a9b38c28f",
+      "size": [
+        65,
+        32
+      ]
+    },
+    "bed_block_50.png": {
+      "sha256": "5f5a6be102db47fd99bfe475e35487919d682e1477dcbca7329cb24ab74a58fd",
+      "size": [
+        98,
+        65
+      ]
+    },
+    "furnace_off_block_45.png": {
+      "sha256": "44b99fd91de7d1c38a26f59630b171950d62451dd10422ccc13abfe27cfa17bd",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "furnace_on_block_46.png": {
+      "sha256": "22e8c1f0d683e93fdd5bbc4b0493826886c38230644ec2dfa895740ec6c230c0",
+      "size": [
+        527,
+        32
+      ]
+    },
+    "furnace_part_block_47.png": {
+      "sha256": "d5adbe5ebe7acc3115f3d0ef947ec4892a0c438b1b120c753a88a11d70ef667d",
+      "size": [
+        32,
+        131
+      ]
+    },
+    "torch_block_53.png": {
+      "sha256": "52d399909ceceb7ee0d09b091530fab6cb08b507aba8ba0940ecbf4b49dd5eba",
+      "size": [
+        296,
+        131
+      ]
+    },
+    "small_torch_block_54.png": {
+      "sha256": "1fa2a0204d1e24ea337536e85a465f2b4fd9facc9b2d02a2548af4979b9dce93",
+      "size": [
+        33,
+        131
+      ]
+    },
+    "torch_anim_298_0.png": {
+      "sha256": "db71661c7dcf6dc0903b1730e2c5efe42530baf22493068602160088a66d3468",
+      "size": [
+        21,
+        32
+      ]
+    },
+    "torch_anim_298_1.png": {
+      "sha256": "894f07b067aee6b6d26c86bbe7ef7fbde01093c5dbc80dd7f7e521801b8bfecd",
+      "size": [
+        22,
+        32
+      ]
+    },
+    "torch_anim_298_2.png": {
+      "sha256": "0afbcf617603e50e82f7178c27eb323b47edae3be6f49cef209a1b5b916b1f88",
+      "size": [
+        22,
+        32
+      ]
+    },
+    "torch_anim_298_3.png": {
+      "sha256": "4aed5740988229737eef9a1a127ccf8bdd48e6e265f1b029b1906ab5aef94bd3",
+      "size": [
+        22,
+        32
+      ]
+    },
+    "torch_anim_298_4.png": {
+      "sha256": "fc6ce1ffa0fa2aa3a2b3a709f0d25b589cc5f24df714c96ca647206fb1a5cb91",
+      "size": [
+        23,
+        32
+      ]
+    },
+    "torch_anim_298_5.png": {
+      "sha256": "b1866000b3f5015b93504bbe5604cae91b2d6d8316ffe0837371b0d764927ace",
+      "size": [
+        23,
+        32
+      ]
+    },
+    "torch_anim_298_6.png": {
+      "sha256": "a5346bd16ad81b37950227bf94b3c32a934a7e9841174ccb5a4bde9027e588f0",
+      "size": [
+        22,
+        32
+      ]
+    },
+    "torch_anim_298_7.png": {
+      "sha256": "343aae704f95db833ee006960a049124f993dc2431970ae5ec331b8701215711",
+      "size": [
+        22,
+        32
+      ]
+    },
+    "torch_anim_298_8.png": {
+      "sha256": "b19025cb8b908f8ae347495e17e6d342f8dd1391657821440062f00c85df202f",
+      "size": [
+        22,
+        32
+      ]
+    },
+    "torch_anim_299_0.png": {
+      "sha256": "a4630b7aa6dcf23bfa0663c937298bf95ca7723b5090f35340b4a98be1bdd6b4",
+      "size": [
+        22,
+        27
+      ]
+    },
+    "torch_anim_299_1.png": {
+      "sha256": "8f5fa2263b7f5a0f5d4e91bdb0b0573240a788177d6d2dd792d675a80823f0e0",
+      "size": [
+        22,
+        27
+      ]
+    },
+    "torch_anim_299_10.png": {
+      "sha256": "2799ba7da59b96e98d84abc4345d3b42d23547c254d18e63a05cf65c24da8230",
+      "size": [
+        22,
+        27
+      ]
+    },
+    "torch_anim_299_11.png": {
+      "sha256": "0285958559a0730b1a20a6200b102051f8b2001e8338d9ab7bd4b349dc60aaa3",
+      "size": [
+        22,
+        27
+      ]
+    },
+    "torch_anim_299_12.png": {
+      "sha256": "b356650dfc3f3d577e8883872a7f2e505fc7970405ed5f55a8ebb0adb6d35bbe",
+      "size": [
+        22,
+        27
+      ]
+    },
+    "torch_anim_299_13.png": {
+      "sha256": "ef44959c637cd8274ff7b0295fe245c76606ec695ced12d35bb6308e9726f6f9",
+      "size": [
+        22,
+        27
+      ]
+    },
+    "torch_anim_299_14.png": {
+      "sha256": "5a46efb7d86a047305564db6016f6f0b89a4b917f616d20635a008a036425ced",
+      "size": [
+        22,
+        27
+      ]
+    },
+    "torch_anim_299_15.png": {
+      "sha256": "3240bdc16e4770cb8ab1e3cf596ab54d17a5de7ca048029db772e90e465fe6df",
+      "size": [
+        22,
+        27
+      ]
+    },
+    "torch_anim_299_2.png": {
+      "sha256": "08f4c1fa85fc36c1d931875d47d15005463f2fb62de1c85deb72d1797b0dd9db",
+      "size": [
+        27,
+        27
+      ]
+    },
+    "torch_anim_299_3.png": {
+      "sha256": "5d63eb9fe5bd0ac49cc26f7946fcf8d16034cc024d27af38f7572567f94999cf",
+      "size": [
+        21,
+        27
+      ]
+    },
+    "torch_anim_299_4.png": {
+      "sha256": "5002fb0a3137ff229ff9bd562311b22ef13d76c81709cbe61743b46eaaeb756b",
+      "size": [
+        22,
+        27
+      ]
+    },
+    "torch_anim_299_5.png": {
+      "sha256": "c0b012dc3f50e858f85725c361d825dcaea53efb5288e8d2fa58d3144bb8d7b3",
+      "size": [
+        27,
+        27
+      ]
+    },
+    "torch_anim_299_6.png": {
+      "sha256": "01d29e98bd7e30a14f4a9314c0b05ea5f036248f3271bc268ad63954945d4d08",
+      "size": [
+        26,
+        27
+      ]
+    },
+    "torch_anim_299_7.png": {
+      "sha256": "a7b38851cc2adc469302080a58ecab3c0026f6ba7f24751a5c7f69497559c6a1",
+      "size": [
+        21,
+        27
+      ]
+    },
+    "torch_anim_299_8.png": {
+      "sha256": "45db4c486637da6062c8cf531ad9e42db922deb3f7f3efcaf2644ef07d006fd6",
+      "size": [
+        23,
+        27
+      ]
+    },
+    "torch_anim_299_9.png": {
+      "sha256": "98395916ffdbea317309bf83f6ad4e198b943f5c96eada981d086afc22ff4794",
+      "size": [
+        22,
+        27
+      ]
+    },
+    "clay_icon_atlas_272.png": {
+      "sha256": "141c61412308261d8b5cc3aae48cc50bdc6e3240200040d8d0f3449987bdf934",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "clay_icon_ui_272.png": {
+      "sha256": "8126b0a5f0426c9510901dcab166b9f7fa022d52c9b839b807e2c0af88d3d110",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "wood_icon_atlas_282.png": {
+      "sha256": "50505d219921795a7ad2c9f269829feaaffd045b3e267d893ee46ddfdd73e4ab",
+      "size": [
+        16,
+        11
+      ]
+    },
+    "wood_icon_ui_282.png": {
+      "sha256": "e2f55d29605d594685e1c4f7ab4f6b4a55ac58703f512126d6ad1a3767ad574b",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "wood_planks_icon_atlas_363.png": {
+      "sha256": "1bccc9ffb824fda139fc056f55ffb4e03ca7b7b1f5a30998f8a7b4266bb89683",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "wood_planks_icon_ui_363.png": {
+      "sha256": "c080152f9e1140df004120d29a62f56668c86906a6306e322331690bfcd276bc",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "workbench_icon_atlas_291.png": {
+      "sha256": "c545f0260c9cb5987e522c88628b7b7b9c63457f084de6843a69c0640d9506d4",
+      "size": [
+        26,
+        13
+      ]
+    },
+    "workbench_icon_ui_291.png": {
+      "sha256": "dbd7ab7af1c6c5da0cc4356af5506430e4401e8246b7a502821c7cbefd5dd7b9",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "furnace_icon_atlas_292.png": {
+      "sha256": "0a96830af6d96211cc24df1501c30bace73115f67cb2843528305aec13b3ce15",
+      "size": [
+        22,
+        14
+      ]
+    },
+    "furnace_icon_ui_292.png": {
+      "sha256": "2277bec44149f37ed3d7a2299fba61a6d1532c9cd2b0492659a5e46af8b4889f",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "bed_icon_atlas_295.png": {
+      "sha256": "a5f5563d70a081e72e7014bf96fc3bc376fb3de8c7134f363fae60f3b99c20bf",
+      "size": [
+        30,
+        12
+      ]
+    },
+    "bed_icon_ui_295.png": {
+      "sha256": "d801b5c7abc585b368e7d3302f8da1e979163a0fb9c67a73d11bb16a4fa67011",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "ladder_icon_atlas_297.png": {
+      "sha256": "e24b75e47febc0c83b1fdaf97794141caa475e9344c15d10490feab34c5dcdee",
+      "size": [
+        18,
+        18
+      ]
+    },
+    "ladder_icon_ui_297.png": {
+      "sha256": "fd338cb3525e50864a148d244f4c1a80bfebca588b5df7eb557b6af8a161bdbb",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "torch_icon_atlas_298.png": {
+      "sha256": "f328379af8cad6db78603751f97c3ddbb359ae87c1f1e767006dd631f77cfdda",
+      "size": [
+        11,
+        16
+      ]
+    },
+    "torch_icon_ui_298.png": {
+      "sha256": "8471ae85f8e5e4e983193adeec9f2e33a46d05b385a6e8d9279a541abd20bf55",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "small_torch_icon_atlas_299.png": {
+      "sha256": "d70b29a37b1d270f90dc44eeed6bd99d4e9d55260d828e90a6b4d02233c50b85",
+      "size": [
+        10,
+        15
+      ]
+    },
+    "small_torch_icon_ui_299.png": {
+      "sha256": "9003b3f6e18eeb7a1a3e6e9443fae1d6985d6ddff228a06193613d5fafb44879",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "chair_icon_atlas_309.png": {
+      "sha256": "d067391abdfa12672b92267a7e53bc03fc53d57fe8da87ba214942afdcf25745",
+      "size": [
+        15,
+        20
+      ]
+    },
+    "chair_icon_ui_309.png": {
+      "sha256": "e4ce7edc6847a5164f53c2ee9085d9b7f1a5d7917fda57de1c4ce525727a62ae",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "table_icon_atlas_310.png": {
+      "sha256": "b7124b5ce3a7174471d8d27c7b2da7923c6f6935f43a56bcf95314ac30903e2f",
+      "size": [
+        30,
+        15
+      ]
+    },
+    "table_icon_ui_310.png": {
+      "sha256": "d1bddd03d243987fbd32e8987be01b6fd745e4df5c671ee849b0230e76d06be9",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "wall_stone_icon_atlas_4.png": {
+      "sha256": "169eb96e23c4be14d0da1552eac4960222d360f9d7678b06233c76d847964a5b",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "wall_stone_icon_ui_4.png": {
+      "sha256": "c2298c5b2b9f56a774378eb2b2dd10b8af2f8f163031f2b8a9d9061011437478",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "wall_wood_icon_atlas_6.png": {
+      "sha256": "e9dbf6a1ecd770f4ac84ea84e29731eedf549edc466a341f905ce0348a3cab05",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "wall_wood_icon_ui_6.png": {
+      "sha256": "a2bab372bff91e1e9c4b5d4cd166790f774efa693bd3b3a60bf306bc47ed6046",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "wood_pickaxe_icon_atlas_1058.png": {
+      "sha256": "62eeba7d9425c6196e67ccae5d28c9e86ec8bb59fc479c276393683a169662b9",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "wood_pickaxe_icon_ui_1058.png": {
+      "sha256": "5f93a7c014a2ec6e53567b33d9faf922fa4fc7ec822926b980b7ba675a755de1",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "cudgel_icon_atlas_1064.png": {
+      "sha256": "a077aaae701a215c528add3ce1a7b0301b19e45c533708589a523e220cf74d11",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "cudgel_icon_ui_1064.png": {
+      "sha256": "f2e42e84391387fd0eb20a2b37413932b8d88d843f115231cd77a4fd77da1475",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "wooden_helmet_icon_atlas_1208.png": {
+      "sha256": "fde9f8fb03725a22662da901835a625c0d3ab69898a814162be81a5577352917",
+      "size": [
+        21,
+        21
+      ]
+    },
+    "wooden_helmet_icon_ui_1208.png": {
+      "sha256": "3126f5d4166742f30aac2f012f052a7115b8f64199c3c1bb4bdb05b852bab7ff",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "wooden_chainmail_icon_atlas_1209.png": {
+      "sha256": "9e7748fd1ce2916fa33aacfefaa6f898b8537537e74c042dced4013483d2dc14",
+      "size": [
+        27,
+        20
+      ]
+    },
+    "wooden_chainmail_icon_ui_1209.png": {
+      "sha256": "0237bea167308c0f464b683b611653f61dd8aebb53774920d397ca33233f12c6",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "wooden_greaves_icon_atlas_1215.png": {
+      "sha256": "c5a9c528fe1df236009d28a7f5b2e0e00652e59f75a5c98215ff202c50f4ee21",
+      "size": [
+        20,
+        18
+      ]
+    },
+    "wooden_greaves_icon_ui_1215.png": {
+      "sha256": "1562ccdff023a9ecc89a39525a9cf4bd8cd272e070c1e93900224607426fa93b",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "leaves_icon_atlas_281.png": {
+      "sha256": "0d83c5fa56063c606d917aa571378c5c7d36ea7fcae161778be122a142ea4d0d",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "leaves_icon_ui_281.png": {
+      "sha256": "7d1fa20418e0e48d744f45e3782703e9458581a63671fc5aad14172f434dde2c",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "wall_dirt_icon_atlas_5.png": {
+      "sha256": "1044fc69e474769e66130af6df3e51ce7b8b9d2099f9b690b787c18e66d414e5",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "wall_dirt_icon_ui_5.png": {
+      "sha256": "06b5832a4ac2bcb97198c6233d8177cabe30b6ee719d681b8c1541953a439cf3",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "armor_female_armor_body_1209_0.png": {
+      "sha256": "a0fff5994982f578af3803eae4ed41cb0d04ff3c1cdac9ffeb9d72d09295423a",
+      "size": [
+        23,
+        26
+      ]
+    },
+    "armor_female_armor_body_1209_1.png": {
+      "sha256": "8cbb1cdc3d506dc1d1f90f6392cc61567a1d6a9aecd71ed613883fa1a96f18db",
+      "size": [
+        20,
+        23
+      ]
+    },
+    "armor_female_armor_body_1209_10.png": {
+      "sha256": "308a22d8b36658d5346463acf92713c6c79e17851056c7657b6bc16c47cdcf6f",
+      "size": [
+        25,
+        21
+      ]
+    },
+    "armor_female_armor_body_1209_11.png": {
+      "sha256": "65bdc7788c1880f1cffc238fc6b95fba03232593a96a0fdab754f0f23bd0578c",
+      "size": [
+        23,
+        21
+      ]
+    },
+    "armor_female_armor_body_1209_12.png": {
+      "sha256": "a0200e814ad4f7380a5ad3ec9d32efa3fcfc8655af21e751589b8df08302b397",
+      "size": [
+        22,
+        21
+      ]
+    },
+    "armor_male_armor_body_1209_0.png": {
+      "sha256": "93304d6bfb56333f2935e91be41288600723d544eb8f213873939d84ac5fc6a8",
+      "size": [
+        24,
+        26
+      ]
+    },
+    "armor_female_armor_body_1209_13.png": {
+      "sha256": "ac18f65b6b1be0642c24171f6b9bf06bb2d202ab99e7faefda946c7f2c721f73",
+      "size": [
+        20,
+        22
+      ]
+    },
+    "armor_female_armor_body_1209_14.png": {
+      "sha256": "81c4d7e6e47cf711a90e2e6d11e5e8cfe060fc465e4010e8c43c68ebf4957bf5",
+      "size": [
+        20,
+        22
+      ]
+    },
+    "armor_female_armor_body_1209_16.png": {
+      "sha256": "aa070ffd5a3766619e338260db50bad1f8982d7be13445e67f1ed5f1ef587c7a",
+      "size": [
+        23,
+        26
+      ]
+    },
+    "armor_female_armor_body_1209_17.png": {
+      "sha256": "0b98a18531e73c763799f1428d1dee796f2dfa5c7e7b4f9fdababc127b5c2bc5",
+      "size": [
+        23,
+        26
+      ]
+    },
+    "armor_female_armor_body_1209_18.png": {
+      "sha256": "cd878d6ddd1741e5f705615605205641a0687ef7e9ec75b1fd883475fd72eabb",
+      "size": [
+        23,
+        26
+      ]
+    },
+    "armor_female_armor_body_1209_19.png": {
+      "sha256": "2127a1fbd14afdfec6f0511c39802ab130c8f7d5cf550e97cfa2ee08340f28d0",
+      "size": [
+        29,
+        21
+      ]
+    },
+    "armor_female_armor_body_1209_2.png": {
+      "sha256": "7929072706f4afcf9bbe8a4c87d20783df8de1b993f866887d50ebd02bb63b3e",
+      "size": [
+        20,
+        23
+      ]
+    },
+    "armor_female_armor_body_1209_3.png": {
+      "sha256": "bd9a382bcaca45b6b04928fb7943fa77c31133c8d5f3c1bb235df277bf451b31",
+      "size": [
+        21,
+        22
+      ]
+    },
+    "armor_female_armor_body_1209_4.png": {
+      "sha256": "67af41b55b83eb3dc529198c0f7007b1f44adbdcca9bab169ea5a9ac33161dc5",
+      "size": [
+        23,
+        21
+      ]
+    },
+    "armor_female_armor_body_1209_5.png": {
+      "sha256": "57af76048d27136b95a49f8ea399306c9232d02d5c6a221ddc1ad7bd602aadde",
+      "size": [
+        24,
+        21
+      ]
+    },
+    "armor_female_armor_body_1209_6.png": {
+      "sha256": "8a8ffce47758dc91d52a518d073e7745feb344806870b96af889dd1796fd6cec",
+      "size": [
+        26,
+        21
+      ]
+    },
+    "armor_female_armor_body_1209_7.png": {
+      "sha256": "fd92b916939cf40c1fb1f5bdc81f603b51cbfc6f4eb6e2021cc051025b260631",
+      "size": [
+        27,
+        20
+      ]
+    },
+    "armor_female_armor_body_1209_8.png": {
+      "sha256": "6e2e768ce1e9e421a9a6d5a46c4529879690e5582efc3211c291911124f79a51",
+      "size": [
+        29,
+        21
+      ]
+    },
+    "armor_female_armor_body_1209_9.png": {
+      "sha256": "3c302cd6f54a4e63920a50d6a999df559a5cd1ef8c37895733285aa6cb4be003",
+      "size": [
+        27,
+        21
+      ]
+    },
+    "armor_female_armor_hand_1209_0.png": {
+      "sha256": "6e00cafd5cccca9b75f62b4c55799a84627ee4f7c1ad708b43e3df6dba39423b",
+      "size": [
+        12,
+        23
+      ]
+    },
+    "armor_female_armor_hand_1209_1.png": {
+      "sha256": "b6487898f7f16b6c1915724093f4c4a7f34ca02e670581ad3447e7f037cea0c9",
+      "size": [
+        20,
+        19
+      ]
+    },
+    "armor_female_armor_hand_1209_10.png": {
+      "sha256": "59f7b64af41ce5e06d6c5bc38c7378deb9f1fac591f06b54e8e45ceb4c209d48",
+      "size": [
+        14,
+        21
+      ]
+    },
+    "armor_female_armor_hand_1209_11.png": {
+      "sha256": "87ee85b69265111168413a73cd53e611fad98f7934f6e5f13b0978015870f6a2",
+      "size": [
+        12,
+        21
+      ]
+    },
+    "armor_female_armor_hand_1209_12.png": {
+      "sha256": "4c0a135b3e6c1192c0cfd33dce31c93520866a45dc1639ea11cf8dac2ae723f1",
+      "size": [
+        16,
+        21
+      ]
+    },
+    "armor_female_armor_hand_1209_13.png": {
+      "sha256": "d142d323dffbb6419d58658fc4ea738921061c7445439af12868af6f5492758a",
+      "size": [
+        18,
+        20
+      ]
+    },
+    "armor_female_armor_hand_1209_14.png": {
+      "sha256": "b63cfd1e2401910049ebecf8ff1697b7ad5e1b776a60f2eb86166de6bef94026",
+      "size": [
+        19,
+        19
+      ]
+    },
+    "armor_female_armor_hand_1209_15.png": {
+      "sha256": "40be578af92420fd7802455395283e70b84e92ecb93bf58efd5b043ee8f36eae",
+      "size": [
+        13,
+        24
+      ]
+    },
+    "armor_female_armor_hand_1209_16.png": {
+      "sha256": "3706afd03aaa78e2ef25a46ac5c7884d96b959509125736916225483ffbfd026",
+      "size": [
+        25,
+        19
+      ]
+    },
+    "armor_female_armor_hand_1209_17.png": {
+      "sha256": "dc6605580191e5ef848a9a54f3c5224ddf3356e6746f91f7bada234f976e6f69",
+      "size": [
+        28,
+        12
+      ]
+    },
+    "armor_female_armor_hand_1209_18.png": {
+      "sha256": "e1d4c89dae555f66562931ad60534e45fe8368430d03f374281b145cf6a6c0f7",
+      "size": [
+        23,
+        20
+      ]
+    },
+    "armor_female_armor_hand_1209_19.png": {
+      "sha256": "bf446921fa473ab1cca23f414fdf8fa578387381b321987c3910c6ee4a5530d2",
+      "size": [
+        16,
+        20
+      ]
+    },
+    "armor_female_armor_hand_1209_2.png": {
+      "sha256": "61ddab0fe2659e97da0815bea6f70cdbae389e56985652bc647de9ce7b36387c",
+      "size": [
+        18,
+        19
+      ]
+    },
+    "armor_female_armor_hand_1209_3.png": {
+      "sha256": "9b0a1f2ace656ae827c4bf8437a4ec3c750ef77a3b193d84ff8debdccf7e6ae9",
+      "size": [
+        15,
+        20
+      ]
+    },
+    "armor_female_armor_hand_1209_4.png": {
+      "sha256": "7882521ef8da63ec83e3dcc69f9bd4e5cad8d96d4c34494b9d54e451d553a5bd",
+      "size": [
+        14,
+        21
+      ]
+    },
+    "armor_female_armor_hand_1209_5.png": {
+      "sha256": "feb338d5f7e092700bd9605125e5ecc38581c75908fe5a01a0b7d47056777a63",
+      "size": [
+        13,
+        21
+      ]
+    },
+    "armor_female_armor_hand_1209_6.png": {
+      "sha256": "6a7b5a4e3606909d543fa33097c98fdfce08491ac37e1137d19ad8eb7b257598",
+      "size": [
+        15,
+        22
+      ]
+    },
+    "armor_female_armor_hand_1209_7.png": {
+      "sha256": "3ca5b7716550f4d1830771b4912b5a18cd2a1e3bd082cfe3b1bef9b051fb3884",
+      "size": [
+        17,
+        21
+      ]
+    },
+    "armor_female_armor_hand_1209_8.png": {
+      "sha256": "f3e4e9b556f8d24b99e38970a3b638f34977084eec5077b77f0ab55e06abb6c8",
+      "size": [
+        18,
+        20
+      ]
+    },
+    "armor_female_armor_hand_1209_9.png": {
+      "sha256": "d15b98db4dc4aa46cee93571dbfab585f6c6a311512cf73698fc25d9dd85a769",
+      "size": [
+        16,
+        22
+      ]
+    },
+    "armor_female_armor_head_1208_0.png": {
+      "sha256": "2d3679c25addf350197bf7d7d5ab8c8d3caf4ee811778978e4c735807219cf79",
+      "size": [
+        25,
+        24
+      ]
+    },
+    "armor_female_armor_head_1208_1.png": {
+      "sha256": "165932e3ba2e7efa207a0d04c5e24f421d07ab36c611cc07aee42e8d8da6e30d",
+      "size": [
+        25,
+        25
+      ]
+    },
+    "armor_female_armor_legs_1215_0.png": {
+      "sha256": "6eba4bf36c2c85a5fed18a841073f1305d62f27452229459e3150bd775b42af4",
+      "size": [
+        16,
+        17
+      ]
+    },
+    "armor_female_armor_legs_1215_1.png": {
+      "sha256": "77cfdb3f5ed8bae416c675a7b3784a4c23529016e3691def709025fa8ebb2f60",
+      "size": [
+        28,
+        18
+      ]
+    },
+    "armor_female_armor_legs_1215_10.png": {
+      "sha256": "5eddf832c6cee63ff8af26b134f96d0aa3a9e8dce25b281f0837ee7b26e43e41",
+      "size": [
+        16,
+        17
+      ]
+    },
+    "armor_female_armor_legs_1215_11.png": {
+      "sha256": "03134790a13639afb2af711c6d1160a0350a46ea3741d9f67c2e76062619fee7",
+      "size": [
+        18,
+        18
+      ]
+    },
+    "armor_female_armor_legs_1215_12.png": {
+      "sha256": "3ac5e62ffbc85298260227d9d4b0466871fc8970ce86e1f72eec72b7c87d812d",
+      "size": [
+        22,
+        18
+      ]
+    },
+    "armor_female_armor_legs_1215_13.png": {
+      "sha256": "5f7183f27de56dacd441f4092123bfb4035e5b90500daae3a4411d7818522006",
+      "size": [
+        24,
+        18
+      ]
+    },
+    "armor_female_armor_legs_1215_14.png": {
+      "sha256": "25e4dd8c89d49ec20479a2644b031a2eedbf32ba3ed8092fd9f930e8a061dc14",
+      "size": [
+        27,
+        18
+      ]
+    },
+    "armor_female_armor_legs_1215_19.png": {
+      "sha256": "e703d8ef5af23c2e72f87db666223d11cc10d72db3dbc47c335ae94f9cfbc3bb",
+      "size": [
+        19,
+        17
+      ]
+    },
+    "armor_female_armor_legs_1215_2.png": {
+      "sha256": "f4b363a803978141bdcfaa6286f25cd9eadd84d3eb4d8c364837023d67fb3bd9",
+      "size": [
+        23,
+        18
+      ]
+    },
+    "armor_female_armor_legs_1215_3.png": {
+      "sha256": "82834d64417b9dc353daf4e3bfee96d7e76645e3a521641cccecfeb026560ffd",
+      "size": [
+        19,
+        17
+      ]
+    },
+    "armor_female_armor_legs_1215_4.png": {
+      "sha256": "52790dce324e41cb87846652b85e079aa0ef73ad8eb941018bbe74ec4947f977",
+      "size": [
+        18,
+        18
+      ]
+    },
+    "armor_female_armor_legs_1215_5.png": {
+      "sha256": "03105d7bcab7736e0dbb763a114bfd9a42227df9ec3190a22afb57b6d58f4d81",
+      "size": [
+        16,
+        18
+      ]
+    },
+    "armor_female_armor_legs_1215_6.png": {
+      "sha256": "ba4007e496b021a43a6fc05417fa8e5b367cf8810a9514fc03d7ab74e6e41556",
+      "size": [
+        16,
+        18
+      ]
+    },
+    "armor_female_armor_legs_1215_7.png": {
+      "sha256": "f3d589e336c0809e717466a711ce5fdaa041999022bc9517e820e679b17598ee",
+      "size": [
+        17,
+        17
+      ]
+    },
+    "armor_female_armor_legs_1215_8.png": {
+      "sha256": "fbd3fe48493b73a211045c98b60deae0b877752cc5497f235e8c0eab2be5d934",
+      "size": [
+        17,
+        16
+      ]
+    },
+    "armor_female_armor_legs_1215_9.png": {
+      "sha256": "5c06c58c2186f896d2ea8b20e1cd97bf9e9d814ce6f9d206183b610ec7813665",
+      "size": [
+        16,
+        18
+      ]
+    },
+    "armor_male_armor_body_1209_1.png": {
+      "sha256": "79b6adee0699fdbbeab11d0c0350e8ecb5cda67d8ab38a15cd015f5ad2bcb426",
+      "size": [
+        21,
+        23
+      ]
+    },
+    "armor_male_armor_body_1209_10.png": {
+      "sha256": "19a71693d991d8c2a7ef3755a54af72b11f633564b6ff4f768dc3b984ba1ffc4",
+      "size": [
+        26,
+        22
+      ]
+    },
+    "armor_male_armor_body_1209_11.png": {
+      "sha256": "f22938a57a09185b549f97cb9755cf57e889366e020d420c4a6323545fb8859a",
+      "size": [
+        24,
+        23
+      ]
+    },
+    "armor_male_armor_body_1209_12.png": {
+      "sha256": "203204a4c2040d8a18b75b7475fbddbfb0c1de2328ad659f18889c25cd9341c8",
+      "size": [
+        22,
+        24
+      ]
+    },
+    "armor_male_armor_body_1209_13.png": {
+      "sha256": "def01e2edd847fd73b1be4ea24897441053a661ff82b31df6ada0902df5fd862",
+      "size": [
+        21,
+        24
+      ]
+    },
+    "armor_male_armor_body_1209_14.png": {
+      "sha256": "d0d11de20dc54a9528edbadb47cd24a4d76debea69ffa589b6f51c846d42ac5c",
+      "size": [
+        21,
+        24
+      ]
+    },
+    "armor_male_armor_body_1209_15.png": {
+      "sha256": "1c7ee29ef931e19d7262cef4b27ec85bb40be62d781dff461a89aa694c40a58b",
+      "size": [
+        24,
+        26
+      ]
+    },
+    "armor_male_armor_body_1209_16.png": {
+      "sha256": "672c38a6dab1f9dcc974519617ba0eff93089ac726d17dbfeed302574527c099",
+      "size": [
+        24,
+        26
+      ]
+    },
+    "armor_male_armor_body_1209_17.png": {
+      "sha256": "443e73d302f4ad5c0b3ff081df33dc90e8dae0a27d29292061fa19c7382f4eff",
+      "size": [
+        24,
+        26
+      ]
+    },
+    "armor_male_armor_body_1209_18.png": {
+      "sha256": "bfeb7e92ae6f8bdb6f8ce1ef32303991b9e712f5befdeb6e83d9a1a27e7a8ff7",
+      "size": [
+        24,
+        26
+      ]
+    },
+    "armor_male_armor_body_1209_19.png": {
+      "sha256": "a35c1dafdb583884923b016be3a8998806b8c1bbe8e3b921922d3aee40df7544",
+      "size": [
+        28,
+        20
+      ]
+    },
+    "armor_male_armor_body_1209_2.png": {
+      "sha256": "baad3ab2c179d18134ef01271e18fa082bbb2be575850010465d1a28cd55f7b0",
+      "size": [
+        21,
+        24
+      ]
+    },
+    "armor_male_armor_body_1209_3.png": {
+      "sha256": "5c28648a585a7861fdba7cbf3a8ec4b49a99255db06d21f43237423417a472a9",
+      "size": [
+        22,
+        24
+      ]
+    },
+    "armor_male_armor_body_1209_4.png": {
+      "sha256": "212130a453b58d3a6dcf6dee56e95878c00bd7abf86a8efd9dee3d7d90a81cec",
+      "size": [
+        23,
+        24
+      ]
+    },
+    "armor_male_armor_body_1209_5.png": {
+      "sha256": "cfdd641ef01a05ee97f120680aa1c113aed7186033ccdd84f52c0d53a265e62a",
+      "size": [
+        23,
+        24
+      ]
+    },
+    "armor_male_armor_body_1209_6.png": {
+      "sha256": "10543173924ec6b62aaada88fecb6612f80a21138844b0fc5bf06d1f9f672c71",
+      "size": [
+        25,
+        23
+      ]
+    },
+    "armor_male_armor_body_1209_7.png": {
+      "sha256": "06d03605db3b3233ccb36ac0bfdd57268f6401c89c81e2b3ec6fb12a3eec5d10",
+      "size": [
+        27,
+        22
+      ]
+    },
+    "armor_male_armor_body_1209_8.png": {
+      "sha256": "1ceb7314eab45f4ad07f32f929e6925710559bb437f390cbf5282cd211bd132f",
+      "size": [
+        29,
+        20
+      ]
+    },
+    "armor_male_armor_body_1209_9.png": {
+      "sha256": "16ce0d3fd6efe221690a5f621c161fb7b2b7652f1c478406eb8da84beb780c88",
+      "size": [
+        28,
+        21
+      ]
+    },
+    "armor_male_armor_hand_1209_0.png": {
+      "sha256": "151cfd363b4793412b8faf557fe41945ac61198bd7c12413587c01ea5dba6e8a",
+      "size": [
+        13,
+        24
+      ]
+    },
+    "armor_male_armor_hand_1209_1.png": {
+      "sha256": "0ede33a6bd04a19b60c3106cfad57ae9d2b7fa22b68ae432ebdeba9c3459a861",
+      "size": [
+        19,
+        20
+      ]
+    },
+    "armor_male_armor_hand_1209_10.png": {
+      "sha256": "fc29a87fd3a500109175b4320baa3f6348da0997ab89ca49fb246e21fad470ce",
+      "size": [
+        16,
+        23
+      ]
+    },
+    "armor_male_armor_hand_1209_11.png": {
+      "sha256": "a143b83baff422f81292456d8623964594f7f0f5ea2ae9ac7a22d721dfce7431",
+      "size": [
+        15,
+        23
+      ]
+    },
+    "armor_male_armor_hand_1209_12.png": {
+      "sha256": "59a1540a385c13b17f4c8c1aa83eddd75b4a4a13c7ec8a476fbadc1c40b58072",
+      "size": [
+        14,
+        22
+      ]
+    },
+    "armor_male_armor_hand_1209_13.png": {
+      "sha256": "b596b1f67fbb63e9993bd2ea12e080d0fb9a9f33c03666787b2f936b31fdf86d",
+      "size": [
+        17,
+        22
+      ]
+    },
+    "armor_male_armor_hand_1209_14.png": {
+      "sha256": "a46a6be8af8a4c531dc21e13ebd90219a872219b35cc3a54be6080543d14c5e9",
+      "size": [
+        17,
+        21
+      ]
+    },
+    "armor_male_armor_hand_1209_15.png": {
+      "sha256": "e7bd39791599645e7e76bbf4b61df028379831fef46435f3f5e1642b6420bfa1",
+      "size": [
+        13,
+        23
+      ]
+    },
+    "armor_male_armor_hand_1209_16.png": {
+      "sha256": "952f314151472ef8dc2759aaa6ec754d514bf49a314f20b497b02e89e260c67f",
+      "size": [
+        25,
+        17
+      ]
+    },
+    "armor_male_armor_hand_1209_17.png": {
+      "sha256": "9a77136b16b27a353e1105ec1dea61a97851fa977d0438716d26b01fa31c8ba1",
+      "size": [
+        26,
+        13
+      ]
+    },
+    "armor_male_armor_hand_1209_18.png": {
+      "sha256": "5dcc7bcc01dc926ffe82efbf12140b55e557f656f8184d2a46ede1442ca1e5f8",
+      "size": [
+        22,
+        21
+      ]
+    },
+    "armor_male_armor_hand_1209_19.png": {
+      "sha256": "c38a5bdf42e87a805fee62a4ae51a16fecc1fd07d7682f048ff6b76b350bcaa4",
+      "size": [
+        17,
+        21
+      ]
+    },
+    "armor_male_armor_hand_1209_2.png": {
+      "sha256": "8a3ab13065fcccc407bf7f2348608dce42940b9e65bc94e308f6616954bd5f67",
+      "size": [
+        19,
+        20
+      ]
+    },
+    "armor_male_armor_hand_1209_3.png": {
+      "sha256": "0bbdac1364909c6d4658aaac96637b374f3a9d6c10cf22ab9723a661bec25515",
+      "size": [
+        18,
+        21
+      ]
+    },
+    "armor_male_armor_hand_1209_4.png": {
+      "sha256": "1404ddc0d3f0fda927d8b36f1f93a50e1173daa6b9d8b90790535f2329854585",
+      "size": [
+        16,
+        22
+      ]
+    },
+    "armor_male_armor_hand_1209_5.png": {
+      "sha256": "a8331bd5a2bee1df87f2381ebe8e843f19a1509cc4bdd59271a6a11a3804e16e",
+      "size": [
+        13,
+        23
+      ]
+    },
+    "armor_male_armor_hand_1209_6.png": {
+      "sha256": "1cc76ab6de8499793cd68419c907c11cd3ceebc52002bfd01093e60662b089ec",
+      "size": [
+        16,
+        23
+      ]
+    },
+    "armor_male_armor_hand_1209_7.png": {
+      "sha256": "fdc3851edfb92198bf606109368c3932daedc8fef4f3b242ca46ccd6e403585a",
+      "size": [
+        17,
+        23
+      ]
+    },
+    "armor_male_armor_hand_1209_8.png": {
+      "sha256": "05eb2d42e9c5f9f1981ae281113d9f7d6df5c08534be625422c9718db145af54",
+      "size": [
+        18,
+        22
+      ]
+    },
+    "armor_male_armor_hand_1209_9.png": {
+      "sha256": "96902d209402a5c6c4a4d88b2408fcb0e38dafafe6df08b6fc5552dacb51cf43",
+      "size": [
+        18,
+        22
+      ]
+    },
+    "armor_male_armor_head_1208_0.png": {
+      "sha256": "e87c830b5b90904ad8810ffe65e8136af3019c0f03600be9fa1398cdcad47ccf",
+      "size": [
+        27,
+        27
+      ]
+    },
+    "armor_male_armor_legs_1215_0.png": {
+      "sha256": "29ba878b4f32765fe940f36f59c551cbbe4d319eaa28fa664944ff22d41b1326",
+      "size": [
+        18,
+        16
+      ]
+    },
+    "armor_male_armor_legs_1215_1.png": {
+      "sha256": "64051a618891083c5edc0ea628fc43219759ed6f51a0900ff9c9a648d4d52ccc",
+      "size": [
+        32,
+        17
+      ]
+    },
+    "hit_clay.png": {
+      "sha256": "5043e7dad5b61ee5c1bcbbd5036db17c89a6cfaec02170df6354b57d89ad6f19",
+      "size": [
+        10,
+        10
+      ]
+    },
+    "armor_male_armor_legs_1215_10.png": {
+      "sha256": "83e175b2ee5f66478c96413a89ce800cbb224d8a65af9388818e92ff70da6492",
+      "size": [
+        18,
+        16
+      ]
+    },
+    "armor_male_armor_legs_1215_11.png": {
+      "sha256": "8564d4de0cfdef36b99479347378d2944e6ede2a9c04c1212fff07394a5c803a",
+      "size": [
+        20,
+        17
+      ]
+    },
+    "armor_male_armor_legs_1215_12.png": {
+      "sha256": "46765e21684138640c584e6b97f9e9144265a826b8dfabf8f312fdac997894b9",
+      "size": [
+        23,
+        18
+      ]
+    },
+    "armor_male_armor_legs_1215_13.png": {
+      "sha256": "98fc1b38949fc2e653efc47f7cb62506135cc9267f91ba7c8c84bb401d7ef51d",
+      "size": [
+        25,
+        17
+      ]
+    },
+    "armor_male_armor_legs_1215_14.png": {
+      "sha256": "41bc3d6d61f395458bfec0285bbe63e7ad225f0de0ee76011e09744d40c9e034",
+      "size": [
+        28,
+        17
+      ]
+    },
+    "armor_male_armor_legs_1215_19.png": {
+      "sha256": "da754ff2931cdb0dfaf5001734c959130c9daff0cd8be27cd64433d4b2016cab",
+      "size": [
+        23,
+        16
+      ]
+    },
+    "armor_male_armor_legs_1215_2.png": {
+      "sha256": "ab99353606bbc6cb23ee4cac1c3254e1b10e74a669899e929010da742638dcb2",
+      "size": [
+        28,
+        17
+      ]
+    },
+    "armor_male_armor_legs_1215_3.png": {
+      "sha256": "ca6a5f687feafc6de6887fe197a88cd80a4bb5c7d0f9b9c66a76dc51dadf5f48",
+      "size": [
+        22,
+        16
+      ]
+    },
+    "armor_male_armor_legs_1215_4.png": {
+      "sha256": "8196764317b7f5ae20143edc61cd530e4f5c956423bf67f7286215613fa55440",
+      "size": [
+        20,
+        17
+      ]
+    },
+    "armor_male_armor_legs_1215_5.png": {
+      "sha256": "65807295f9d9d5bd81b1d846862612f3632a8ee5b522a1e1488718ded7af30e2",
+      "size": [
+        17,
+        18
+      ]
+    },
+    "armor_male_armor_legs_1215_6.png": {
+      "sha256": "cdfad1b6f7f023dac42c6f7bcd07c81658e453aa3fdbe2d55eaf56af31666624",
+      "size": [
+        17,
+        17
+      ]
+    },
+    "armor_male_armor_legs_1215_7.png": {
+      "sha256": "26162c7a792b0e451d26b48c10ac7a3779785355f798ce2b1533855bafa6467d",
+      "size": [
+        17,
+        16
+      ]
+    },
+    "armor_male_armor_legs_1215_8.png": {
+      "sha256": "73c4e2268c37031593101354820a48c33755df269621eb66abfcbb6335f317e8",
+      "size": [
+        17,
+        16
+      ]
+    },
+    "armor_male_armor_legs_1215_9.png": {
+      "sha256": "8dd4ae4b6110c0c66a10b90350c402b4ea733a5e5dd73bd367b4a526309543aa",
+      "size": [
+        17,
+        17
+      ]
+    },
+    "hit_wood.png": {
+      "sha256": "bbde4a9e0102164912c78bd897d0fd243dfecc0dcfa405bf2299ec26d9f440b6",
+      "size": [
+        8,
+        8
+      ]
+    },
+    "hit_leaves.png": {
+      "sha256": "dae3a673166922bc0c9db5f05376c1fbe081f090ece059845bcf581f0dae9a3a",
+      "size": [
+        7,
+        7
+      ]
+    }
+  }
+}

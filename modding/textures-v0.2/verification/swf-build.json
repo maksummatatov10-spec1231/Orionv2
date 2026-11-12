@@ -1,0 +1,308 @@
+{
+  "input": "/tmp/orion-work/Orion Sandbox Enhanced/Orion.swf",
+  "output": "modding/textures-v0.2/build/Orion.mod.swf",
+  "input_sha256": "233befd6a79bb5c74624467fddcbba4ea2dccf0907a1315c9e816530e0e15313",
+  "output_sha256": "5e46ad7b380d300f3d90c3efa8ae8805e56d78c6c588e05d3c1c9d765cbc06b5",
+  "input_size": 62062024,
+  "output_size": 62079272,
+  "tag_count": 2307,
+  "replaced_image_tags": 7,
+  "all_other_tags_identical": true,
+  "targets": [
+    {
+      "label": "stone_block_4",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_4",
+      "x": 802,
+      "y": 1088,
+      "w": 131,
+      "h": 32,
+      "processed_sha256": "47060950938b62e55b2b2e86a79f806eec8847b9945282c5f03d800eb2a92133",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "dirt_block_14",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_14",
+      "x": 637,
+      "y": 1311,
+      "w": 131,
+      "h": 32,
+      "processed_sha256": "5303d04b9f8a7698f918e60f30390789fc35b41b02c6576bbf8800373f179a19",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "grass_block_18",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_18",
+      "x": 832,
+      "y": 238,
+      "w": 131,
+      "h": 32,
+      "processed_sha256": "5031660e5fbcbfa543917f1d4a9040362abbf821b497f83d37bff4bc9d7b75ab",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "tallgrass_block_19",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_19",
+      "x": 834,
+      "y": 306,
+      "w": 131,
+      "h": 32,
+      "processed_sha256": "fd46e58514872c43ba09943bf15a1c0e00079e21cf5fd40a0065dbd3bd0a8c8e",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "cobblestone_block_75",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_75",
+      "x": 770,
+      "y": 1394,
+      "w": 131,
+      "h": 32,
+      "processed_sha256": "ff91c5563484407db7e02676c8bdcfe0554375044677dd22896174e53665d524",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "stone_icon_atlas_259",
+      "kind": "atlas_rect",
+      "atlas_char": 1476,
+      "region": "item_259",
+      "x": 452,
+      "y": 636,
+      "w": 16,
+      "h": 16,
+      "processed_sha256": "fdb009a90c459213cb23c65ccdcc7797786b5771df31511cc45071875d0e2512",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "dirt_icon_atlas_269",
+      "kind": "atlas_rect",
+      "atlas_char": 1476,
+      "region": "item_269",
+      "x": 462,
+      "y": 655,
+      "w": 16,
+      "h": 16,
+      "processed_sha256": "790fb31cb1b5a859051afde280d1e6bd10da3ff4909d764e981bb0df7611c271",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "grass_icon_atlas_273",
+      "kind": "atlas_rect",
+      "atlas_char": 1476,
+      "region": "item_273",
+      "x": 378,
+      "y": 657,
+      "w": 16,
+      "h": 16,
+      "processed_sha256": "6135b7fb6b211f9a11077d1dccd7675e129776d794617aaacf89e10c29370950",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "cobblestone_icon_atlas_325",
+      "kind": "atlas_rect",
+      "atlas_char": 1476,
+      "region": "item_325",
+      "x": 56,
+      "y": 471,
+      "w": 16,
+      "h": 16,
+      "processed_sha256": "233ebe9a68edc399ac4f967d2f0353d701e81be2c25d011a4708dfa801a970c4",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "hit_dirt",
+      "kind": "atlas_rect",
+      "atlas_char": 1501,
+      "region": "hit_dirt",
+      "x": 112,
+      "y": 421,
+      "w": 10,
+      "h": 10,
+      "processed_sha256": "24004d5c9e0e0bd9383878169e6aebefbe9bee2cd3b970d3e51098e8a6fa4fae",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "hit_stone",
+      "kind": "atlas_rect",
+      "atlas_char": 1501,
+      "region": "hit_stone",
+      "x": 112,
+      "y": 445,
+      "w": 10,
+      "h": 10,
+      "processed_sha256": "5754bc4cacc3b673486bc7e5dab5a42249619e999f9b1eab9543f07594b7bd8c",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "hit_plant",
+      "kind": "atlas_rect",
+      "atlas_char": 1501,
+      "region": "hit_plant",
+      "x": 1014,
+      "y": 143,
+      "w": 7,
+      "h": 7,
+      "processed_sha256": "68e06edd28d25921a709439b6f1658fd58050fe4740b3d417d1d65b2b7bd160b",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "stone_icon_ui_259",
+      "kind": "image",
+      "char": 1958,
+      "w": 32,
+      "h": 32,
+      "processed_sha256": "0514ba838f875b37d578fe0ba213d464a58fb884545677646e1d7b0f64c08393",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "dirt_icon_ui_269",
+      "kind": "image",
+      "char": 1143,
+      "w": 32,
+      "h": 32,
+      "processed_sha256": "a3a4292e6f28a42f1852eee26b24827e461813e4650bca59a47c4b8dca72ac0c",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "grass_icon_ui_273",
+      "kind": "image",
+      "char": 1207,
+      "w": 32,
+      "h": 32,
+      "processed_sha256": "e2fb1848094cb266862fabd46702230ea0e536e2282cb40eea3d1177282f6b58",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "cobblestone_icon_ui_325",
+      "kind": "image",
+      "char": 2003,
+      "w": 32,
+      "h": 32,
+      "processed_sha256": "fedfbbb2dd1e37f74c5ecaa7f19b91d521ab8f0007cea8370d8da298978abc49",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    }
+  ],
+  "output_exact": [
+    {
+      "label": "stone_block_4",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "dirt_block_14",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "grass_block_18",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tallgrass_block_19",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "cobblestone_block_75",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "stone_icon_atlas_259",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "dirt_icon_atlas_269",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "grass_icon_atlas_273",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "cobblestone_icon_atlas_325",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "hit_dirt",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "hit_stone",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "hit_plant",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "stone_icon_ui_259",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "dirt_icon_ui_269",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "grass_icon_ui_273",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "cobblestone_icon_ui_325",
+      "premultiplied_exact": true
+    }
+  ],
+  "method": "direct DefineBitsLossless2 format-5 replacement; opaque and premultiplied-alpha exact; no FFDec re-encode"
+}

@@ -1,0 +1,117 @@
+{
+  "version": "textures-v0.2",
+  "files": {
+    "dirt_block_14.png": {
+      "sha256": "5303d04b9f8a7698f918e60f30390789fc35b41b02c6576bbf8800373f179a19",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "grass_block_18.png": {
+      "sha256": "5031660e5fbcbfa543917f1d4a9040362abbf821b497f83d37bff4bc9d7b75ab",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "stone_block_4.png": {
+      "sha256": "47060950938b62e55b2b2e86a79f806eec8847b9945282c5f03d800eb2a92133",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "cobblestone_block_75.png": {
+      "sha256": "ff91c5563484407db7e02676c8bdcfe0554375044677dd22896174e53665d524",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "tallgrass_block_19.png": {
+      "sha256": "fd46e58514872c43ba09943bf15a1c0e00079e21cf5fd40a0065dbd3bd0a8c8e",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "dirt_icon_atlas_269.png": {
+      "sha256": "790fb31cb1b5a859051afde280d1e6bd10da3ff4909d764e981bb0df7611c271",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "dirt_icon_ui_269.png": {
+      "sha256": "a3a4292e6f28a42f1852eee26b24827e461813e4650bca59a47c4b8dca72ac0c",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "grass_icon_atlas_273.png": {
+      "sha256": "6135b7fb6b211f9a11077d1dccd7675e129776d794617aaacf89e10c29370950",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "grass_icon_ui_273.png": {
+      "sha256": "e2fb1848094cb266862fabd46702230ea0e536e2282cb40eea3d1177282f6b58",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "stone_icon_atlas_259.png": {
+      "sha256": "fdb009a90c459213cb23c65ccdcc7797786b5771df31511cc45071875d0e2512",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "stone_icon_ui_259.png": {
+      "sha256": "0514ba838f875b37d578fe0ba213d464a58fb884545677646e1d7b0f64c08393",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "cobblestone_icon_atlas_325.png": {
+      "sha256": "233ebe9a68edc399ac4f967d2f0353d701e81be2c25d011a4708dfa801a970c4",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "cobblestone_icon_ui_325.png": {
+      "sha256": "fedfbbb2dd1e37f74c5ecaa7f19b91d521ab8f0007cea8370d8da298978abc49",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "hit_dirt.png": {
+      "sha256": "24004d5c9e0e0bd9383878169e6aebefbe9bee2cd3b970d3e51098e8a6fa4fae",
+      "size": [
+        10,
+        10
+      ]
+    },
+    "hit_stone.png": {
+      "sha256": "5754bc4cacc3b673486bc7e5dab5a42249619e999f9b1eab9543f07594b7bd8c",
+      "size": [
+        10,
+        10
+      ]
+    },
+    "hit_plant.png": {
+      "sha256": "68e06edd28d25921a709439b6f1658fd58050fe4740b3d417d1d65b2b7bd160b",
+      "size": [
+        7,
+        7
+      ]
+    }
+  }
+}

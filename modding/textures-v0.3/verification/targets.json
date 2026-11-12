@@ -1,0 +1,883 @@
+{
+  "source_swf_sha256": "233befd6a79bb5c74624467fddcbba4ea2dccf0907a1315c9e816530e0e15313",
+  "targets": [
+    {
+      "kind": "atlas_rect",
+      "label": "stone_block_4",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_4",
+      "x": 802,
+      "y": 1088,
+      "w": 131,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/stone_block_4.png",
+      "sha256": "df60de6204283c61c3213a11904aaaf4f3f2293d700483d214a5978f744cd6a8",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "dirt_block_14",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_14",
+      "x": 637,
+      "y": 1311,
+      "w": 131,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/dirt_block_14.png",
+      "sha256": "3e13db4c5713bbb2396de4cbafe73f3ab60b9b2a9ac7cc2e91b8f0eb6a6bf793",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "grass_block_18",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_18",
+      "x": 832,
+      "y": 238,
+      "w": 131,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/grass_block_18.png",
+      "sha256": "2aacaa42df03bb69cb4c8df75996d9375de28c59e5d45fe0c312522ec55dfe21",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tallgrass_block_19",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_19",
+      "x": 834,
+      "y": 306,
+      "w": 131,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tallgrass_block_19.png",
+      "sha256": "3e15f87007577dd80500b8a21fcd8cc8f2a4302ae1cae81dcfd9ee0026bc176f",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "cobblestone_block_75",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_75",
+      "x": 770,
+      "y": 1394,
+      "w": 131,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/cobblestone_block_75.png",
+      "sha256": "0842e64320f933ec6ac48fb33139cdfe22f48f0b3041056ed84afd1cdff36205",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "sand_block_16",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_16",
+      "x": 637,
+      "y": 1345,
+      "w": 131,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/sand_block_16.png",
+      "sha256": "6c89f03db7d69b0b13b0cabfa88f1d2b044d957e5db6b4a96e5f175a159ee82c",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "red_granite_block_167",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_167",
+      "x": 637,
+      "y": 1413,
+      "w": 131,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/red_granite_block_167.png",
+      "sha256": "d8ef33111f09df97d2cdc85ee6cd52d32ab75587d4907a6417f19245365c0c4e",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_trunk_26",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_26",
+      "x": 3,
+      "y": 1103,
+      "w": 131,
+      "h": 197,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_trunk_26.png",
+      "sha256": "b74fabe4505661f6d6530d1553207ee1943861b2074b98584eaa95abb6b01a10",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "leaves_block_28",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_28",
+      "x": 834,
+      "y": 850,
+      "w": 131,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/leaves_block_28.png",
+      "sha256": "804d4d66a805e4f77488f1d6ac96295c43eebe90b65264f56a606ec790498afe",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "wood_block_29",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_29",
+      "x": 834,
+      "y": 884,
+      "w": 131,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/wood_block_29.png",
+      "sha256": "02acd4726a46ccf5f057596fea538bcd3b0a640e9234b4e7d411b8dbb2f6e1e7",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_165",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_165",
+      "x": 534,
+      "y": 574,
+      "w": 98,
+      "h": 65,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_165.png",
+      "sha256": "4f870a6d59ba37b2048a814a0c0bc3641ae3e2078f9fdc1619ec22fb89192e94",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_168",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_168",
+      "x": 3,
+      "y": 572,
+      "w": 296,
+      "h": 197,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_168.png",
+      "sha256": "ff8cf24ed20cc5f19b4125de861eb13f4f38650eef49a675132461e90d0c14e2",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_169",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_169",
+      "x": 534,
+      "y": 641,
+      "w": 98,
+      "h": 65,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_169.png",
+      "sha256": "25e3d165f4e07d396e2d5e632945e8445cf30b53c221d4316c07e43c1d5f3c66",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_170",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_170",
+      "x": 3,
+      "y": 771,
+      "w": 296,
+      "h": 197,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_170.png",
+      "sha256": "01ad91c276294a4e72958a5ce2a55e5fef1c18507799ac3f2a2d004ac522dec9",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_171",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_171",
+      "x": 3,
+      "y": 172,
+      "w": 296,
+      "h": 198,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_171.png",
+      "sha256": "c86d095c466bbe9abb427ef4b28369664fba8d9d5b361a195281765aa2bacfaa",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_172",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_172",
+      "x": 3,
+      "y": 372,
+      "w": 296,
+      "h": 198,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_172.png",
+      "sha256": "a13e6a56cadb70569c3eab0749d84e7be9ea9ee6e57f2e16c397ad888ddf3e3e",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_173",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_173",
+      "x": 3,
+      "y": 1668,
+      "w": 131,
+      "h": 98,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_173.png",
+      "sha256": "ef27c0769812ca2ab384c7114bc720d1a904b45947b1beb3b6d9bc19578248c0",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_174",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_174",
+      "x": 3,
+      "y": 1768,
+      "w": 131,
+      "h": 98,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_174.png",
+      "sha256": "779a6d71940fd8880657367b645b40061a6c1168c32e1407e026e99bdb20460a",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_175",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_175",
+      "x": 731,
+      "y": 104,
+      "w": 98,
+      "h": 98,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_175.png",
+      "sha256": "15e174ad2f746dee2bf99aad9faebde8193636eb7d7745ddf35aa6ba52ccfd76",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_176",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_176",
+      "x": 270,
+      "y": 1270,
+      "w": 98,
+      "h": 98,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_176.png",
+      "sha256": "b2ed40af09aa16f75a9d56bfb705b7c6aafbc6b0f27672885b1de21718d5a95b",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_177",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_177",
+      "x": 136,
+      "y": 1103,
+      "w": 131,
+      "h": 131,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_177.png",
+      "sha256": "f57cd586d39ea59fd674639a9fc5b47ed7c579bae8a112499f239719b3eb783c",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_178",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_178",
+      "x": 301,
+      "y": 537,
+      "w": 131,
+      "h": 131,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_178.png",
+      "sha256": "1e474d6ed93b0d823b4ec023e96c3869b86879fc18767c2e61585422bffaf8ec",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_179",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_179",
+      "x": 534,
+      "y": 708,
+      "w": 98,
+      "h": 65,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_179.png",
+      "sha256": "fa71cf636a5e5e213428c70c30f8f34abc32c1dec2e06ab5161b0a3b5caf3d65",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_180",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_180",
+      "x": 534,
+      "y": 775,
+      "w": 98,
+      "h": 65,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_180.png",
+      "sha256": "3d11c1a4ba0f4c79f9218c0a02b648fc37c0809b10c3d36745660684e33e7eb3",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_181",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_181",
+      "x": 3,
+      "y": 1868,
+      "w": 131,
+      "h": 98,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_181.png",
+      "sha256": "85607c60fd791256fe29cf49d88e63922f4544c6b388c216e8f106d9cfa9acf9",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_182",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_182",
+      "x": 501,
+      "y": 339,
+      "w": 131,
+      "h": 98,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_182.png",
+      "sha256": "fe8cabe45c312d55af936bb68aba66d06280d6bb72d8d79fdb41e299ec33aadf",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_183",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_183",
+      "x": 270,
+      "y": 1370,
+      "w": 98,
+      "h": 98,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_183.png",
+      "sha256": "c76aeebd055305de8c25247d1d7f0163a9aca3da379976b15a1a64a177219f6e",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_184",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_184",
+      "x": 169,
+      "y": 1537,
+      "w": 98,
+      "h": 98,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_184.png",
+      "sha256": "c79e93be494ff39930d1da60fab60c6df826daf7aeb878805cb3bca5071b131b",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_185",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_185",
+      "x": 301,
+      "y": 670,
+      "w": 131,
+      "h": 131,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_185.png",
+      "sha256": "26cc20f120ad69362e542e0068b82e546c76e4e3cc60d0b19e91b7a33c1afc7f",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "tree_branch_186",
+      "atlas_char": 1646,
+      "xml_char": 1987,
+      "region": "block_186",
+      "x": 301,
+      "y": 803,
+      "w": 131,
+      "h": 131,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/tree_branch_186.png",
+      "sha256": "5d5e674eb152166aac1df20a6eea7c81598396414e22a751ce86e82336634575",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "stone_icon_atlas_259",
+      "atlas_char": 1476,
+      "xml_char": 2045,
+      "region": "item_259",
+      "x": 452,
+      "y": 636,
+      "w": 16,
+      "h": 16,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/stone_icon_atlas_259.png",
+      "sha256": "6d486b85792035d12c392e60e7ff61fa54b5222a3ba51db19ac9010d43055a25",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "dirt_icon_atlas_269",
+      "atlas_char": 1476,
+      "xml_char": 2045,
+      "region": "item_269",
+      "x": 462,
+      "y": 655,
+      "w": 16,
+      "h": 16,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/dirt_icon_atlas_269.png",
+      "sha256": "1efd04a8325ae8bd91cda6da38e5c070ed526fbf05d9bb45cfee1734aef543e0",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "grass_icon_atlas_273",
+      "atlas_char": 1476,
+      "xml_char": 2045,
+      "region": "item_273",
+      "x": 378,
+      "y": 657,
+      "w": 16,
+      "h": 16,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/grass_icon_atlas_273.png",
+      "sha256": "b856eca574cf891e9f205fab2d27423ff082cbe86e54f3c476a22a8affbed2d1",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "cobblestone_icon_atlas_325",
+      "atlas_char": 1476,
+      "xml_char": 2045,
+      "region": "item_325",
+      "x": 56,
+      "y": 471,
+      "w": 16,
+      "h": 16,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/cobblestone_icon_atlas_325.png",
+      "sha256": "bbed26f877b49fcff1db4a4fdd50995319aa2f5f9efcd04ff8ca9fbeb3c12673",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "sand_icon_atlas_271",
+      "atlas_char": 1476,
+      "xml_char": 2045,
+      "region": "item_271",
+      "x": 360,
+      "y": 640,
+      "w": 16,
+      "h": 16,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/sand_icon_atlas_271.png",
+      "sha256": "f8713f0be09c5c62d494b756c5a52750f4db02b289ca76466717d96ca45bb508",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "red_granite_icon_atlas_421",
+      "atlas_char": 1476,
+      "xml_char": 2045,
+      "region": "item_421",
+      "x": 360,
+      "y": 570,
+      "w": 18,
+      "h": 16,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/red_granite_icon_atlas_421.png",
+      "sha256": "26588333801cc940171af2ffe3bdd874c1ac69b2b1e1fd803df8e1fbcfdda611",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "leaves_icon_atlas_281",
+      "atlas_char": 1476,
+      "xml_char": 2045,
+      "region": "item_281",
+      "x": 396,
+      "y": 668,
+      "w": 16,
+      "h": 16,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/leaves_icon_atlas_281.png",
+      "sha256": "172e2f8e7bcd76b4f0e82cc65779a8fecea4d746c9ddf3b866f956dd6a69120d",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "wood_icon_atlas_282",
+      "atlas_char": 1476,
+      "xml_char": 2045,
+      "region": "item_282",
+      "x": 459,
+      "y": 719,
+      "w": 16,
+      "h": 11,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/wood_icon_atlas_282.png",
+      "sha256": "a797f60d6553acf9e2d279e16dccec94b7ef880c07fc08a2084d2c6614953fc2",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "stone_icon_ui_259",
+      "char": 1958,
+      "tag_code": 36,
+      "w": 32,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/stone_icon_ui_259.png",
+      "sha256": "deca68efb06b2950dd9680ec63285eb753b94f8843ebce7e07de8592d8a8d159",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "dirt_icon_ui_269",
+      "char": 1143,
+      "tag_code": 36,
+      "w": 32,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/dirt_icon_ui_269.png",
+      "sha256": "94ccf44750c4672e274a0593c03eaecf6a1ec95afcb22bbdbbb29f24515de3d3",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "grass_icon_ui_273",
+      "char": 1207,
+      "tag_code": 36,
+      "w": 32,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/grass_icon_ui_273.png",
+      "sha256": "d8278e5b3bd1ee1cdc4221e0558dd7d9a750e0f9b32f8ce85dd19a347dfdb9f6",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "cobblestone_icon_ui_325",
+      "char": 2003,
+      "tag_code": 36,
+      "w": 32,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/cobblestone_icon_ui_325.png",
+      "sha256": "a079b9aea9b48d794906a12f2d26cffdeaf8897a10b87db76db2d4bc6506ac32",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "leaves_icon_ui_281",
+      "char": 1721,
+      "tag_code": 36,
+      "w": 32,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/leaves_icon_ui_281.png",
+      "sha256": "348a632e1842eb6d8990cd443acad4b72f2273d507af2e1d80fdbefa2ced3cf7",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "wood_icon_ui_282",
+      "char": 1313,
+      "tag_code": 36,
+      "w": 32,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/wood_icon_ui_282.png",
+      "sha256": "c2a043dc3dbb6adf47cae6a50ce0e4c9ed145fe13641c41177c3cd60e7d427b8",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "red_granite_icon_ui_421",
+      "char": 1289,
+      "tag_code": 36,
+      "w": 32,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/red_granite_icon_ui_421.png",
+      "sha256": "a7f278a8683c3a98610dd5defbe6177f2531b571afe122c1516a5da92123e2f3",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "sand_icon_ui_271",
+      "char": 1516,
+      "tag_code": 36,
+      "w": 32,
+      "h": 32,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/sand_icon_ui_271.png",
+      "sha256": "4a0e2a187e1de2e8e46c62441c8605d93c85a45e91b8e7bfa478790b6c31a36b",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "hit_dirt",
+      "atlas_char": 1501,
+      "xml_char": 1582,
+      "region": "hit_dirt",
+      "x": 112,
+      "y": 421,
+      "w": 10,
+      "h": 10,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/hit_dirt.png",
+      "sha256": "d3098e7cbd4c201dd88c4f79064edd816359bc853c67d9ca1a6a4a44c11295b8",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "hit_stone",
+      "atlas_char": 1501,
+      "xml_char": 1582,
+      "region": "hit_stone",
+      "x": 112,
+      "y": 445,
+      "w": 10,
+      "h": 10,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/hit_stone.png",
+      "sha256": "2072a598474bc421521474a3e2dbd8ce0a4b82737f54a1f6be9b4cf0b3070767",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "hit_plant",
+      "atlas_char": 1501,
+      "xml_char": 1582,
+      "region": "hit_plant",
+      "x": 1014,
+      "y": 143,
+      "w": 7,
+      "h": 7,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/hit_plant.png",
+      "sha256": "c1db02ac854d913907ecb335b300dc6a5851f2c9966c583c6bc20e8a387c56d4",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "hit_sand",
+      "atlas_char": 1501,
+      "xml_char": 1582,
+      "region": "hit_sand",
+      "x": 100,
+      "y": 438,
+      "w": 10,
+      "h": 10,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/hit_sand.png",
+      "sha256": "9b85a6596ec9ec406508583c416b86fd3b5183a788f52e77e7002411ea594617",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "hit_wood",
+      "atlas_char": 1501,
+      "xml_char": 1582,
+      "region": "hit_wood",
+      "x": 1014,
+      "y": 124,
+      "w": 8,
+      "h": 8,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/hit_wood.png",
+      "sha256": "ae63288e313ded1e60745101ee55f2bf8c77b65451f50f76b86a78d3ae5d46bf",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "hit_leaves",
+      "atlas_char": 1501,
+      "xml_char": 1582,
+      "region": "hit_leaves",
+      "x": 1014,
+      "y": 134,
+      "w": 7,
+      "h": 7,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/hit_leaves.png",
+      "sha256": "c25739092e74c76be1f911210bd8a3798be86a7367221d6db26f95a126b84846",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "atlas_rect",
+      "label": "hit_bronze",
+      "atlas_char": 1501,
+      "xml_char": 1582,
+      "region": "hit_bronze",
+      "x": 1014,
+      "y": 74,
+      "w": 8,
+      "h": 8,
+      "path": "/home/user/Orionv2/modding/textures-v0.3/input/hit_bronze.png",
+      "sha256": "b0b221da1b49bd0765cb0ccd23d5f3db7a1c26f81920b2d8ba2214812adbbe55",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    }
+  ],
+  "version": "textures-v0.3"
+}

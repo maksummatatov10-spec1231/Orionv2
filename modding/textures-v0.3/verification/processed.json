@@ -1,0 +1,377 @@
+{
+  "version": "textures-v0.3",
+  "kept_targets": 53,
+  "files": {
+    "grass_block_18.png": {
+      "sha256": "5031660e5fbcbfa543917f1d4a9040362abbf821b497f83d37bff4bc9d7b75ab",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "cobblestone_block_75.png": {
+      "sha256": "ff91c5563484407db7e02676c8bdcfe0554375044677dd22896174e53665d524",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "grass_icon_atlas_273.png": {
+      "sha256": "6135b7fb6b211f9a11077d1dccd7675e129776d794617aaacf89e10c29370950",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "grass_icon_ui_273.png": {
+      "sha256": "e2fb1848094cb266862fabd46702230ea0e536e2282cb40eea3d1177282f6b58",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "cobblestone_icon_atlas_325.png": {
+      "sha256": "233ebe9a68edc399ac4f967d2f0353d701e81be2c25d011a4708dfa801a970c4",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "cobblestone_icon_ui_325.png": {
+      "sha256": "fedfbbb2dd1e37f74c5ecaa7f19b91d521ab8f0007cea8370d8da298978abc49",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "dirt_block_14.png": {
+      "sha256": "ebb33a18416c2295f8bc41a0320479a236d04b33a4ddc6c48a9de41a23a06d47",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "stone_block_4.png": {
+      "sha256": "3e57fbfd2d48badc86478f770b8687bbb34b86706ad64edc08ee12b7a389deb6",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "sand_block_16.png": {
+      "sha256": "8ac4aa56efad0480b949f80f84d4ad50fb11570f95b100d6028b262188e850f7",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "red_granite_block_167.png": {
+      "sha256": "7f81ea9e0cb8826fae120c284496ee771154b34fde782fb57e0e4e1c3758be60",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "tallgrass_block_19.png": {
+      "sha256": "169138695ba3549031edfd9036a2a210a6acf794e97ac6f06d5ff90d469f873a",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "tree_trunk_26.png": {
+      "sha256": "a9a7213ec02100096850872bae8c88ebde5dfe6dd46621b5c07badf4e8342e75",
+      "size": [
+        131,
+        197
+      ]
+    },
+    "leaves_block_28.png": {
+      "sha256": "847cda3a955c868b561ec7f450cb1bfd896b9ae803430e70afd4a5041bdbdde4",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "wood_block_29.png": {
+      "sha256": "038a3acb8ebcaee0c26b241849e4a28684a47152af618c7dacc37e914e29c4da",
+      "size": [
+        131,
+        32
+      ]
+    },
+    "tree_branch_165.png": {
+      "sha256": "880663e4259a377a32ba0477ab2d53f668a6d76870b91db0884ef4284c5d1a3f",
+      "size": [
+        98,
+        65
+      ]
+    },
+    "tree_branch_168.png": {
+      "sha256": "2c5aa8e013e2b52b25b9d38b733b60bf44b3d75f8015b4561cd93869a0d76e1b",
+      "size": [
+        296,
+        197
+      ]
+    },
+    "tree_branch_169.png": {
+      "sha256": "9306e185dbf298f500c61dff4c2185b860d38c174cf9abb4792ec593064afc37",
+      "size": [
+        98,
+        65
+      ]
+    },
+    "tree_branch_170.png": {
+      "sha256": "3050083594a1e3bb425f779536335efe200c232866eccff3613cdce72302774d",
+      "size": [
+        296,
+        197
+      ]
+    },
+    "tree_branch_171.png": {
+      "sha256": "292ef14ffb572417d04feda54037690f95e31cbabde1d8a139c1606fe0220e8f",
+      "size": [
+        296,
+        198
+      ]
+    },
+    "tree_branch_172.png": {
+      "sha256": "d968cb066664500991f82c30bd74bd2483b3cff1d39905cf520c2d1907ec6880",
+      "size": [
+        296,
+        198
+      ]
+    },
+    "tree_branch_173.png": {
+      "sha256": "01a4e960275fd298b634b9502a35742f277877f575b0923a4ca6b5d4dbe5b3de",
+      "size": [
+        131,
+        98
+      ]
+    },
+    "tree_branch_174.png": {
+      "sha256": "6f1e5b20b0b306a120d1f57eba910866d5fa355f503d65750cd902e31af9d28c",
+      "size": [
+        131,
+        98
+      ]
+    },
+    "tree_branch_175.png": {
+      "sha256": "1f061199d56c05bbed4fab58a6ce1ecacac812a88c87f5d7103dcd37e7ebd785",
+      "size": [
+        98,
+        98
+      ]
+    },
+    "tree_branch_176.png": {
+      "sha256": "828d6f8f12e156e5304d9536b9c95373d901b4635d7d55804e39c3289fed82cc",
+      "size": [
+        98,
+        98
+      ]
+    },
+    "tree_branch_177.png": {
+      "sha256": "6c4246bf541b6f6372aa1036c70ee2e85723c709675b6a12703ca0776b4fc5f6",
+      "size": [
+        131,
+        131
+      ]
+    },
+    "tree_branch_178.png": {
+      "sha256": "4549606aaa96d2d65d4081118029ca05bdea5db8fd7146b6c7978e02724fade6",
+      "size": [
+        131,
+        131
+      ]
+    },
+    "tree_branch_179.png": {
+      "sha256": "254408113dc8df72eddd8f5881abfc2731837e983589640bbb888ae2675482b1",
+      "size": [
+        98,
+        65
+      ]
+    },
+    "tree_branch_180.png": {
+      "sha256": "4f45cf0164c9f65d0337d492a366fbf6273cbd07fb4cd1f404e436ef76acb41a",
+      "size": [
+        98,
+        65
+      ]
+    },
+    "tree_branch_181.png": {
+      "sha256": "172adf83da3980231ad0c3da31abd981cea49866c4713e88a20efa0c901e87f8",
+      "size": [
+        131,
+        98
+      ]
+    },
+    "tree_branch_182.png": {
+      "sha256": "156d130ee9e165d8493e834d9a1ef118a953cffa1a4e22482c37c80b4532f05c",
+      "size": [
+        131,
+        98
+      ]
+    },
+    "tree_branch_183.png": {
+      "sha256": "3fa27b0bb03024dd30307d1ee42f27f864506d9076dbec5ed9021621e61eaf48",
+      "size": [
+        98,
+        98
+      ]
+    },
+    "tree_branch_184.png": {
+      "sha256": "a4c5ba5ef287e2a22b8a3f5b12142d1517c844baac1d5b790eeaeb5e1e5397cd",
+      "size": [
+        98,
+        98
+      ]
+    },
+    "tree_branch_185.png": {
+      "sha256": "e7689c391d97336034fa364944b5b7892e4edc5e6491c0fe6b58cdb9cba64e11",
+      "size": [
+        131,
+        131
+      ]
+    },
+    "tree_branch_186.png": {
+      "sha256": "37975f43658e36b292e969785a158a2dcd248484c98cbf3531fb2a93d427385c",
+      "size": [
+        131,
+        131
+      ]
+    },
+    "stone_icon_atlas_259.png": {
+      "sha256": "223f770710cb04f762a86a53875bfbc889e8477820673f0fdf18e0e601282206",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "stone_icon_ui_259.png": {
+      "sha256": "b16e77ebb6ebafec2779d3f66ad90e2ff346d9c9b51fa07dd01030ab31f025f1",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "dirt_icon_atlas_269.png": {
+      "sha256": "b970b74fe9c7e779c462a0b688e93c093fade7cf59d9449d2b9b2c15f2a72a53",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "dirt_icon_ui_269.png": {
+      "sha256": "da124dc52aaf3f4778b7fbfe1e391fdfc815231e4059c14c773bfd19635d9ff4",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "sand_icon_atlas_271.png": {
+      "sha256": "a62b7eaac223fe215fec30e224818afba8661fdefaf6c359d5c534d12ec157b7",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "sand_icon_ui_271.png": {
+      "sha256": "f4efc39ca4bc9807a4dd4752cc7375b95a743e74a409ee0e707537ed969edd5a",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "red_granite_icon_atlas_421.png": {
+      "sha256": "34baac40854bdfe9434b1e0b3dab4d9914ef36c85766119aefb944c085995fa4",
+      "size": [
+        18,
+        16
+      ]
+    },
+    "red_granite_icon_ui_421.png": {
+      "sha256": "a53d2c2c5b9bf6d7061fee4c11661576446a6d4524771c6aafa9c8bb940dc55a",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "leaves_icon_atlas_281.png": {
+      "sha256": "f0132a33a8380d3e5505a7c0535f8eca42cd37b053d6bfa0df08a5fc72c25b08",
+      "size": [
+        16,
+        16
+      ]
+    },
+    "leaves_icon_ui_281.png": {
+      "sha256": "9f22edda6d02c837ff970ad8976135ed329cf13fa52e078d0ed2e6200d693305",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "wood_icon_atlas_282.png": {
+      "sha256": "c590cf06b5711b1af62062f59ad85007af3cb3c17e6b85f270962409ac6d39df",
+      "size": [
+        16,
+        11
+      ]
+    },
+    "wood_icon_ui_282.png": {
+      "sha256": "ee51680c02dfcc408abe54fa5cb1ed643060f5176e665f5f5406ad9009cc5645",
+      "size": [
+        32,
+        32
+      ]
+    },
+    "hit_dirt.png": {
+      "sha256": "9b7985139a5b6e93210a99a4c6a0b89ddcf98dd2a8b1467315f07f254f90ef9c",
+      "size": [
+        10,
+        10
+      ]
+    },
+    "hit_stone.png": {
+      "sha256": "8ad745e44a1e8e2b84700460f8ce4515d6d73fc06285283ca68795f20b7e96cc",
+      "size": [
+        10,
+        10
+      ]
+    },
+    "hit_sand.png": {
+      "sha256": "a5167f2f39fc2911ed5edd2003c316298009c71dad2ead17c8e6b370926aea2e",
+      "size": [
+        10,
+        10
+      ]
+    },
+    "hit_bronze.png": {
+      "sha256": "4ac85bfb207fd4e485b2a2eed69cff035c047ac9d46a8ea5f7ad88bb0aedb7ed",
+      "size": [
+        8,
+        8
+      ]
+    },
+    "hit_wood.png": {
+      "sha256": "2dc7e7bbb0637f0f56266b885503c3a70174abf51ce79c0225f407852df469be",
+      "size": [
+        8,
+        8
+      ]
+    },
+    "hit_leaves.png": {
+      "sha256": "007d592dee4f981726f8ef0ce3128b94029b11a51ec05dee9feb3daf594c0225",
+      "size": [
+        7,
+        7
+      ]
+    },
+    "hit_plant.png": {
+      "sha256": "627db8f06ab9d4d146e2fe684c3209b6b7734d6c8db7d2c344c6e1ae81b955dc",
+      "size": [
+        7,
+        7
+      ]
+    }
+  }
+}

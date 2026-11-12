@@ -1,0 +1,16 @@
+{
+  "user_term": "красный гранит / red granite",
+  "name_search": "No 'granite' string exists in AS3 or ru/en localization (binary-1481/2048).",
+  "method": "Visual + pixel MSE match of screenshot image-1.png ore-like blocks against original atlas candidates (ores, designer blocks, clay).",
+  "screenshot": "modding/textures-v0.3/reference/user-stone-dirt-screenshot.png is image-2; identification used /tmp/arena-coding-uploads/image-1.png (surface screenshot).",
+  "best_match": {
+    "block_id": 167,
+    "vanilla_name": "BRONZE_ORE / Бронзовая Руда",
+    "atlas_region": "block_167",
+    "variant": 2,
+    "brightness_factor": 0.4,
+    "mse": 5.17,
+    "runner_up_black_designer_block_226_mse": 10.58
+  },
+  "decision": "Replace block_167 and its item icon (item_421 / UI char 1289) plus hit_bronze particle with the new red-granite texture. Do NOT change clay block_17."
+}

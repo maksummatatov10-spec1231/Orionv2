@@ -1,0 +1,999 @@
+{
+  "input": "/tmp/orion-work/Orion Sandbox Enhanced/Orion.swf",
+  "output": "modding/textures-v0.3/build/Orion.mod.swf",
+  "input_sha256": "233befd6a79bb5c74624467fddcbba4ea2dccf0907a1315c9e816530e0e15313",
+  "output_sha256": "194b8ca6b3e873868d50500425d4af59e380deec01b80905dd57c18e58de42e2",
+  "input_size": 62062024,
+  "output_size": 62441905,
+  "tag_count": 2307,
+  "replaced_image_tags": 11,
+  "all_other_tags_identical": true,
+  "targets": [
+    {
+      "label": "stone_block_4",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_4",
+      "x": 802,
+      "y": 1088,
+      "w": 131,
+      "h": 32,
+      "processed_sha256": "3e57fbfd2d48badc86478f770b8687bbb34b86706ad64edc08ee12b7a389deb6",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "dirt_block_14",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_14",
+      "x": 637,
+      "y": 1311,
+      "w": 131,
+      "h": 32,
+      "processed_sha256": "ebb33a18416c2295f8bc41a0320479a236d04b33a4ddc6c48a9de41a23a06d47",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "grass_block_18",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_18",
+      "x": 832,
+      "y": 238,
+      "w": 131,
+      "h": 32,
+      "processed_sha256": "5031660e5fbcbfa543917f1d4a9040362abbf821b497f83d37bff4bc9d7b75ab",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "tallgrass_block_19",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_19",
+      "x": 834,
+      "y": 306,
+      "w": 131,
+      "h": 32,
+      "processed_sha256": "169138695ba3549031edfd9036a2a210a6acf794e97ac6f06d5ff90d469f873a",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "cobblestone_block_75",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_75",
+      "x": 770,
+      "y": 1394,
+      "w": 131,
+      "h": 32,
+      "processed_sha256": "ff91c5563484407db7e02676c8bdcfe0554375044677dd22896174e53665d524",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "sand_block_16",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_16",
+      "x": 637,
+      "y": 1345,
+      "w": 131,
+      "h": 32,
+      "processed_sha256": "8ac4aa56efad0480b949f80f84d4ad50fb11570f95b100d6028b262188e850f7",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "red_granite_block_167",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_167",
+      "x": 637,
+      "y": 1413,
+      "w": 131,
+      "h": 32,
+      "processed_sha256": "7f81ea9e0cb8826fae120c284496ee771154b34fde782fb57e0e4e1c3758be60",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "tree_trunk_26",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_26",
+      "x": 3,
+      "y": 1103,
+      "w": 131,
+      "h": 197,
+      "processed_sha256": "a9a7213ec02100096850872bae8c88ebde5dfe6dd46621b5c07badf4e8342e75",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "leaves_block_28",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_28",
+      "x": 834,
+      "y": 850,
+      "w": 131,
+      "h": 32,
+      "processed_sha256": "847cda3a955c868b561ec7f450cb1bfd896b9ae803430e70afd4a5041bdbdde4",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "wood_block_29",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_29",
+      "x": 834,
+      "y": 884,
+      "w": 131,
+      "h": 32,
+      "processed_sha256": "038a3acb8ebcaee0c26b241849e4a28684a47152af618c7dacc37e914e29c4da",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_165",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_165",
+      "x": 534,
+      "y": 574,
+      "w": 98,
+      "h": 65,
+      "processed_sha256": "880663e4259a377a32ba0477ab2d53f668a6d76870b91db0884ef4284c5d1a3f",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_168",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_168",
+      "x": 3,
+      "y": 572,
+      "w": 296,
+      "h": 197,
+      "processed_sha256": "2c5aa8e013e2b52b25b9d38b733b60bf44b3d75f8015b4561cd93869a0d76e1b",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_169",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_169",
+      "x": 534,
+      "y": 641,
+      "w": 98,
+      "h": 65,
+      "processed_sha256": "9306e185dbf298f500c61dff4c2185b860d38c174cf9abb4792ec593064afc37",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_170",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_170",
+      "x": 3,
+      "y": 771,
+      "w": 296,
+      "h": 197,
+      "processed_sha256": "3050083594a1e3bb425f779536335efe200c232866eccff3613cdce72302774d",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_171",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_171",
+      "x": 3,
+      "y": 172,
+      "w": 296,
+      "h": 198,
+      "processed_sha256": "292ef14ffb572417d04feda54037690f95e31cbabde1d8a139c1606fe0220e8f",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_172",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_172",
+      "x": 3,
+      "y": 372,
+      "w": 296,
+      "h": 198,
+      "processed_sha256": "d968cb066664500991f82c30bd74bd2483b3cff1d39905cf520c2d1907ec6880",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_173",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_173",
+      "x": 3,
+      "y": 1668,
+      "w": 131,
+      "h": 98,
+      "processed_sha256": "01a4e960275fd298b634b9502a35742f277877f575b0923a4ca6b5d4dbe5b3de",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_174",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_174",
+      "x": 3,
+      "y": 1768,
+      "w": 131,
+      "h": 98,
+      "processed_sha256": "6f1e5b20b0b306a120d1f57eba910866d5fa355f503d65750cd902e31af9d28c",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_175",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_175",
+      "x": 731,
+      "y": 104,
+      "w": 98,
+      "h": 98,
+      "processed_sha256": "1f061199d56c05bbed4fab58a6ce1ecacac812a88c87f5d7103dcd37e7ebd785",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_176",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_176",
+      "x": 270,
+      "y": 1270,
+      "w": 98,
+      "h": 98,
+      "processed_sha256": "828d6f8f12e156e5304d9536b9c95373d901b4635d7d55804e39c3289fed82cc",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_177",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_177",
+      "x": 136,
+      "y": 1103,
+      "w": 131,
+      "h": 131,
+      "processed_sha256": "6c4246bf541b6f6372aa1036c70ee2e85723c709675b6a12703ca0776b4fc5f6",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_178",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_178",
+      "x": 301,
+      "y": 537,
+      "w": 131,
+      "h": 131,
+      "processed_sha256": "4549606aaa96d2d65d4081118029ca05bdea5db8fd7146b6c7978e02724fade6",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_179",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_179",
+      "x": 534,
+      "y": 708,
+      "w": 98,
+      "h": 65,
+      "processed_sha256": "254408113dc8df72eddd8f5881abfc2731837e983589640bbb888ae2675482b1",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_180",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_180",
+      "x": 534,
+      "y": 775,
+      "w": 98,
+      "h": 65,
+      "processed_sha256": "4f45cf0164c9f65d0337d492a366fbf6273cbd07fb4cd1f404e436ef76acb41a",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_181",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_181",
+      "x": 3,
+      "y": 1868,
+      "w": 131,
+      "h": 98,
+      "processed_sha256": "172adf83da3980231ad0c3da31abd981cea49866c4713e88a20efa0c901e87f8",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_182",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_182",
+      "x": 501,
+      "y": 339,
+      "w": 131,
+      "h": 98,
+      "processed_sha256": "156d130ee9e165d8493e834d9a1ef118a953cffa1a4e22482c37c80b4532f05c",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_183",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_183",
+      "x": 270,
+      "y": 1370,
+      "w": 98,
+      "h": 98,
+      "processed_sha256": "3fa27b0bb03024dd30307d1ee42f27f864506d9076dbec5ed9021621e61eaf48",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_184",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_184",
+      "x": 169,
+      "y": 1537,
+      "w": 98,
+      "h": 98,
+      "processed_sha256": "a4c5ba5ef287e2a22b8a3f5b12142d1517c844baac1d5b790eeaeb5e1e5397cd",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_185",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_185",
+      "x": 301,
+      "y": 670,
+      "w": 131,
+      "h": 131,
+      "processed_sha256": "e7689c391d97336034fa364944b5b7892e4edc5e6491c0fe6b58cdb9cba64e11",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "tree_branch_186",
+      "kind": "atlas_rect",
+      "atlas_char": 1646,
+      "region": "block_186",
+      "x": 301,
+      "y": 803,
+      "w": 131,
+      "h": 131,
+      "processed_sha256": "37975f43658e36b292e969785a158a2dcd248484c98cbf3531fb2a93d427385c",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "stone_icon_atlas_259",
+      "kind": "atlas_rect",
+      "atlas_char": 1476,
+      "region": "item_259",
+      "x": 452,
+      "y": 636,
+      "w": 16,
+      "h": 16,
+      "processed_sha256": "223f770710cb04f762a86a53875bfbc889e8477820673f0fdf18e0e601282206",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "dirt_icon_atlas_269",
+      "kind": "atlas_rect",
+      "atlas_char": 1476,
+      "region": "item_269",
+      "x": 462,
+      "y": 655,
+      "w": 16,
+      "h": 16,
+      "processed_sha256": "b970b74fe9c7e779c462a0b688e93c093fade7cf59d9449d2b9b2c15f2a72a53",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "grass_icon_atlas_273",
+      "kind": "atlas_rect",
+      "atlas_char": 1476,
+      "region": "item_273",
+      "x": 378,
+      "y": 657,
+      "w": 16,
+      "h": 16,
+      "processed_sha256": "6135b7fb6b211f9a11077d1dccd7675e129776d794617aaacf89e10c29370950",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "cobblestone_icon_atlas_325",
+      "kind": "atlas_rect",
+      "atlas_char": 1476,
+      "region": "item_325",
+      "x": 56,
+      "y": 471,
+      "w": 16,
+      "h": 16,
+      "processed_sha256": "233ebe9a68edc399ac4f967d2f0353d701e81be2c25d011a4708dfa801a970c4",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "sand_icon_atlas_271",
+      "kind": "atlas_rect",
+      "atlas_char": 1476,
+      "region": "item_271",
+      "x": 360,
+      "y": 640,
+      "w": 16,
+      "h": 16,
+      "processed_sha256": "a62b7eaac223fe215fec30e224818afba8661fdefaf6c359d5c534d12ec157b7",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "label": "red_granite_icon_atlas_421",
+      "kind": "atlas_rect",
+      "atlas_char": 1476,
+      "region": "item_421",
+      "x": 360,
+      "y": 570,
+      "w": 18,
+      "h": 16,
+      "processed_sha256": "34baac40854bdfe9434b1e0b3dab4d9914ef36c85766119aefb944c085995fa4",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "leaves_icon_atlas_281",
+      "kind": "atlas_rect",
+      "atlas_char": 1476,
+      "region": "item_281",
+      "x": 396,
+      "y": 668,
+      "w": 16,
+      "h": 16,
+      "processed_sha256": "f0132a33a8380d3e5505a7c0535f8eca42cd37b053d6bfa0df08a5fc72c25b08",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "wood_icon_atlas_282",
+      "kind": "atlas_rect",
+      "atlas_char": 1476,
+      "region": "item_282",
+      "x": 459,
+      "y": 719,
+      "w": 16,
+      "h": 11,
+      "processed_sha256": "c590cf06b5711b1af62062f59ad85007af3cb3c17e6b85f270962409ac6d39df",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "hit_dirt",
+      "kind": "atlas_rect",
+      "atlas_char": 1501,
+      "region": "hit_dirt",
+      "x": 112,
+      "y": 421,
+      "w": 10,
+      "h": 10,
+      "processed_sha256": "9b7985139a5b6e93210a99a4c6a0b89ddcf98dd2a8b1467315f07f254f90ef9c",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "hit_stone",
+      "kind": "atlas_rect",
+      "atlas_char": 1501,
+      "region": "hit_stone",
+      "x": 112,
+      "y": 445,
+      "w": 10,
+      "h": 10,
+      "processed_sha256": "8ad745e44a1e8e2b84700460f8ce4515d6d73fc06285283ca68795f20b7e96cc",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "hit_plant",
+      "kind": "atlas_rect",
+      "atlas_char": 1501,
+      "region": "hit_plant",
+      "x": 1014,
+      "y": 143,
+      "w": 7,
+      "h": 7,
+      "processed_sha256": "627db8f06ab9d4d146e2fe684c3209b6b7734d6c8db7d2c344c6e1ae81b955dc",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "hit_sand",
+      "kind": "atlas_rect",
+      "atlas_char": 1501,
+      "region": "hit_sand",
+      "x": 100,
+      "y": 438,
+      "w": 10,
+      "h": 10,
+      "processed_sha256": "a5167f2f39fc2911ed5edd2003c316298009c71dad2ead17c8e6b370926aea2e",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "hit_wood",
+      "kind": "atlas_rect",
+      "atlas_char": 1501,
+      "region": "hit_wood",
+      "x": 1014,
+      "y": 124,
+      "w": 8,
+      "h": 8,
+      "processed_sha256": "2dc7e7bbb0637f0f56266b885503c3a70174abf51ce79c0225f407852df469be",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "hit_leaves",
+      "kind": "atlas_rect",
+      "atlas_char": 1501,
+      "region": "hit_leaves",
+      "x": 1014,
+      "y": 134,
+      "w": 7,
+      "h": 7,
+      "processed_sha256": "007d592dee4f981726f8ef0ce3128b94029b11a51ec05dee9feb3daf594c0225",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "hit_bronze",
+      "kind": "atlas_rect",
+      "atlas_char": 1501,
+      "region": "hit_bronze",
+      "x": 1014,
+      "y": 74,
+      "w": 8,
+      "h": 8,
+      "processed_sha256": "4ac85bfb207fd4e485b2a2eed69cff035c047ac9d46a8ea5f7ad88bb0aedb7ed",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "stone_icon_ui_259",
+      "kind": "image",
+      "char": 1958,
+      "w": 32,
+      "h": 32,
+      "processed_sha256": "b16e77ebb6ebafec2779d3f66ad90e2ff346d9c9b51fa07dd01030ab31f025f1",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "dirt_icon_ui_269",
+      "kind": "image",
+      "char": 1143,
+      "w": 32,
+      "h": 32,
+      "processed_sha256": "da124dc52aaf3f4778b7fbfe1e391fdfc815231e4059c14c773bfd19635d9ff4",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "grass_icon_ui_273",
+      "kind": "image",
+      "char": 1207,
+      "w": 32,
+      "h": 32,
+      "processed_sha256": "e2fb1848094cb266862fabd46702230ea0e536e2282cb40eea3d1177282f6b58",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "cobblestone_icon_ui_325",
+      "kind": "image",
+      "char": 2003,
+      "w": 32,
+      "h": 32,
+      "processed_sha256": "fedfbbb2dd1e37f74c5ecaa7f19b91d521ab8f0007cea8370d8da298978abc49",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "leaves_icon_ui_281",
+      "kind": "image",
+      "char": 1721,
+      "w": 32,
+      "h": 32,
+      "processed_sha256": "9f22edda6d02c837ff970ad8976135ed329cf13fa52e078d0ed2e6200d693305",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "wood_icon_ui_282",
+      "kind": "image",
+      "char": 1313,
+      "w": 32,
+      "h": 32,
+      "processed_sha256": "ee51680c02dfcc408abe54fa5cb1ed643060f5176e665f5f5406ad9009cc5645",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "red_granite_icon_ui_421",
+      "kind": "image",
+      "char": 1289,
+      "w": 32,
+      "h": 32,
+      "processed_sha256": "a53d2c2c5b9bf6d7061fee4c11661576446a6d4524771c6aafa9c8bb940dc55a",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "label": "sand_icon_ui_271",
+      "kind": "image",
+      "char": 1516,
+      "w": 32,
+      "h": 32,
+      "processed_sha256": "f4efc39ca4bc9807a4dd4752cc7375b95a743e74a409ee0e707537ed969edd5a",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    }
+  ],
+  "output_exact": [
+    {
+      "label": "stone_block_4",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "dirt_block_14",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "grass_block_18",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tallgrass_block_19",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "cobblestone_block_75",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "sand_block_16",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "red_granite_block_167",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_trunk_26",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "leaves_block_28",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "wood_block_29",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_165",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_168",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_169",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_170",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_171",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_172",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_173",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_174",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_175",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_176",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_177",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_178",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_179",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_180",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_181",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_182",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_183",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_184",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_185",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "tree_branch_186",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "stone_icon_atlas_259",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "dirt_icon_atlas_269",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "grass_icon_atlas_273",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "cobblestone_icon_atlas_325",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "sand_icon_atlas_271",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "red_granite_icon_atlas_421",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "leaves_icon_atlas_281",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "wood_icon_atlas_282",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "hit_dirt",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "hit_stone",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "hit_plant",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "hit_sand",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "hit_wood",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "hit_leaves",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "hit_bronze",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "stone_icon_ui_259",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "dirt_icon_ui_269",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "grass_icon_ui_273",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "cobblestone_icon_ui_325",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "leaves_icon_ui_281",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "wood_icon_ui_282",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "red_granite_icon_ui_421",
+      "premultiplied_exact": true
+    },
+    {
+      "label": "sand_icon_ui_271",
+      "premultiplied_exact": true
+    }
+  ],
+  "method": "direct DefineBitsLossless2 format-5 replacement; opaque and premultiplied-alpha exact; no FFDec re-encode"
+}

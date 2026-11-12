@@ -3888,6 +3888,118 @@
       ]
     },
     {
+      "kind": "image",
+      "label": "armor_standalone_male_head_1208",
+      "char": 1236,
+      "tag_code": 36,
+      "w": 200,
+      "h": 300,
+      "path": "/home/user/Orionv2/modding/textures-v0.4/input/armor_standalone_male_head_1208.png",
+      "sha256": "3b5050d7b0b9b4cfff2db1d75d61b10c69c23accb61e5eefa9973dc0d4c5327d",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "armor_standalone_male_body_1209",
+      "char": 1511,
+      "tag_code": 36,
+      "w": 200,
+      "h": 300,
+      "path": "/home/user/Orionv2/modding/textures-v0.4/input/armor_standalone_male_body_1209.png",
+      "sha256": "a58054810ff75429cf73c6dd17a7f7ab12051fba3c549cacf26c14c66f4e478c",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "armor_standalone_male_hand_1209",
+      "char": 1217,
+      "tag_code": 36,
+      "w": 200,
+      "h": 300,
+      "path": "/home/user/Orionv2/modding/textures-v0.4/input/armor_standalone_male_hand_1209.png",
+      "sha256": "77513da653eda228c86d949009b033ad0caca9fa76933ad7b29fd1e1012f8569",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "armor_standalone_male_legs_1215",
+      "char": 1314,
+      "tag_code": 36,
+      "w": 200,
+      "h": 300,
+      "path": "/home/user/Orionv2/modding/textures-v0.4/input/armor_standalone_male_legs_1215.png",
+      "sha256": "e104691347781df5a54f9bc7587907efc0cf2444f98b48c4401e9653abbaaef0",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "armor_standalone_female_head_1208",
+      "char": 1704,
+      "tag_code": 36,
+      "w": 200,
+      "h": 300,
+      "path": "/home/user/Orionv2/modding/textures-v0.4/input/armor_standalone_female_head_1208.png",
+      "sha256": "caee377e89706a875b6a91a680661a5bbeedd28f70d95b3402513104e7ac326b",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "armor_standalone_female_body_1209",
+      "char": 1294,
+      "tag_code": 36,
+      "w": 200,
+      "h": 300,
+      "path": "/home/user/Orionv2/modding/textures-v0.4/input/armor_standalone_female_body_1209.png",
+      "sha256": "d48d6af60f94b0a4e17005936a1f8ce54c12acc8511a52b8e61bf06b8ac6cd10",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "armor_standalone_female_hand_1209",
+      "char": 1661,
+      "tag_code": 36,
+      "w": 200,
+      "h": 300,
+      "path": "/home/user/Orionv2/modding/textures-v0.4/input/armor_standalone_female_hand_1209.png",
+      "sha256": "75fdffce4a008fe73958367cd62b9ff3741cf2e3899cf22665d546fc2e44237b",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "kind": "image",
+      "label": "armor_standalone_female_legs_1215",
+      "char": 2136,
+      "tag_code": 36,
+      "w": 200,
+      "h": 300,
+      "path": "/home/user/Orionv2/modding/textures-v0.4/input/armor_standalone_female_legs_1215.png",
+      "sha256": "ed7474af15c67b0c4a5eae16e7574245ff2dda1f5a515d01ea8642e324d0e98d",
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
       "kind": "atlas_rect",
       "label": "hit_dirt",
       "atlas_char": 1501,

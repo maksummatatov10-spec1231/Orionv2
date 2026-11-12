@@ -1,0 +1,96 @@
+{
+  "version": "textures-v0.4-correction",
+  "trees": {
+    "branch_bark_pixels": 23385,
+    "old_orange_bark_pixels_left": 0,
+    "unified_bark_ramp": [
+      [
+        34,
+        25,
+        20
+      ],
+      [
+        48,
+        36,
+        28
+      ],
+      [
+        66,
+        50,
+        38
+      ],
+      [
+        86,
+        66,
+        50
+      ],
+      [
+        108,
+        84,
+        64
+      ]
+    ],
+    "branch_ids": [
+      165,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185,
+      186
+    ]
+  },
+  "armor": {
+    "frames": 122,
+    "mean_abs_rgb_diff": 9.981,
+    "max_frame_mean_abs_diff": 13.892,
+    "standalone_worn_sheets": 8,
+    "method": "original artwork preserved; walnut color/contrast grade + unsharp; no procedural surface overlay; standalone worn sheets replaced"
+  },
+  "grass": {
+    "blade_heights_px": [
+      32,
+      32,
+      31,
+      32
+    ],
+    "alpha_coverage_per_variant": [
+      0.1836,
+      0.1836,
+      0.1836,
+      0.1826
+    ],
+    "max_coverage": 0.1836,
+    "min_height": 31
+  },
+  "walls": {
+    "stone": {
+      "wall_mean_luma": 71.51,
+      "foreground_mean_luma": 124.76,
+      "darker_than_foreground": true
+    },
+    "dirt": {
+      "wall_mean_luma": 69.05,
+      "foreground_mean_luma": 80.22,
+      "darker_than_foreground": true
+    },
+    "wood": {
+      "wall_mean_luma": 70.93,
+      "foreground_mean_luma": 126.36,
+      "darker_than_foreground": true
+    }
+  }
+}

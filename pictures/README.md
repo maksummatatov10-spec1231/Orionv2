@@ -96,7 +96,14 @@ SWF: `modding/textures-v0.3/build/Orion.mod.swf`.
 
 SWF: `modding/textures-v0.4/build/Orion.mod.swf`.
 
-Проверка сборки: 2307 тегов, 29 заменённых image-тегов, 240/240 целевых регионов совпадают побайтово (premultiplied RGBA), все остальные теги без изменений. SHA-256: `3b57c55f50488d31e80ee11be42675d9f55376f3384e45e67eb465345f2d86e8`.
+Проверка сборки: 2307 тегов, 37 заменённых image-тегов, 248/248 целевых регионов совпадают побайтово (premultiplied RGBA), все остальные теги без изменений. SHA-256: `638901aec1fbce6fd99681d50b8e2cea2bb6f70269f6da5b2381a7d01f94d748`.
+
+### Правки по фидбеку v0.4
+
+- **Дерево** — ствол и все ветки/кроны переведены в единую десатурированную кору; старых оранжевых веток и светлой полосы среза не осталось (`previews/v0.4/tree_branch_168-v04.png`, `tree_branch_171-v04.png`, `trunk-stacked-seam-check.png`).
+- **Деревянная броня** — заменены не только atlas-кадры, но и standalone-листы надеваемой брони (male/female head/body/hand/legs). Оригинальная рисовка пластин, ремней и зерна сохранена; цвет уведён в более тёмный walnut, контраст и резкость подняты. Сравнение в игре: `previews/v0.4/v04-fix-armor-compare.png`.
+- **Стены** — собственные фоновые тайлы камня/земли/дерева вместо затемнённых передних блоков; иконки стен пересобраны из новых тайлов. Runtime-проверка: `previews/v0.4/v04-fix-walls.png`, `v04-fix-walls-crop.png`.
+- **Трава** — длинные редкие стебли (до 32 px, покрытие ~18% вместо густого куста), неоновая кромка grass_block смягчена. Runtime: `previews/v0.4/v04-fix-gameplay.png`.
 
 Примечание по запуску: оригинальный Orion — Adobe AIR-приложение (FRESteamWorks/NativeApplication). Ruffle упирается в Stage3D (`createContext3D not implemented`), «голый» standalone Flash Player — в AIR-only API (Error #0). Для визуальной проверки собран отдельный тестовый стенд: в копию SWF добавлены AIR/Steam-стабы (`modding/textures-v0.4/runtime/`), после чего получены реальные скриншоты лобби, геймплея и инвентаря (`previews/v0.4/v04-title.png`, `v04-gameplay.png`, `v04-gameplay-hud.png`, `v04-inventory.png`, `original-gameplay.png`). Сам `Orion.mod.swf` остаётся texture-only: ABC не изменён. Runtime-скриншоты original и v0.4 сделаны в разных случайных мирах; для попиксельного «до/после» используйте `terrain-before-after-v04.png`.
 

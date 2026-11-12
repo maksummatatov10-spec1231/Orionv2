@@ -4,7 +4,7 @@ Preserves atlas geometry, alpha masks, animation frame counts and icon frames.
 """
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageOps
-import json, hashlib, random, shutil, math
+import json, hashlib, random, shutil, math, colorsys
 
 ROOT = Path(__file__).resolve().parents[1]
 IN = ROOT / 'input'; GEN = ROOT / 'generated'; PROC = ROOT / 'processed'; PREV = ROOT / 'preview'
@@ -54,6 +54,17 @@ def variant(base, i, seed=0):
 def strip(name, base, seed=0):
     orig = Image.open(IN / f'{name}.png').convert('RGBA'); out = orig.copy()
     for i, off in enumerate(OFFS): out.paste(variant(base, i, seed).convert('RGBA'), (off, 0))
+    # rebuild padding gutters from the NEW cell edges; otherwise original-color gutters bleed as seams
+    px = out.load()
+    for gx in GUT:
+        if gx >= out.width: continue
+        for y in range(out.height):
+            l = px[gx - 1, y] if gx - 1 >= 0 else None
+            r = px[gx + 1, y] if gx + 1 < out.width else None
+            if l and r and l[3] and r[3]:
+                px[gx, y] = tuple((l[k] + r[k]) // 2 for k in range(3)) + (max(l[3], r[3]),)
+            elif l and l[3]: px[gx, y] = l
+            elif r and r[3]: px[gx, y] = r
     p = PROC / f'{name}.png'; out.save(p); return p
 
 def copy_v03(name):
@@ -83,38 +94,53 @@ for atlas, ui in [('dirt_icon_atlas_269', 'dirt_icon_ui_269')]:
     if bbox: ui_im.paste(tile.resize((bbox[2]-bbox[0], bbox[3]-bbox[1]), Image.Resampling.LANCZOS), (bbox[0], bbox[1]))
     ui_im.putalpha(alpha); ui_im.save(PROC / f'{ui}.png')
 
-# Tall grass: lower than v0.3 (18px), still long blades not a bush.
-def key_magenta(path):
-    im = Image.open(path).convert('RGB'); W, H = im.size; src = im.load()
-    out = Image.new('RGBA', (32, 32), (0, 0, 0, 0)); px = out.load()
-    for cy in range(32):
-        for cx in range(32):
-            rs = gs = bs = n = 0
-            y0 = cy * H // 32; y1 = (cy + 1) * H // 32; x0 = cx * W // 32; x1 = (cx + 1) * W // 32
-            for y in range(y0, y1):
-                for x in range(x0, x1):
-                    r, g, b = src[x, y]
-                    if r > 140 and b > 140 and g < 120 and r > g * 1.25 and b > g * 1.25: continue
-                    if g >= b * 1.05 and g >= r * 0.70: rs += r; gs += g; bs += b; n += 1
-            cell = (y1 - y0) * (x1 - x0)
-            if n >= cell * 0.04: px[cx, cy] = (rs // n, gs // n, bs // n, 255)
-    return out
-master = key_magenta(V03GEN / 'tallgrass_long_master_v3.png')
-bbox = master.getbbox(); tile = Image.new('RGBA', (32, 32), (0, 0, 0, 0))
-if bbox:
-    crop = master.crop(bbox); scale = min(32 / crop.width, 18 / crop.height, 1.0)
-    nw = max(1, round(crop.width * scale)); nh = max(1, round(crop.height * scale))
-    crop = crop.resize((nw, nh), Image.Resampling.NEAREST); tile.paste(crop, ((32 - nw) // 2, 32 - nh), crop)
+# Tall grass: long (23-30 px), sparse individual blades; no dense bush / neon tips.
+def tallgrass_tile(seed):
+    rnd = random.Random(7100 + seed)
+    im = Image.new('RGBA', (32, 32), (0, 0, 0, 0)); px = im.load()
+    bases = [3.5, 8.0, 13.0, 18.0, 23.0, 28.0]
+    heights = [30, 25, 28, 23, 29, 26]
+    for bi, (bx, h) in enumerate(zip(bases, heights)):
+        bx += rnd.uniform(-1.0, 1.0); h += rnd.randint(-1, 1)
+        lean = rnd.uniform(-3.5, 3.5); curl = rnd.uniform(-1.2, 1.2)
+        dry = rnd.random() < 0.22
+        for step in range(h + 1):
+            t = step / h
+            x = bx + lean * (t ** 1.35) + math.sin(t * math.pi) * curl
+            y = 31 - step
+            xi = int(round(x))
+            if not (0 <= xi < 32 and 0 <= y < 32): continue
+            # natural green gradient, darker at the root; a few dry tips
+            r = int(30 + 58 * t); g = int(78 + 62 * t); b = int(30 + 26 * t)
+            if dry and t > 0.72:
+                r = int(r * 0.45 + 126 * 0.55); g = int(g * 0.45 + 118 * 0.55); b = int(b * 0.45 + 62 * 0.55)
+            a = 255 if step < h - 1 else 210
+            px[xi, y] = (clamp(r), clamp(g), clamp(b), a)
+            if step < 3 and xi + 1 < 32: px[xi + 1, y] = (clamp(r * 0.82), clamp(g * 0.82), clamp(b * 0.82), 230)
+        # tiny seed head on one blade, not a cluster
+        if bi == seed % 6:
+            tx = int(round(bx + lean)); ty = 31 - h
+            if 0 <= tx < 31 and 0 <= ty < 31:
+                px[tx, ty] = (132, 124, 70, 235); px[tx + 1, ty] = (118, 112, 62, 220)
+    return im
 orig = Image.open(IN / 'tallgrass_block_19.png').convert('RGBA'); out = orig.copy()
 for x in GUT:
     for y in range(32): out.putpixel((x, y), (0, 0, 0, 0))
 for i, off in enumerate(OFFS):
-    v = tile.copy()
+    v = tallgrass_tile(i)
     if i % 2: v = v.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
-    if i == 2: v = ImageEnhance.Brightness(v).enhance(1.04)
+    if i == 2: v = ImageEnhance.Brightness(v).enhance(1.03)
     if i == 3: v = ImageEnhance.Brightness(v).enhance(0.97)
     out.paste(v, (off, 0))
 out.save(PROC / 'tallgrass_block_19.png')
+# soften neon fringe on the grass block itself (keep accepted soil/clumps)
+gp = PROC / 'grass_block_18.png'; gim = Image.open(gp).convert('RGBA'); gpx = gim.load()
+for y in range(7):
+    for x in range(gim.width):
+        r, g, b, a = gpx[x, y]
+        if a and g > 100 and g > r * 1.25 and g > b * 1.25:
+            gpx[x, y] = (clamp(r * 0.35 + 64 * 0.65), clamp(g * 0.35 + 122 * 0.65), clamp(b * 0.35 + 48 * 0.65), a)
+gim.save(gp)
 
 # Materials
 stone_base = native(V03GEN / 'natural_stone_master_v3.png', 24, 0.90, 0.86, 0.35)
@@ -143,10 +169,68 @@ leaf_big = ImageEnhance.Brightness(leaf_big).enhance(0.92)
 strip('clay_block_17', clay_base, 17)
 strip('wood_block_29', planks_base, 29)
 strip('wood_planks_block_114', planks_base, 114)
-# walls: darker background variants
-strip('wall_stone_4', ImageEnhance.Brightness(stone_base).enhance(0.72), 4)
-strip('wall_dirt_5', ImageEnhance.Brightness(dirt.crop((0, 0, 32, 32)).convert('RGB')).enhance(0.78), 5)
-strip('wall_wood_6', ImageEnhance.Brightness(planks_base).enhance(0.80), 6)
+# Background walls: dedicated flat backdrop materials, NOT darkened foreground blocks.
+# Low relief / low contrast so placed walls read as background, with real masonry / board structure.
+def wall_stone_tile(seed=0):
+    rnd = random.Random(8200 + seed); im = Image.new('RGB', (32, 32)); px = im.load()
+    shades = [(78, 80, 84), (72, 74, 78), (84, 86, 89), (68, 70, 74)]
+    for y in range(32):
+        row = y // 8; off = 8 if row % 2 else 0; by = y % 8
+        for x in range(32):
+            xx = (x + off) % 32; bx = xx % 16
+            if by == 0 or bx == 0:
+                c = (46, 48, 52)
+            else:
+                bid = (xx // 16 + row * 2) % 4; base = shades[bid]
+                n = rnd.randint(-3, 3); c = tuple(clamp(v + n) for v in base)
+                if by == 1 or bx == 1: c = tuple(clamp(v + 9) for v in c)
+                if by == 7 or bx == 15: c = tuple(clamp(v - 10) for v in c)
+            px[x, y] = c
+    return im
+
+def wall_dirt_tile(seed=0):
+    rnd = random.Random(8300 + seed); im = Image.new('RGB', (32, 32)); px = im.load()
+    for y in range(32):
+        band = -7 if y % 8 == 0 else (-3 if y % 8 == 1 else 0)
+        for x in range(32):
+            n = rnd.randint(-4, 4)
+            px[x, y] = (clamp(88 + n + band), clamp(66 + n + band), clamp(48 + n + band))
+    # sparse embedded pebbles / roots, wrapped so the tile repeats cleanly
+    for _ in range(14):
+        x = rnd.randrange(32); y = rnd.randrange(32); w = rnd.choice((2, 3)); dark = rnd.random() < 0.6
+        for dx in range(w):
+            for dy in range(2):
+                c = px[(x + dx) % 32, (y + dy) % 32]
+                d = -14 if dark else 12
+                px[(x + dx) % 32, (y + dy) % 32] = tuple(clamp(v + d) for v in c)
+    return im
+
+def wall_wood_tile(seed=0):
+    rnd = random.Random(8400 + seed); im = Image.new('RGB', (32, 32)); px = im.load()
+    for y in range(32):
+        row = y // 8; off = 8 if row % 2 else 0; by = y % 8
+        for x in range(32):
+            xx = (x + off) % 32; bx = xx % 16
+            grain = int(3 * math.sin((x + seed) * 0.9 + row) + 2 * math.sin(x * 0.23))
+            if by == 0 or bx == 0:
+                c = (52, 38, 27)
+            else:
+                base = (98 + grain, 73 + grain, 51 + grain)
+                if by == 1: base = tuple(clamp(v + 8) for v in base)
+                if by == 7: base = tuple(clamp(v - 9) for v in base)
+                c = base
+            px[x, y] = c
+    # small square nails at staggered board joints
+    for row in range(4):
+        off = 8 if row % 2 else 0
+        for j in (1, 17):
+            x = (j + off) % 32; y = row * 8 + 4
+            px[x, y] = (40, 32, 24); px[(x + 1) % 32, y] = (122, 98, 72)
+    return im
+
+strip('wall_stone_4', wall_stone_tile(4), 4)
+strip('wall_dirt_5', wall_dirt_tile(5), 5)
+strip('wall_wood_6', wall_wood_tile(6), 6)
 
 def surface_for(big, size, seed):
     rnd = random.Random(9100 + seed); w, h = size
@@ -191,52 +275,69 @@ def edge_extend_gutters(im):
             elif down and down[3]: px[x, y] = down
     return out
 
-# Tree trunk: seamless bark tile per cell + edge-extended gutters.
+# Unified bark: one desaturated brown palette for trunk, branches and crown bases.
+# The old branch pass kept the original orange hue; here every bark pixel is remapped
+# through the same ramp, while original shading / contours / knots are preserved.
+BARK_RAMP = [(34, 25, 20), (48, 36, 28), (66, 50, 38), (86, 66, 50), (108, 84, 64)]
+def ramp_color(t, ramp=BARK_RAMP):
+    t = max(0.0, min(1.0, t)) * (len(ramp) - 1)
+    i = min(len(ramp) - 2, int(t)); f = t - i
+    a, b = ramp[i], ramp[i + 1]
+    return tuple(clamp(a[k] * (1 - f) + b[k] * f) for k in range(3))
+
+def classify_tree_pixel(r, g, b):
+    h, s, v = colorsys.rgb_to_hsv(r / 255, g / 255, b / 255); h *= 360
+    if (h < 18 or h > 345) and s > 0.45 and v > 0.35 and r > 105: return 'apple'
+    if 38 <= h <= 170 and s > 0.14 and v > 0.10: return 'leaf'
+    return 'bark'
+
+def bark_pixel(x, y, L, detail, seed, vertical=False):
+    if vertical:
+        grain = 0.45 * math.sin((x * 2 * math.pi) / 8 + math.sin(y * 2 * math.pi / 32) * 0.7) + 0.25 * math.sin((x * 2 * math.pi) / 3 + y * 0.02)
+    else:
+        grain = 0.35 * math.sin(x * 0.33 + y * 0.11 + seed) + 0.25 * math.sin(x * 0.10 - y * 0.41 + seed * 0.7)
+    t = 0.18 + 0.58 * (L / 255) + 0.10 * (detail / 32) + 0.055 * grain
+    return ramp_color(t)
+
+# Tree trunk: seamless 32px bark, no pale cut band at vertical joints.
 trunk_orig = Image.open(IN / 'tree_trunk_26.png').convert('RGBA')
 trunk = trunk_orig.copy(); tp = trunk.load()
+trunk_light, trunk_mean = smooth_light(trunk_orig, 3.0)
+trunk_gray = ImageOps.grayscale(trunk_orig.convert('RGB')).load()
 for row in range(6):
     for col in range(4):
         ox = col * 33; oy = row * 33
-        shift = (col * 7 + row * 3) % 32
         for y in range(32):
             for x in range(32):
                 r, g, b, a = trunk_orig.getpixel((ox + x, oy + y))
                 if a == 0: continue
-                sr, sg, sb = bark_tile.getpixel(((x + shift) % 32, y))
-                L = lum(r, g, b)
-                f = 0.72 + 0.40 * (L / 255)
-                nr, ng, nb = sr * f, sg * f, sb * f
-                # pale cut rings / fresh wood
-                if L > 150 and r > 160 and g > 110 and r > b * 1.15:
-                    nr = nr * 0.30 + 205 * 0.70; ng = ng * 0.30 + 172 * 0.70; nb = nb * 0.30 + 126 * 0.70
-                tp[ox + x, oy + y] = (clamp(nr), clamp(ng), clamp(nb), a)
+                L = lum(r, g, b); detail = trunk_gray[ox + x, oy + y] - trunk_light[ox + x, oy + y]
+                shade = 0.82 + 0.30 * (trunk_light[ox + x, oy + y] / trunk_mean)
+                c = bark_pixel(x, y, L * shade, detail, col, vertical=True)
+                tp[ox + x, oy + y] = (*c, a)
 trunk = edge_extend_gutters(trunk)
 trunk.save(PROC / 'tree_trunk_26.png')
 
 def retexture_sprite(name, seed=0):
     im = Image.open(IN / f'{name}.png').convert('RGBA'); out = im.copy(); px = out.load()
     leaf_px = surface_for(leaf_big, im.size, seed)
-    bark_px = surface_for(bark_big, im.size, seed + 101)
-    light, mean = smooth_light(im, 5.0)
+    light, mean = smooth_light(im, 4.0)
+    gray = ImageOps.grayscale(im.convert('RGB')).load()
     for y in range(im.height):
         for x in range(im.width):
             r, g, b, a = im.getpixel((x, y))
             if a == 0: continue
-            L = lum(r, g, b)
-            is_apple = r > 110 and r > g * 1.35 and r > b * 1.35 and g < 130
-            is_green = (g > r * 1.02 and g > b * 1.02) or (g >= r and g >= b and g > 35 and b < 160)
-            f = max(0.62, min(1.18, 0.86 + 0.30 * (light[x, y] / mean - 1.0)))
-            if is_apple:
-                px[x, y] = (clamp(r * 1.05 + 4), clamp(g * 0.97), clamp(b * 0.97), a)
-            elif is_green:
+            kind = classify_tree_pixel(r, g, b)
+            L = lum(r, g, b); detail = gray[x, y] - light[x, y]
+            f = max(0.66, min(1.16, 0.88 + 0.26 * (light[x, y] / mean - 1.0)))
+            if kind == 'apple':
+                px[x, y] = (clamp(r * 1.04 + 3), clamp(g * 0.98), clamp(b * 0.98), a)
+            elif kind == 'leaf':
                 sr, sg, sb = leaf_px[x, y]
                 px[x, y] = (clamp(sr * f), clamp(sg * f), clamp(sb * f), a)
             else:
-                sr, sg, sb = bark_px[x, y]
-                nr, ng, nb = sr * f * 0.75 + 90 * 0.25, sg * f * 0.75 + 66 * 0.25, sb * f * 0.75 + 46 * 0.25
-                if L > 150 and r > 160 and g > 110 and r > b * 1.15:
-                    nr = nr * 0.35 + 205 * 0.65; ng = ng * 0.35 + 172 * 0.65; nb = nb * 0.35 + 126 * 0.65
-                px[x, y] = (clamp(nr), clamp(ng), clamp(nb), a)
+                c = bark_pixel(x, y, L, detail, seed)
+                px[x, y] = (*c, a)
     out = edge_extend_gutters(out)
     out.save(PROC / f'{name}.png'); return out
 
@@ -373,18 +474,36 @@ for name in ['wall_dirt_icon_atlas_5', 'wall_dirt_icon_ui_5']:
     im = Image.open(IN / f'{name}.png').convert('RGBA'); alpha = im.getchannel('A')
     out = wt.resize(im.size, Image.Resampling.LANCZOS).convert('RGBA'); out.putalpha(alpha); out.save(PROC / f'{name}.png')
 
-# Worn wooden armor frames: recolor with armor surface, preserve alpha/shading.
+# Worn wooden armor: keep the ORIGINAL hand-drawn plates / straps / grain / silhouettes.
+# The previous procedural wood overlay flattened all of that detail. Only a mild material
+# grade + unsharp is applied, so the equipped armor matches the quality of the original art.
+def grade_armor(im):
+    im = im.convert('RGBA'); alpha = im.getchannel('A')
+    rgb = im.convert('RGB')
+    # Walnut grade: visibly cooler/darker than the original orange wood, but the
+    # original hand-drawn plates / straps / grain / silhouettes are fully preserved.
+    rgb = ImageEnhance.Color(rgb).enhance(0.72)
+    rgb = ImageEnhance.Contrast(rgb).enhance(1.20)
+    rgb = ImageEnhance.Brightness(rgb).enhance(0.94)
+    rgb = rgb.filter(ImageFilter.UnsharpMask(radius=1.0, percent=100, threshold=2))
+    px = rgb.load()
+    for y in range(rgb.height):
+        for x in range(rgb.width):
+            r, g, b = px[x, y]; px[x, y] = (clamp(r), clamp(g * 0.97), clamp(b * 0.92))
+    out = rgb.convert('RGBA'); out.putalpha(alpha); return out
 for p in sorted(IN.glob('armor_*.png')):
-    im = Image.open(p).convert('RGBA'); out = im.copy(); px = out.load()
-    surf = surface_for(armor_big, im.size, int(hashlib.md5(p.stem.encode()).hexdigest()[:8], 16) % 10000)
-    for y in range(im.height):
-        for x in range(im.width):
-            r, g, b, a = im.getpixel((x, y))
-            if a == 0: continue
-            L = lum(r, g, b); f = max(0.55, min(1.25, 0.78 + 0.42 * (L / 255)))
-            sr, sg, sb = surf[x, y]
-            px[x, y] = (clamp(sr * f), clamp(sg * f), clamp(sb * f), a)
-    out.save(PROC / f'{p.stem}.png')
+    grade_armor(Image.open(p)).save(PROC / f'{p.stem}.png')
+# armor icons: same detail-preserving grade (do NOT run the generic surface recolorer)
+for n in ['wooden_helmet_icon_atlas_1208', 'wooden_helmet_icon_ui_1208',
+          'wooden_chainmail_icon_atlas_1209', 'wooden_chainmail_icon_ui_1209',
+          'wooden_greaves_icon_atlas_1215', 'wooden_greaves_icon_ui_1215']:
+    grade_armor(Image.open(IN / f'{n}.png')).save(PROC / f'{n}.png')
+# wall icons must match the new dedicated wall tiles, not the foreground materials
+for mat, cid in [('stone', 4), ('dirt', 5), ('wood', 6)]:
+    wt = Image.open(PROC / f'wall_{mat}_{cid}.png').crop((0, 0, 32, 32))
+    for n in [f'wall_{mat}_icon_atlas_{cid}', f'wall_{mat}_icon_ui_{cid}']:
+        im = Image.open(IN / f'{n}.png').convert('RGBA'); alpha = im.getchannel('A')
+        o = wt.resize(im.size, Image.Resampling.LANCZOS).convert('RGBA'); o.putalpha(alpha); o.save(PROC / f'{n}.png')
 
 # Particles
 def palette(im):
@@ -466,6 +585,64 @@ for idx, name in enumerate(icon_names):
     bg = Image.new('RGBA', big.size, (60, 64, 72, 255)); bg.alpha_composite(big); sheet.paste(bg.convert('RGB'), (x + 12, y + 20))
 sheet.save(PREV / 'icons-v04.png')
 
+# --- targeted verification for the v0.4 correction pass ---
+fixes = {'version': 'textures-v0.4-correction', 'trees': {}, 'armor': {}, 'grass': {}, 'walls': {}}
+orange_left = 0; bark_px_total = 0
+for i in [165, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186]:
+    im = Image.open(PROC / f'tree_branch_{i}.png').convert('RGBA'); bad = 0; tot = 0
+    for r, g, b, a in im.getdata():
+        if a < 128: continue
+        if classify_tree_pixel(r, g, b) != 'bark': continue
+        tot += 1
+        if r > 110 and r > g * 1.25 and r > b * 1.5: bad += 1
+    orange_left += bad; bark_px_total += tot
+fixes['trees'] = {'branch_bark_pixels': bark_px_total, 'old_orange_bark_pixels_left': orange_left,
+                  'unified_bark_ramp': BARK_RAMP, 'branch_ids': [165, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186]}
+assert orange_left == 0, f'orange bark left: {orange_left}'
+# armor: alpha must be identical and pixels close to original (detail preserved, not repainted)
+adiffs = []; amax = 0
+for p in sorted(IN.glob('armor_*.png')):
+    a = Image.open(p).convert('RGBA'); b = Image.open(PROC / p.name).convert('RGBA')
+    assert a.size == b.size and a.getchannel('A').tobytes() == b.getchannel('A').tobytes(), p.name
+    da = a.convert('RGB').tobytes(); db = b.convert('RGB').tobytes()
+    md = sum(abs(x - y) for x, y in zip(da, db)) / len(da); adiffs.append(md); amax = max(amax, md)
+fixes['armor'] = {'frames': len(adiffs), 'mean_abs_rgb_diff': round(sum(adiffs) / len(adiffs), 3), 'max_frame_mean_abs_diff': round(amax, 3),
+                  'standalone_worn_sheets': len(list(IN.glob('armor_standalone_*.png'))),
+                  'method': 'original artwork preserved; walnut color/contrast grade + unsharp; no procedural surface overlay; standalone worn sheets replaced'}
+assert amax < 24, amax
+# grass: taller + sparser than the previous 18px dense bush
+tg = Image.open(PROC / 'tallgrass_block_19.png').convert('RGBA'); heights = []; covers = []
+for off in OFFS:
+    cell = tg.crop((off, 0, off + 32, 32)); ys = [y for y in range(32) for x in range(32) if cell.getpixel((x, y))[3] > 40]
+    heights.append(32 - min(ys) if ys else 0); covers.append(round(len(ys) / 1024, 4))
+fixes['grass'] = {'blade_heights_px': heights, 'alpha_coverage_per_variant': covers, 'max_coverage': max(covers), 'min_height': min(heights)}
+assert min(heights) >= 23 and max(covers) < 0.24, fixes['grass']
+# walls: dedicated materials, lower luminance than foreground counterparts
+wall_ids = {'stone': 4, 'dirt': 5, 'wood': 6}
+for mat, fg in [('stone', 'stone_block_4'), ('dirt', 'dirt_block_14'), ('wood', 'wood_planks_block_114')]:
+    w = Image.open(PROC / f'wall_{mat}_{wall_ids[mat]}.png').convert('RGB')
+    f = Image.open(PROC / f'{fg}.png').convert('RGB')
+    wl = sum(lum(*p) for p in w.getdata()) / (w.width * w.height); fl = sum(lum(*p) for p in f.getdata()) / (f.width * f.height)
+    fixes['walls'][mat] = {'wall_mean_luma': round(wl, 2), 'foreground_mean_luma': round(fl, 2), 'darker_than_foreground': wl < fl}
+    assert wl < fl, mat
+(ROOT / 'verification/fixes-v04.json').write_text(json.dumps(fixes, indent=2))
+
+# correction previews: armor detail + dedicated walls
+anames = ['armor_male_armor_head_1208_0', 'armor_male_armor_body_1209_0', 'armor_male_armor_legs_1215_0', 'armor_male_armor_body_1209_5', 'armor_female_armor_body_1209_0', 'wooden_helmet_icon_ui_1208', 'wooden_chainmail_icon_ui_1209', 'wooden_greaves_icon_ui_1215']
+cw = 300; ch = 250; cols = 4; s = Image.new('RGB', (cw * cols, ch * 2), (24, 26, 30)); d = ImageDraw.Draw(s)
+for idx, n in enumerate(anames):
+    x = (idx % cols) * cw; y = (idx // cols) * ch; d.text((x + 6, y + 4), n + '  ORIG / v0.4', fill=(220, 220, 220))
+    for j, folder in enumerate([IN, PROC]):
+        im = Image.open(folder / f'{n}.png').convert('RGBA'); sc = min(130 / im.width, 190 / im.height, 8)
+        big = im.resize((max(1, int(im.width * sc)), max(1, int(im.height * sc))), Image.Resampling.NEAREST)
+        bg = Image.new('RGBA', big.size, (30, 55, 58, 255)); bg.alpha_composite(big); s.paste(bg.convert('RGB'), (x + j * 150 + (130 - big.width) //2, y + 28))
+s.save(PREV / 'armor-detail-v04.png')
+wnames = ['wall_stone_4', 'wall_dirt_5', 'wall_wood_6']; s = Image.new('RGB', (131 * 4 * 3, 32 * 4 * 3 + 60), (24, 26, 30)); d = ImageDraw.Draw(s)
+for idx, n in enumerate(wnames):
+    im = Image.open(PROC / f'{n}.png').convert('RGBA'); big = on_bg(im, (45, 51, 56, 255)).resize((131 * 4, 32 * 4), Image.Resampling.NEAREST)
+    y = idx * (32 * 4 + 20); d.text((6, y + 2), n, fill=(220, 220, 220)); s.paste(big.convert('RGB'), (0, y + 18))
+s.save(PREV / 'walls-v04.png')
+
 manifest = {'version': 'textures-v0.4', 'targets': len(targets['targets']), 'files': {p.name: {'sha256': sha(p), 'size': list(Image.open(p).size)} for p in PROC.glob('*.png')}}
 (ROOT / 'verification/processed.json').write_text(json.dumps(manifest, indent=2))
-print(json.dumps({'targets': manifest['targets'], 'files': len(manifest['files'])}))
+print(json.dumps({'targets': manifest['targets'], 'files': len(manifest['files']), 'fixes': fixes}))

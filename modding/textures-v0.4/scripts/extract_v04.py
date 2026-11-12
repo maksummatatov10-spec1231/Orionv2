@@ -27,8 +27,12 @@ swf=SWF.read_bytes(); ts=tags(zlib.decompress(swf[8:])); byid={}
 for code,data in ts:
  if code in (20,36) and len(data)>=7: byid[struct.unpack_from('<H',data,0)[0]]=(code,data)
 manifest={'source_swf_sha256':sha(swf),'targets':[]}
+decoded={}
+def decoded_image(cid):
+ if cid not in decoded: decoded[cid]=lossless(byid[cid][1])
+ return decoded[cid]
 def atlas(cid,xml,name,label):
- im=lossless(byid[cid][1]); r=E.parse(REPO/'analysis/binary'/f'binary-{xml}.xml').getroot()
+ im=decoded_image(cid); r=E.parse(REPO/'analysis/binary'/f'binary-{xml}.xml').getroot()
  e=next(e for e in r if e.get('name')==name); x,y,w,h=map(int,(e.get('x'),e.get('y'),e.get('width'),e.get('height')))
  c=im.crop((x,y,x+w,y+h)); p=OUT/f'{label}.png'; c.save(p)
  manifest['targets'].append({'kind':'atlas_rect','label':label,'atlas_char':cid,'xml_char':xml,'region':name,'x':x,'y':y,'w':w,'h':h,'path':str(p),'sha256':sha(p.read_bytes()),'alpha_extrema':c.getchannel('A').getextrema()})
@@ -69,6 +73,14 @@ for prefix in ['male_armor_head_1208','female_armor_head_1208','male_armor_body_
    key=(e.get('x'),e.get('y'),e.get('width'),e.get('height'))
    if key in seen: continue
    seen.add(key); atlas(1586,2071,n,f'armor_{n}')
+# Standalone embedded armor sheets: these, not the player-atlas frames, are loaded by
+# ResourceManager for the equipped character. IDs are verified against Images_*_CLASS.as.
+for cid, label in [
+    (1236, 'armor_standalone_male_head_1208'), (1511, 'armor_standalone_male_body_1209'),
+    (1217, 'armor_standalone_male_hand_1209'), (1314, 'armor_standalone_male_legs_1215'),
+    (1704, 'armor_standalone_female_head_1208'), (1294, 'armor_standalone_female_body_1209'),
+    (1661, 'armor_standalone_female_hand_1209'), (2136, 'armor_standalone_female_legs_1215')]:
+    image(cid, label)
 # Particles
 for name in ['hit_dirt','hit_stone','hit_plant','hit_sand','hit_wood','hit_leaves','hit_clay']:
  atlas(1501,1582,name,name)

@@ -1,0 +1,54 @@
+{
+  "input": "/tmp/orion-work/Orion Sandbox Enhanced/Orion.swf",
+  "output": "modding/textures-v0.1/build/Orion.mod.swf",
+  "input_sha256": "233befd6a79bb5c74624467fddcbba4ea2dccf0907a1315c9e816530e0e15313",
+  "output_sha256": "218c78226d6f2674c573f31a5991928eff85016c62ffc675dd2b14be0316a4aa",
+  "input_size": 62062024,
+  "output_size": 62072194,
+  "atlas_character_id": 1646,
+  "atlas_tag_code": 36,
+  "atlas_format": 5,
+  "atlas_size": [
+    1024,
+    2048
+  ],
+  "targets": [
+    {
+      "name": "block_14",
+      "label": "dirt",
+      "x": 637,
+      "y": 1311,
+      "w": 131,
+      "h": 32,
+      "original_sha256": "3e13db4c5713bbb2396de4cbafe73f3ab60b9b2a9ac7cc2e91b8f0eb6a6bf793",
+      "processed_sha256": "fee7ee96c346b6464f4ca53ab69b008af163019f274156e7cc6d003753e3a5a4",
+      "original_rect_exact": true
+    },
+    {
+      "name": "block_18",
+      "label": "grass",
+      "x": 832,
+      "y": 238,
+      "w": 131,
+      "h": 32,
+      "original_sha256": "2aacaa42df03bb69cb4c8df75996d9375de28c59e5d45fe0c312522ec55dfe21",
+      "processed_sha256": "d94250faa0ee0ec031c85dbee141be5bfc81eda356775bf9d4cee7c0dc122a6f",
+      "original_rect_exact": true
+    }
+  ],
+  "output_rects_exact": [
+    {
+      "name": "block_14",
+      "exact": true
+    },
+    {
+      "name": "block_18",
+      "exact": true
+    }
+  ],
+  "changed_atlas_bytes": 18448,
+  "atlas_outside_targets_identical": true,
+  "all_other_tags_identical": true,
+  "tag_count": 2307,
+  "method": "direct DefineBitsLossless2 ARGB rectangle replacement; opaque targets; no FFDec re-encode"
+}

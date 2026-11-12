@@ -25,3 +25,11 @@
 - `textures/ground/grass_block_18.png` — оригинальная земля с травой, `Block.GRASS`, `block_18`, 131×32.
 
 Источник: `Orion.swf` из `Orion Sandbox Enhanced.7z`, атлас `tiles`, characterId 1646, XML characterId 1987.
+
+## Текстуры v0.1
+
+- `textures/ground/v0.1/dirt_block_14.png` — новая земля без травы.
+- `textures/ground/v0.1/grass_block_18.png` — новая земля с травой.
+- `textures/ground/v0.1/before-after.png` — сравнение оригинал / v0.1.
+
+Тестовый SWF: `modding/textures-v0.1/build/Orion.mod.swf`.

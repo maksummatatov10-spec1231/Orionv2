@@ -1,0 +1,5 @@
+flashlog tail:
+TypeError: Error #1009: Cannot access a property or method of a null object reference.
+	at Main/init()
+	at Main()
+V05_VERIFY_READY tx=300 gy=49 rowY=48

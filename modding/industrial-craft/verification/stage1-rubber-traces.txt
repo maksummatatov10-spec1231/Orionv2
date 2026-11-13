@@ -1,0 +1,7 @@
+IC_RUBBER_READY id=1243 resin=1032 recipeResin=2
+IC_LOAD machines=3
+IC_RUBBER_TEST_PASS id=1243 resinId=1032 consumed=2 output=1 restored=true
+IC_SAVE machines=3
+IC_RUBBER_READY id=1243 resin=1032 recipeResin=2
+IC_LOAD machines=3
+IC_RUBBER_RELOAD_PASS count=2 resin=2

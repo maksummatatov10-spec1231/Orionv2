@@ -10,6 +10,8 @@ package {
  import flash.net.SharedObject;
  import orion.worlds.Item;
  import orion.worlds.Block;
+ import orion.worlds.Crafting;
+ import orion.worlds.Recipe;
  import orion.worlds.ItemStack;
  import orion.worlds.World;
  import orion.worlds.items.blocks.TreeItem;
@@ -37,6 +39,12 @@ package {
     if(MODE=="reload"){setTimeout(verifyReload,1200);return;}
     if(MODE=="resin"){setTimeout(verifyResin,1200);return;}
     if(MODE=="timing"){setTimeout(verifyTiming,1200);return;}
+    if(MODE=="rubber"){setTimeout(verifyRubber,1200);return;}
+    if(MODE=="rubber-reload"){
+     var count:int=C.game.player.inventory.count(B.RUBBER);
+     trace("IC_RUBBER_RELOAD_"+(count>=2?"PASS":"FAIL")+" count="+count+" resin="+C.game.player.inventory.count(Item.RESIN));
+     return;
+    }
     // Test-only grant and site preparation. Not present in dev/release content.
     var gy:int=py;for(var yy:int=py;yy<py+12;yy++){var t:* =w.tiles[px+yy*w.tilesX];if(t.blockId!=0 && Block.BLOCKS[t.blockId].hard){gy=yy;break;}}
     mx=px+2;my=gy-1;bx=mx+3;by=my;
@@ -63,6 +71,22 @@ package {
     s.running=false;storeExpected(s);
     C.game.showInventory_Crafting(1);trace("IC_TEST_OPEN_WORKBENCH");
    } catch(e:Error){trace("IC_TEST_INSPECT_ERROR "+e.name+" "+e.message+"\n"+e.getStackTrace());}
+  }
+  private static function verifyRubber():void {
+   try {
+    var C:* =getDefinitionByName("Context");var B:* =getDefinitionByName("industrialcraft.ContentRegistry");
+    var inv:* =C.game.player.inventory;var recipe:Recipe=null;
+    for each(var r:Recipe in Recipe.DECORS)if(r.craftedItem.item==B.RUBBER){recipe=r;break;}
+    if(recipe==null){trace("IC_RUBBER_TEST_FAIL no recipe");return;}
+    inv.add(new ItemStack(Item.RESIN,0,2));var before:int=inv.count(Item.RESIN);
+    var allowed:Boolean=Crafting.canCraftItem(recipe.ingredients);
+    var result:ItemStack=Crafting.craftItem(recipe.ingredients,recipe.craftedItem);
+    var remaining:int=inv.count(Item.RESIN);
+    var buf:ByteArray=new ByteArray();ItemStack.save(buf,result);buf.position=0;var restored:ItemStack=ItemStack.load(buf);
+    var ok:Boolean=allowed&&result.item==B.RUBBER&&restored.item==B.RUBBER&&result.count==1&&before-remaining==2&&B.RUBBER!=Item.RESIN&&B.RUBBER.texture!=null;
+    trace("IC_RUBBER_TEST_"+(ok?"PASS":"FAIL")+" id="+B.RUBBER.id+" resinId="+Item.RESIN.id+" consumed="+(before-remaining)+" output="+result.count+" restored="+(restored.item==B.RUBBER));
+    inv.add(result);C.game.showInventory_Crafting(1);
+   } catch(e:Error){trace("IC_RUBBER_TEST_ERROR "+e.name+" "+e.message+"\n"+e.getStackTrace());}
   }
   private static function verifyTiming():void {
    try {

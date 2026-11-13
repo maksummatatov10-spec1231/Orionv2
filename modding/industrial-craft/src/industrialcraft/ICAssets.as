@@ -1,7 +1,19 @@
 package industrialcraft {
  import flash.display.BitmapData;
+ import flash.display.Shape;
  import flash.geom.Rectangle;
  public final class ICAssets {
+  public static function rubberIcon():BitmapData {
+   // BitmapData used by inventory; the atlas contains the matching world icon.
+   var b:BitmapData=new BitmapData(32,32,true,0);
+   var s:flash.display.Shape=new flash.display.Shape();
+   s.graphics.beginFill(0x12191a);s.graphics.drawEllipse(4,5,24,23);s.graphics.endFill();
+   s.graphics.beginFill(0x394c4d);s.graphics.drawEllipse(6,6,20,19);s.graphics.endFill();
+   s.graphics.beginFill(0x637a77);s.graphics.drawEllipse(9,9,14,13);s.graphics.endFill();
+   s.graphics.beginFill(0x12191a);s.graphics.drawEllipse(11,10,10,11);s.graphics.endFill();
+   b.draw(s);b.fillRect(new Rectangle(13,12,6,6),0);b.fillRect(new Rectangle(9,8,8,2),0xff95aba1);
+   return b;
+  }
   public static function probeIcon():BitmapData {
    var b:BitmapData=new BitmapData(32,32,true,0);
    var dark:uint=0xff2b1d18, wood:uint=0xff84532d, light:uint=0xffb87c41, brass:uint=0xffc59146, hi:uint=0xffefbe63;

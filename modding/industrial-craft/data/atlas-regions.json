@@ -2,6 +2,15 @@
   "regions": [
     {
       "atlas": "items",
+      "name": "item_1243",
+      "x": 49,
+      "y": 556,
+      "w": 32,
+      "h": 32,
+      "file": "icons/rubber.png"
+    },
+    {
+      "atlas": "items",
       "name": "item_1242",
       "x": 16,
       "y": 760,

@@ -22,6 +22,17 @@ def icon_probe():
  d.rectangle((12,3,12,5),fill=PAL['brass']);d.rectangle((19,3,19,5),fill=PAL['brass'])
  return im
 
+def icon_rubber():
+ # A dark rubber ring, visibly different from Orion's amber resin.
+ im=Image.new('RGBA',(32,32));d=ImageDraw.Draw(im)
+ d.ellipse((4,5,27,27),fill=(18,25,26,255))
+ d.ellipse((6,6,25,24),fill=(57,76,77,255))
+ d.ellipse((9,9,22,21),fill=(99,122,119,255))
+ d.ellipse((11,10,20,20),fill=(18,25,26,255))
+ d.ellipse((12,11,19,19),fill=(0,0,0,0))
+ d.line((8,10,11,7,18,7),fill=(149,171,161,255),width=2)
+ return im
+
 def block_probe():
  im=Image.new('RGBA',(32,32));d=ImageDraw.Draw(im)
  d.rectangle((1,3,30,31),fill=PAL['outline']);d.rectangle((3,2,28,4),fill=PAL['outline'])
@@ -47,9 +58,10 @@ def block_probe_sheet():
 
 def main():
  (OUT/'icons').mkdir(parents=True,exist_ok=True);(OUT/'blocks').mkdir(parents=True,exist_ok=True)
- icon_probe().save(OUT/'icons/probe.png');block_probe_sheet().save(OUT/'blocks/probe.png')
+ icon_probe().save(OUT/'icons/probe.png');icon_rubber().save(OUT/'icons/rubber.png');block_probe_sheet().save(OUT/'blocks/probe.png')
  # Atlas placement is checked against every original region, with a 2px gutter.
- regions=[{'atlas':'items','name':'item_1242','x':16,'y':760,'w':32,'h':32,'file':'icons/probe.png'},
+ regions=[{'atlas':'items','name':'item_1243','x':49,'y':556,'w':32,'h':32,'file':'icons/rubber.png'},
+          {'atlas':'items','name':'item_1242','x':16,'y':760,'w':32,'h':32,'file':'icons/probe.png'},
           {'atlas':'items','name':'item_495','x':64,'y':760,'w':32,'h':32,'file':'icons/probe.png'},
           {'atlas':'tiles','name':'block_239','x':989,'y':1632,'w':32,'h':98,'file':'blocks/probe.png'}]
  data=json.loads((ROOT/'data/atlas-regions.json').read_text()) if (ROOT/'data/atlas-regions.json').exists() else {}

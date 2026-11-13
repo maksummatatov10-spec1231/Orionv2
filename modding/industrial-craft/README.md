@@ -4,7 +4,9 @@ Technical foundation mod for Orion Sandbox Enhanced, built on the accepted textu
 Patch `0.1.1-stage0` fixes the tree-resin drop and the Russian item name ("Смола",
 not "Резина") — see `verification/RESIN_FIX.md`. The subsequent stage-0 machine
 texture, animation, timing and panel hotfix is documented in
-`verification/MACHINE_FIX.md`; stage 1 and hostile-mob pathfinding are not yet included.
+`verification/MACHINE_FIX.md`. Stage 1 is in progress: an experimental separate
+rubber item and recipe are in `verification/STAGE1_RUBBER_PREVIEW.md`; copper and
+other components are not yet included. Hostile-mob pathfinding is unchanged.
 
 - `src/industrialcraft/` — AS3 mod code (content registry, machine manager/state, block/item, panel UI, bootstrap).
 - `data/` — content and atlas-region metadata.

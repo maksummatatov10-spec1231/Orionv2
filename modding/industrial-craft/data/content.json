@@ -2,10 +2,57 @@
   "modVersion": "0.1.1-stage0",
   "saveFormatVersion": 1,
   "items": [
-    {"key": "ic:probe", "id": 1242, "nameRu": "Калибровочный модуль", "descriptionRu": "Технический предмет этапа 0. Проверяет реестр, иконку и сохранение.", "icon": "probe"},
-    {"key": "ic:probe_block", "id": 495, "blockId": 239, "nameRu": "Калибровочный станок", "descriptionRu": "Простейший механизм: смола → калибровочный модуль за 5 секунд.", "icon": "probe"}
+    {
+      "key": "ic:probe",
+      "id": 1242,
+      "nameRu": "Калибровочный модуль",
+      "descriptionRu": "Технический предмет этапа 0. Проверяет реестр, иконку и сохранение.",
+      "icon": "probe"
+    },
+    {
+      "key": "ic:probe_block",
+      "id": 495,
+      "blockId": 239,
+      "nameRu": "Калибровочный станок",
+      "descriptionRu": "Простейший механизм: смола → калибровочный модуль за 5 секунд.",
+      "icon": "probe"
+    },
+    {
+      "key": "ic:rubber",
+      "id": 1243,
+      "nameRu": "Резина",
+      "descriptionRu": "Материал из древесной смолы. Основа будущей изоляции проводов.",
+      "icon": "rubber"
+    }
   ],
   "recipes": [
-    {"category": "decors", "utility": "workbench", "output": "ic:probe_block", "count": 1, "ingredients": [{"item": "orion:cobblestone", "count": 4}, {"item": "orion:resin", "count": 1}]}
+    {
+      "category": "decors",
+      "utility": "workbench",
+      "output": "ic:probe_block",
+      "count": 1,
+      "ingredients": [
+        {
+          "item": "orion:cobblestone",
+          "count": 4
+        },
+        {
+          "item": "orion:resin",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "category": "decors",
+      "utility": "workbench",
+      "output": "ic:rubber",
+      "count": 1,
+      "ingredients": [
+        {
+          "item": "orion:resin",
+          "count": 2
+        }
+      ]
+    }
   ]
 }

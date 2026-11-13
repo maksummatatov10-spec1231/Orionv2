@@ -8,7 +8,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parent))
 from abc_utils import parse_tags,encode_tag
 ROOT=Path(__file__).resolve().parents[1]
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--mode',choices=['setup','reload','resin','timing'],required=True);ap.add_argument('--java',default='/tmp/orionjdk/jdk4py/java-runtime/bin/java');ap.add_argument('--asc',default='/tmp/orion-tools/asc/asc.jar');ap.add_argument('--game-abc',default='/tmp/ic-stage0/frame2.abc');args=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--mode',choices=['setup','reload','resin','timing','rubber','rubber-reload'],required=True);ap.add_argument('--java',default='/tmp/orionjdk/jdk4py/java-runtime/bin/java');ap.add_argument('--asc',default='/tmp/orion-tools/asc/asc.jar');ap.add_argument('--game-abc',default='/tmp/ic-stage0/frame2.abc');args=ap.parse_args()
  test=ROOT/'build/test';test.mkdir(parents=True,exist_ok=True)
  src=test/'Stage0Probe.as';src.write_text((ROOT/'verification/Stage0Probe.as').read_text().replace('__MODE__',args.mode))
  cmd=[args.java,'-jar',args.asc,'-AS3','-md','-strict']

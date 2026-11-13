@@ -1,0 +1,11 @@
+IC_TEST_STORAGE flushed
+IC_LOAD machines=3
+IC_TEST_ID_AUDIT freeItemsBefore=3661 freeBlocksBefore=23 blockRanges=77-77,130-131,136-136,139-140,157-157,240-255
+IC_TEST_RELOAD_PASS x=302 y=48 progress=1 completed=1 running=false input=1 output=1
+IC_SAVE machines=3
+IC_LOAD machines=3
+IC_TEST_FULL_SAVE count=3
+IC_SAVE machines=3
+IC_LOAD machines=3
+IC_TEST_PARTIAL_SAVE count=3
+IC_PANEL_OPEN 302,48

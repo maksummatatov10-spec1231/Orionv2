@@ -1,0 +1,52 @@
+[
+  {
+    "class": "orion.worlds.World",
+    "method": "saveAdditional_v1",
+    "calls": "industrialcraft.IndustrialCraftBootstrap.saveWorld",
+    "original_code_sha256": "a968960b201420953c59656517f78c74a88e3e2aebf37839d8e70f6e531134c4",
+    "patched_code_sha256": "433069325cdb4a383452c74362b7e52d4e6d3a0cea4d304283af66da18385f1b",
+    "original_body_size": 12,
+    "patched_body_size": 21,
+    "mode": "replace_empty"
+  },
+  {
+    "class": "orion.worlds.World",
+    "method": "loadAdditional_v1",
+    "calls": "industrialcraft.IndustrialCraftBootstrap.loadWorld",
+    "original_code_sha256": "a968960b201420953c59656517f78c74a88e3e2aebf37839d8e70f6e531134c4",
+    "patched_code_sha256": "b3da6c06c18974f1af960cfb8f65f0f96350c73c3d942ab8f452fe9af22514a8",
+    "original_body_size": 12,
+    "patched_body_size": 21,
+    "mode": "replace_empty"
+  },
+  {
+    "class": "orion.worlds.earth.EarthWorld",
+    "method": "saveAdditional_v1",
+    "calls": "industrialcraft.IndustrialCraftBootstrap.saveWorld",
+    "original_code_sha256": "ff92c2492091bc54be0d288dde748324b1dbe22f8cf965f0275b65aed9f85e00",
+    "patched_code_sha256": "a3a862a099c1c10a69bedc951f6ac01d718b376afa15312359c1f1e66ab86040",
+    "original_body_size": 56,
+    "patched_body_size": 65,
+    "mode": "append"
+  },
+  {
+    "class": "orion.worlds.earth.EarthWorld",
+    "method": "loadAdditional_v1",
+    "calls": "industrialcraft.IndustrialCraftBootstrap.loadWorld",
+    "original_code_sha256": "f670ed2653c8e118b682303982ff4f44a4992f98aff4e13ccced52117036ea64",
+    "patched_code_sha256": "42ee01afc623dc47c626ef949b55fc0165bb66647274d3c6aae4a05ebf1a672f",
+    "original_body_size": 55,
+    "patched_body_size": 64,
+    "mode": "append"
+  },
+  {
+    "class": "orion.GameProcess",
+    "method": "initStatic",
+    "calls": "industrialcraft.IndustrialCraftBootstrap.install",
+    "original_code_sha256": "566817ac353e355c1d401128fb5a0d89af69beec0c67d5e214bfc0f68ba91d70",
+    "patched_code_sha256": "404df2ba7625f26c6a6a29bc6d6331d2a2454ca900ca436a30d6dec2db6af1bd",
+    "original_body_size": 86,
+    "patched_body_size": 93,
+    "mode": "append"
+  }
+]

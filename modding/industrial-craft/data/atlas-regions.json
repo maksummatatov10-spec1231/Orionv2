@@ -1,0 +1,31 @@
+{
+  "regions": [
+    {
+      "atlas": "items",
+      "name": "item_1242",
+      "x": 16,
+      "y": 760,
+      "w": 32,
+      "h": 32,
+      "file": "icons/probe.png"
+    },
+    {
+      "atlas": "items",
+      "name": "item_495",
+      "x": 64,
+      "y": 760,
+      "w": 32,
+      "h": 32,
+      "file": "icons/probe.png"
+    },
+    {
+      "atlas": "tiles",
+      "name": "block_239",
+      "x": 972,
+      "y": 1682,
+      "w": 32,
+      "h": 32,
+      "file": "blocks/probe.png"
+    }
+  ]
+}

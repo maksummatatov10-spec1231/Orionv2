@@ -1,0 +1,52 @@
+{
+  "input": "/home/user/Orionv2/modding/textures-v0.5/build/Orion.mod.swf",
+  "output": "/home/user/Orionv2/modding/industrial-craft/build/Orion.ic-dev.swf",
+  "input_sha256": "12ee72d5acf5cc9ef5f48dc4566636a5f2ed2faed2c64efd8fe08dc4ae55940a",
+  "output_sha256": "df3330318160eccee4820efde1eed46811f78a352c3d5a1a73d15af51726440c",
+  "input_size": 62465568,
+  "output_size": 62473993,
+  "changes": [
+    {
+      "kind": "atlas_image",
+      "char": 1476,
+      "regions": 2
+    },
+    {
+      "kind": "atlas_xml",
+      "char": 2045,
+      "added": [
+        "item_1242",
+        "item_495"
+      ]
+    },
+    {
+      "kind": "atlas_image",
+      "char": 1646,
+      "regions": 1
+    },
+    {
+      "kind": "atlas_xml",
+      "char": 1987,
+      "added": [
+        "block_239"
+      ]
+    },
+    {
+      "kind": "replace_abc",
+      "name": "frame2"
+    },
+    {
+      "kind": "append_abc_after_frame2",
+      "name": "industrialcraft"
+    }
+  ],
+  "air_stubs": false,
+  "test_give": false,
+  "save_hooks": [
+    "World.saveAdditional_v1",
+    "World.loadAdditional_v1",
+    "EarthWorld.saveAdditional_v1",
+    "EarthWorld.loadAdditional_v1"
+  ],
+  "content_hook": "GameProcess.initStatic"
+}

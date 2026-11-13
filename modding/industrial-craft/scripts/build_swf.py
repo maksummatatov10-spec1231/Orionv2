@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Build IC dev SWF from accepted v0.5 texture base.
 
-Changes: two atlas images, their XML metadata, frame2 ABC hooks, appended mod ABC.
-AIR stubs and verification bootstrap are deliberately not included.
+Changes: two atlas images, their XML metadata, reviewed localization overrides,
+frame2 ABC hooks and appended mod ABC. AIR stubs and test grants are not included.
 """
 from pathlib import Path
 import argparse,hashlib,json,struct,zlib,sys
@@ -51,6 +51,23 @@ def main():
    node=f'    <SubTexture name="{r["name"]}" x="{r["x"]}" y="{r["y"]}" width="{r["w"]}" height="{r["h"]}"/>\n'
    xml=xml.replace('</TextureAtlas>',node+'</TextureAtlas>')
   replacements[xml_cid[atlas]]=encode_tag(87,xt['data'][:6]+xml.encode());changed.append({'kind':'atlas_xml','char':xml_cid[atlas],'added':[r['name'] for r in rs]})
+ # Patch only reviewed JSON string values. Keep every unrelated dictionary byte,
+ # validate the expected source text, and prove that no other keys changed.
+ localization=json.loads((ROOT/'data/localization.json').read_text())
+ for dictionary in localization['dictionaries']:
+  cid=dictionary['char'];lt=next(t for t in tags if t['code']==87 and struct.unpack_from('<H',t['data'],0)[0]==cid)
+  raw=lt['data'][6:];before=json.loads(raw);updated=raw;keys=[]
+  for rule in dictionary['replacements']:
+   key=rule['key'];expected=rule['expected'];value=rule['value']
+   if key not in before or before[key]!=expected:raise ValueError(('localization source mismatch',cid,key,before.get(key),expected))
+   needle=(json.dumps(key,ensure_ascii=False)+': '+json.dumps(expected,ensure_ascii=False)).encode()
+   replacement=(json.dumps(key,ensure_ascii=False)+': '+json.dumps(value,ensure_ascii=False)).encode()
+   if updated.count(needle)!=1:raise ValueError(('ambiguous localization value',cid,key,updated.count(needle)))
+   updated=updated.replace(needle,replacement);keys.append(key)
+  after=json.loads(updated)
+  if set(before)!=set(after) or {k for k in before if before[k]!=after[k]}!=set(keys):raise ValueError(('unexpected localization changes',cid))
+  replacements[cid]=encode_tag(87,lt['data'][:6]+updated)
+  changed.append({'kind':'localization','char':cid,'language':dictionary['language'],'changed':{k:{'from':before[k],'to':after[k]} for k in keys}})
  hooked=(ROOT/'build/frame2-hooked.abc').read_bytes();mod=(ROOT/'build/IndustrialCraft.abc').read_bytes()
  parts=[];last=0;abc_inserted=False
  for t in tags:
@@ -61,6 +78,6 @@ def main():
   if t['code']==82 and t['data'][4:].split(b'\0',1)[0]==b'frame2' and not abc_inserted:
    parts.append(encode_tag(82,struct.pack('<I',0)+b'industrialcraft\0'+mod));abc_inserted=True;changed.append({'kind':'append_abc_after_frame2','name':'industrialcraft'})
  parts.append(body[last:]);nb=b''.join(parts);result=b'CWS'+swf[3:4]+struct.pack('<I',8+len(nb))+zlib.compress(nb,9);out.write_bytes(result)
- report={'input':str(src),'output':str(out),'input_sha256':sha(swf),'output_sha256':sha(result),'input_size':len(swf),'output_size':len(result),'changes':changed,'air_stubs':False,'test_give':False,'save_hooks':['World.saveAdditional_v1','World.loadAdditional_v1','EarthWorld.saveAdditional_v1','EarthWorld.loadAdditional_v1'],'content_hook':'GameProcess.initStatic'}
+ report={'input':str(src),'output':str(out),'input_sha256':sha(swf),'output_sha256':sha(result),'input_size':len(swf),'output_size':len(result),'changes':changed,'air_stubs':False,'test_give':False,'save_hooks':['World.saveAdditional_v1','World.loadAdditional_v1','EarthWorld.saveAdditional_v1','EarthWorld.loadAdditional_v1'],'content_hook':'GameProcess.initStatic','drop_hooks':['TreeItem.removeItem'],'tree_resin':{'item_id':1032,'per_mined_trunk_tile':1,'branches':0,'drop_false':0}}
  (ROOT/'verification/swf-build.json').write_text(json.dumps(report,indent=2));print(json.dumps(report,indent=2))
 if __name__=='__main__':main()

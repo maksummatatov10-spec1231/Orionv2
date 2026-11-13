@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Patch three empty Orion extension hooks; preserve every other ABC byte.
+"""Patch six Orion ABC methods; preserve every other method body.
 
 World and EarthWorld saveAdditional_v1/loadAdditional_v1 cover full and partial saves.
 EarthWorld overrides the base hooks, so appending only to World would never persist IC.
-GameProcess.initStatic is the safe content-registration point: atlases and localization
-are ready, but no world or saved ItemStack has been loaded yet.
+GameProcess.initStatic registers content after atlases/localization and game statics.
+TreeItem.removeItem appends a guaranteed resin drop for mined trunk tiles; the original
+method computes an extra-drop count but never spawns it. All original instructions stay.
 """
 from pathlib import Path
 import argparse,json,struct
@@ -51,26 +52,34 @@ def encode_pool(a,kind):
 
 def patch(data:bytes, mod_abc:bytes):
     a=ABC(data); mod=ABC(mod_abc); edits=[]; report=[]
-    specs=[('orion.worlds.World','saveAdditional_v1','saveWorld',2,'replace_empty'),
-           ('orion.worlds.World','loadAdditional_v1','loadWorld',2,'replace_empty'),
-           ('orion.worlds.earth.EarthWorld','saveAdditional_v1','saveWorld',2,'append'),
-           ('orion.worlds.earth.EarthWorld','loadAdditional_v1','loadWorld',2,'append'),
-           ('orion.GameProcess','initStatic','install',0,'append')]
+    # args = static callee argc; first_reg = first instance-method register to forward.
+    # Save/load callees receive (this, ByteArray): registers 0,1.
+    # TreeItem callee receives (x,y,data,drop): registers 1,2,3,4 (skip this).
+    specs=[('orion.worlds.World','saveAdditional_v1','saveWorld',2,'replace_empty',0),
+           ('orion.worlds.World','loadAdditional_v1','loadWorld',2,'replace_empty',0),
+           ('orion.worlds.earth.EarthWorld','saveAdditional_v1','saveWorld',2,'append',0),
+           ('orion.worlds.earth.EarthWorld','loadAdditional_v1','loadWorld',2,'append',0),
+           ('orion.GameProcess','initStatic','install',0,'append',0),
+           ('orion.worlds.items.blocks.TreeItem','removeItem','dropTreeResin',4,'append',1)]
     # ASC emits public static methods in the default (empty) package namespace.
     mod.qname('industrialcraft','IndustrialCraftBootstrap')
-    for name in ('saveWorld','loadWorld','install'): mod.qname('',name)
-    for cls,method,static_method,args,mode in specs:
+    for name in ('saveWorld','loadWorld','install','dropTreeResin'): mod.qname('',name)
+    for cls,method,static_method,args,mode,first_reg in specs:
         mi=a.method(cls,method); body=a.body_by_method[mi]
         if mode=='replace_empty' and body.code!=bytes.fromhex('d03047'):
             raise ValueError((cls,method,'expected empty hook',body.code.hex()))
         if mode=='append' and not body.code.endswith(b'\x47'):
             raise ValueError((cls,method,'unexpected original body',body.code.hex()))
         target=add_qname(a,'',static_method)
-        # findpropstrict Bootstrap; getlocal0/getlocal1; callpropvoid static_method
-        code=bytearray(b'\x30') # pushscope is already represented by original d030 below
+        # findpropstrict Bootstrap; forward the selected instance-method registers;
+        # callpropvoid static_method. Append mode keeps the original return last.
+        # Do not push a new scope here: replace_empty already has d030 in prefix,
+        # and append runs after the original body with an empty operand stack.
+        if not 0 <= args <= 4 or not 0 <= first_reg <= 1 or first_reg+args > 5:raise ValueError(('unsupported hook registers',args,first_reg))
         prefix=bytes.fromhex('d030')
         call=bytes([0x60])+u30(add_qname(a,'industrialcraft','IndustrialCraftBootstrap'))
-        if args:call+=bytes.fromhex('d0d1')
+        for reg in range(first_reg,first_reg+args):
+            call+=bytes([0xd0+reg]) if reg<4 else bytes([0x62])+u30(reg)
         call+=bytes([0x4f])+u30(target)+u30(args)+bytes.fromhex('47')
         newcode=prefix+call
         if mode=='append':
@@ -83,12 +92,13 @@ def patch(data:bytes, mod_abc:bytes):
         report.append({'class':cls,'method':method,'calls':'industrialcraft.IndustrialCraftBootstrap.'+static_method,
                        'original_code_sha256':__import__('hashlib').sha256(body.code).hexdigest(),
                        'patched_code_sha256':__import__('hashlib').sha256(newcode).hexdigest(),
-                       'original_body_size':body.end-body.start,'patched_body_size':len(newbody),'mode':mode})
+                       'original_body_size':body.end-body.start,'patched_body_size':len(newbody),'mode':mode,
+                       'forwarded_registers':list(range(first_reg,first_reg+args))})
     base=bytearray(data)
     for kind in reversed(['int','uint','double','string','namespace','ns_set','multiname']):
         start,end=a.pool_ranges[kind];base[start:end]=encode_pool(a,kind)
     cur=bytearray(base)
-    for cls,method,_,_,_ in specs:
+    for cls,method,_,_,_,_ in specs:
         aa=ABC(bytes(cur)); nb=aa.body_by_method[aa.method(cls,method)]
         new=next(n for (st,en,n),sp in zip(edits,specs) if sp[0]==cls and sp[1]==method)
         cur[nb.start:nb.end]=new
@@ -100,7 +110,7 @@ def patch(data:bytes, mod_abc:bytes):
     for old in a.bodies:
         new=b.body_by_method[old.method]
         if old.code!=new.code:changed.append(old.method)
-    if set(changed)!={a.method(c,m) for c,m,_,_,_ in specs}:raise ValueError(('changed bodies',changed))
+    if set(changed)!={a.method(c,m) for c,m,_,_,_,_ in specs}:raise ValueError(('changed bodies',changed))
 
     return result,report
 

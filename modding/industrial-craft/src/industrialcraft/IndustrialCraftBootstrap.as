@@ -5,9 +5,11 @@ package industrialcraft {
  import flash.utils.Timer;
  import flash.utils.getTimer;
  import orion.events.DialogEvent;
+ import orion.worlds.Item;
  import orion.worlds.World;
+ import orion.worlds.items.blocks.TreeItem;
  public final class IndustrialCraftBootstrap {
-  public static const VERSION:String="0.1.0-stage0";
+  public static const VERSION:String="0.1.1-stage0";
   public static const SAVE_MAGIC:uint=0x49435731; // ICW1
   public static const SAVE_VERSION:int=1;
   private static var installed:Boolean=false;
@@ -19,6 +21,17 @@ package industrialcraft {
    ContentRegistry.install();
    lastTime=getTimer();timer=new Timer(100);timer.addEventListener(TimerEvent.TIMER,onTimer);timer.start();
    installed=true;trace("IC_BOOTSTRAP_READY "+VERSION);
+   trace("IC_RESIN_READY id="+Item.RESIN.id+" name="+Item.RESIN.name+" trunkDrop=1");
+  }
+  // Called after TreeItem.removeItem. The original method computes an extra drop
+  // count but never spawns it; keep its wood/branch behavior and add a reliable
+  // stage-0 resin source. Resin is the existing amber material, not future rubber.
+  public static function dropTreeResin(x:int,y:int,data:int,drop:Boolean):void {
+   // TreeItem uses data <= 11 for the first hit / branch-root transition and
+   // leaves the tile in place. Only the final trunk removal may spawn resin.
+   if(!drop || data<=11 || !TreeItem.isTrunk(data) || Context.world==null)return;
+   Context.world.dropTileItem(x,y,Item.RESIN);
+   trace("IC_TREE_RESIN x="+x+" y="+y+" item="+Item.RESIN.id+" count=1");
   }
   private static function onTimer(e:TimerEvent):void {
    var now:int=getTimer();var delta:int=now-lastTime;lastTime=now;

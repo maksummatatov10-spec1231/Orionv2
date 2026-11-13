@@ -7,7 +7,11 @@
     "patched_code_sha256": "433069325cdb4a383452c74362b7e52d4e6d3a0cea4d304283af66da18385f1b",
     "original_body_size": 12,
     "patched_body_size": 21,
-    "mode": "replace_empty"
+    "mode": "replace_empty",
+    "forwarded_registers": [
+      0,
+      1
+    ]
   },
   {
     "class": "orion.worlds.World",
@@ -17,7 +21,11 @@
     "patched_code_sha256": "b3da6c06c18974f1af960cfb8f65f0f96350c73c3d942ab8f452fe9af22514a8",
     "original_body_size": 12,
     "patched_body_size": 21,
-    "mode": "replace_empty"
+    "mode": "replace_empty",
+    "forwarded_registers": [
+      0,
+      1
+    ]
   },
   {
     "class": "orion.worlds.earth.EarthWorld",
@@ -27,7 +35,11 @@
     "patched_code_sha256": "a3a862a099c1c10a69bedc951f6ac01d718b376afa15312359c1f1e66ab86040",
     "original_body_size": 56,
     "patched_body_size": 65,
-    "mode": "append"
+    "mode": "append",
+    "forwarded_registers": [
+      0,
+      1
+    ]
   },
   {
     "class": "orion.worlds.earth.EarthWorld",
@@ -37,7 +49,11 @@
     "patched_code_sha256": "42ee01afc623dc47c626ef949b55fc0165bb66647274d3c6aae4a05ebf1a672f",
     "original_body_size": 55,
     "patched_body_size": 64,
-    "mode": "append"
+    "mode": "append",
+    "forwarded_registers": [
+      0,
+      1
+    ]
   },
   {
     "class": "orion.GameProcess",
@@ -47,6 +63,23 @@
     "patched_code_sha256": "404df2ba7625f26c6a6a29bc6d6331d2a2454ca900ca436a30d6dec2db6af1bd",
     "original_body_size": 86,
     "patched_body_size": 93,
-    "mode": "append"
+    "mode": "append",
+    "forwarded_registers": []
+  },
+  {
+    "class": "orion.worlds.items.blocks.TreeItem",
+    "method": "removeItem",
+    "calls": "industrialcraft.IndustrialCraftBootstrap.dropTreeResin",
+    "original_code_sha256": "94d4e8814aca68771367c7f484ab83c4a4c600daa320f68fbc2c8576935c7787",
+    "patched_code_sha256": "d4406a5d6b08900b6441486472263ea3c3af7416c13153eacd2592cde6ae116b",
+    "original_body_size": 202,
+    "patched_body_size": 214,
+    "mode": "append",
+    "forwarded_registers": [
+      1,
+      2,
+      3,
+      4
+    ]
   }
 ]

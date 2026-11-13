@@ -1,0 +1,27 @@
+IC_TEST_STORAGE flushed
+IC_RESIN_READY id=1032 name=Смола trunkDrop=1
+IC_LOAD machines=3
+IC_TEST_ID_AUDIT freeItemsBefore=3661 freeBlocksBefore=23 blockRanges=77-77,130-131,136-136,139-140,157-157,240-255
+IC_TEST_RESIN_NAME_PASS id=1032 name=Смола inventory=4
+IC_TREE_RESIN x=306 y=31 item=1032 count=1
+IC_TREE_RESIN x=306 y=32 item=1032 count=1
+IC_TREE_RESIN x=306 y=33 item=1032 count=1
+IC_TREE_RESIN x=306 y=34 item=1032 count=1
+IC_TREE_RESIN x=306 y=35 item=1032 count=1
+IC_TREE_RESIN x=306 y=36 item=1032 count=1
+IC_TREE_RESIN x=306 y=37 item=1032 count=1
+IC_TREE_RESIN x=306 y=38 item=1032 count=1
+IC_TREE_RESIN x=306 y=39 item=1032 count=1
+IC_TREE_RESIN x=306 y=40 item=1032 count=1
+IC_TREE_RESIN x=306 y=41 item=1032 count=1
+IC_TREE_RESIN x=306 y=42 item=1032 count=1
+IC_TREE_RESIN x=306 y=43 item=1032 count=1
+IC_TREE_RESIN x=306 y=44 item=1032 count=1
+IC_TREE_RESIN x=306 y=45 item=1032 count=1
+IC_TREE_RESIN x=306 y=46 item=1032 count=1
+IC_TREE_RESIN x=306 y=47 item=1032 count=1
+IC_TREE_RESIN x=306 y=48 item=1032 count=1
+IC_TEST_TRUNK_PASS x=306 y=48 data=11 finalData=15 firstHitResin=0 resin=18 tileAfter=0
+IC_TEST_BRANCH_SKIP no branch
+IC_TEST_RESIN_GUARDS_PASS dropFalseBranchFirstHit=0
+IC_TEST_RESIN_SCREEN x=812 y=444

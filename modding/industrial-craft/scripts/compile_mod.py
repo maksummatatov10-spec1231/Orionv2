@@ -9,7 +9,10 @@ args+=['-import','/tmp/ic-stage0/frame2.abc']
 files=sorted((ROOT/'src').rglob('*.as'))
 # asc compiles one public class per invocation reliably; compile together via -in syntax.
 for f in files:args+=['-in',str(f)]
-args.append(str(BUILD/'IndustrialCraft.as'))
+# This ASC build still opens the trailing primary-source path even with -in inputs.
+stub=BUILD/'IndustrialCraft.as'
+if not stub.exists():stub.write_text('')
+args.append(str(stub))
 out=BUILD/'IndustrialCraft.abc'
 if out.exists():out.unlink()
 r=subprocess.run(args,cwd=BUILD,capture_output=True,text=True)

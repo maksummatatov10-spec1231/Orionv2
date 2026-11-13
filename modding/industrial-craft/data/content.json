@@ -1,5 +1,5 @@
 {
-  "modVersion": "0.1.0-stage0",
+  "modVersion": "0.1.1-stage0",
   "saveFormatVersion": 1,
   "items": [
     {"key": "ic:probe", "id": 1242, "nameRu": "Калибровочный модуль", "descriptionRu": "Технический предмет этапа 0. Проверяет реестр, иконку и сохранение.", "icon": "probe"},

@@ -2,9 +2,9 @@
   "input": "/home/user/Orionv2/modding/textures-v0.5/build/Orion.mod.swf",
   "output": "/home/user/Orionv2/modding/industrial-craft/build/Orion.ic-dev.swf",
   "input_sha256": "12ee72d5acf5cc9ef5f48dc4566636a5f2ed2faed2c64efd8fe08dc4ae55940a",
-  "output_sha256": "df3330318160eccee4820efde1eed46811f78a352c3d5a1a73d15af51726440c",
+  "output_sha256": "6ead6a180650440d74d049d72913356015ae3f15b1e0bd9a36fc32c5f0cb9f0a",
   "input_size": 62465568,
-  "output_size": 62473993,
+  "output_size": 62474268,
   "changes": [
     {
       "kind": "atlas_image",
@@ -32,6 +32,21 @@
       ]
     },
     {
+      "kind": "localization",
+      "char": 1481,
+      "language": "ru",
+      "changed": {
+        "item_resin": {
+          "from": "\u0420\u0435\u0437\u0438\u043d\u0430",
+          "to": "\u0421\u043c\u043e\u043b\u0430"
+        },
+        "item_desc_resin": {
+          "from": "\u0418\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f \u0434\u043b\u044f \u0441\u043e\u0437\u0434\u0430\u043d\u0438\u044f \u0442\u0443\u0441\u043a\u043b\u043e\u0433\u043e \u0444\u0430\u043a\u0435\u043b\u0430",
+          "to": "\u0414\u0440\u0435\u0432\u0435\u0441\u043d\u0430\u044f \u0441\u043c\u043e\u043b\u0430: \u0433\u0430\u0440\u0430\u043d\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u043e \u0432\u044b\u043f\u0430\u0434\u0430\u0435\u0442 \u043f\u0440\u0438 \u0434\u043e\u0431\u044b\u0447\u0435 \u0431\u043b\u043e\u043a\u0430 \u0441\u0442\u0432\u043e\u043b\u0430. \u0418\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f \u0434\u043b\u044f \u0442\u0443\u0441\u043a\u043b\u043e\u0433\u043e \u0444\u0430\u043a\u0435\u043b\u0430 \u0438 \u043a\u0430\u043b\u0438\u0431\u0440\u043e\u0432\u043e\u0447\u043d\u043e\u0433\u043e \u0441\u0442\u0430\u043d\u043a\u0430. \u041d\u0435 \u044f\u0432\u043b\u044f\u0435\u0442\u0441\u044f \u0440\u0435\u0437\u0438\u043d\u043e\u0439."
+        }
+      }
+    },
+    {
       "kind": "replace_abc",
       "name": "frame2"
     },
@@ -48,5 +63,14 @@
     "EarthWorld.saveAdditional_v1",
     "EarthWorld.loadAdditional_v1"
   ],
-  "content_hook": "GameProcess.initStatic"
+  "content_hook": "GameProcess.initStatic",
+  "drop_hooks": [
+    "TreeItem.removeItem"
+  ],
+  "tree_resin": {
+    "item_id": 1032,
+    "per_mined_trunk_tile": 1,
+    "branches": 0,
+    "drop_false": 0
+  }
 }

@@ -1,5 +1,9 @@
 # Industrial Craft — Stage 0 runtime verification
 
+Current patch: `0.1.1-stage0` — resin drop/Russian-name correction, see [RESIN_FIX.md](RESIN_FIX.md).
+The setup/reload traces below were recorded for the original `0.1.0-stage0` probe;
+the current dev SWF also passed the resin regression and real save/load checks.
+
 Date: 2026-11-13 (sandbox clock). Base texture SWF: `modding/textures-v0.5/build/Orion.mod.swf`
 (input sha256 `12ee72d5acf5cc9ef5f48dc4566636a5f2ed2faed2c64efd8fe08dc4ae55940a`).
 
@@ -27,6 +31,7 @@ python3 scripts/patch_hooks.py       # frame2 -> build/frame2-hooked.abc, verifi
 python3 scripts/build_swf.py         # v0.5 base + atlases + hooks + mod ABC -> build/Orion.ic-dev.swf
 python3 scripts/build_test.py --mode setup   # test-only harness -> build/Orion.ic-setup.swf
 python3 scripts/build_test.py --mode reload  # test-only harness -> build/Orion.ic-reload.swf
+python3 scripts/build_test.py --mode resin   # resin/name regression -> build/Orion.ic-resin.swf
 ```
 
 Local toolchain used in this sandbox: ASC jar + JDK under `/tmp/orion-tools` / `/tmp/orionjdk`,
@@ -35,7 +40,7 @@ those paths; they are environment assumptions, not game dependencies.
 
 ## Injected hooks
 
-`verification/hooks.json` records five patches:
+`verification/hooks.json` records six patches:
 
 | Class | Method | Mode |
 |---|---|---|
@@ -44,6 +49,7 @@ those paths; they are environment assumptions, not game dependencies.
 | `orion.worlds.earth.EarthWorld` | `saveAdditional_v1` | append after original five ints |
 | `orion.worlds.earth.EarthWorld` | `loadAdditional_v1` | append after original load |
 | `orion.GameProcess` | `initStatic` | append bootstrap install |
+| `orion.worlds.items.blocks.TreeItem` | `removeItem` | append guaranteed final-trunk resin drop |
 
 The EarthWorld hooks are required: the real Earth world overrides the base `World` additional
 save/load methods. Runtime traces confirmed `IC_LOAD_LEGACY_WORLD` for an old save without the

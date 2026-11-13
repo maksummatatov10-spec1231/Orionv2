@@ -11,6 +11,7 @@ package {
  import orion.worlds.Block;
  import orion.worlds.ItemStack;
  import orion.worlds.World;
+ import orion.worlds.items.blocks.TreeItem;
  public class Stage0Probe extends Sprite {
   public static var _started:Boolean=start();
   private static const MODE:String="__MODE__";
@@ -33,6 +34,7 @@ package {
     var M:* =getDefinitionByName("industrialcraft.MachineManager");
     var w:World=C.world;var px:int=int(C.game.player.center.x/32);var py:int=int(C.game.player.center.y/32);
     if(MODE=="reload"){setTimeout(verifyReload,1200);return;}
+    if(MODE=="resin"){setTimeout(verifyResin,1200);return;}
     // Test-only grant and site preparation. Not present in dev/release content.
     var gy:int=py;for(var yy:int=py;yy<py+12;yy++){var t:* =w.tiles[px+yy*w.tilesX];if(t.blockId!=0 && Block.BLOCKS[t.blockId].hard){gy=yy;break;}}
     mx=px+2;my=gy-1;bx=mx+3;by=my;
@@ -59,6 +61,32 @@ package {
     s.running=false;storeExpected(s);
     C.game.showInventory_Crafting(1);trace("IC_TEST_OPEN_WORKBENCH");
    } catch(e:Error){trace("IC_TEST_INSPECT_ERROR "+e.name+" "+e.message+"\n"+e.getStackTrace());}
+  }
+  private static function countNewResin(w:World,start:int):int {
+   var n:int=0;for(var i:int=start;i<w.entitiesOnGround.length;i++){var e:* = w.entitiesOnGround[i];if(e.itemStack!=null && e.itemStack.item==Item.RESIN)n+=e.itemStack.count;}return n;
+  }
+  private static function verifyResin():void {
+   try {
+    var C:* =getDefinitionByName("Context");var w:World=C.world;var bootstrap:* =getDefinitionByName("industrialcraft.IndustrialCraftBootstrap");
+    var px:int=int(C.game.player.center.x/32);var py:int=int(C.game.player.center.y/32);
+    trace("IC_TEST_RESIN_NAME_"+(Item.RESIN.name=="Резина"?"FAIL":"PASS")+" id="+Item.RESIN.id+" name="+Item.RESIN.name+" inventory="+C.game.player.inventory.count(Item.RESIN));
+    var tx:int=-1;var ty:int=-1;var data:int=0;
+    for(var dy:int=-18;dy<=4 && tx<0;dy++){for(var dx:int=-18;dx<=18;dx++){var x:int=px+dx;var y:int=py+dy;if(x<1||y<2||x>=w.tilesX-1||y>=w.tilesY-1)continue;var t:* = w.tiles[x+y*w.tilesX];if(t.blockId!=Block.TREE.id||!TreeItem.isTrunk(t.blockData))continue;var above:* = w.tiles[x+(y-1)*w.tilesX];if(above.blockId==Block.TREE.id&&TreeItem.isTrunk(above.blockData))continue;tx=x;ty=y;data=t.blockData;break;}}
+    if(tx<0){trace("IC_TEST_RESIN_FAIL no natural trunk near player");return;}
+    var before:int=w.entitiesOnGround.length;var first:int=0;var finalData:int=data;
+    if(data<=11){Item.TREE.removeItem(tx,ty,data,true);first=countNewResin(w,before);finalData=w.tiles[tx+ty*w.tilesX].blockData;before=w.entitiesOnGround.length;}
+    Item.TREE.removeItem(tx,ty,finalData,true);var resin:int=countNewResin(w,before);
+    // Felling a base trunk can cascade through the whole trunk; every destroyed
+    // trunk segment legitimately drops one resin. Require at least one, no first-hit drop.
+    var ok:Boolean=resin>=1&&first==0&&w.tiles[tx+ty*w.tilesX].blockId==0;
+    trace("IC_TEST_TRUNK_"+(ok?"PASS":"FAIL")+" x="+tx+" y="+ty+" data="+data+" finalData="+finalData+" firstHitResin="+first+" resin="+resin+" tileAfter="+w.tiles[tx+ty*w.tilesX].blockId);
+    var bx:int=-1;var by:int=-1;var bd:int=0;
+    for(var yy:int=py-18;yy<=py+4 && bx<0;yy++){for(var xx:int=px-18;xx<=px+18;xx++){if(xx<1||yy<1||xx>=w.tilesX-1||yy>=w.tilesY-1)continue;var bt:* = w.tiles[xx+yy*w.tilesX];if(bt.blockId==Block.TREE.id&&bt.blockData>=4&&bt.blockData<=11&&!TreeItem.isTrunk(bt.blockData)){bx=xx;by=yy;bd=bt.blockData;break;}}}
+    if(bx>=0){before=w.entitiesOnGround.length;Item.TREE.removeItem(bx,by,bd,true);resin=countNewResin(w,before);trace("IC_TEST_BRANCH_"+(resin==0?"PASS":"FAIL")+" x="+bx+" y="+by+" data="+bd+" resin="+resin);}else trace("IC_TEST_BRANCH_SKIP no branch");
+    before=w.entitiesOnGround.length;bootstrap.dropTreeResin(tx,ty,data,false);bootstrap.dropTreeResin(tx,ty,4,true);bootstrap.dropTreeResin(tx,ty,11,true);resin=countNewResin(w,before);
+    trace("IC_TEST_RESIN_GUARDS_"+(resin==0?"PASS":"FAIL")+" dropFalseBranchFirstHit="+resin);
+    trace("IC_TEST_RESIN_SCREEN x="+int(tx*32-C.game.screen.x+16)+" y="+int(ty*32-C.game.screen.y+16));
+   } catch(e:Error){trace("IC_TEST_RESIN_ERROR "+e.name+" "+e.message+"\n"+e.getStackTrace());}
   }
   private static function storeExpected(s:*):void {
    var so:SharedObject=SharedObject.getLocal("ic_stage0_expected");

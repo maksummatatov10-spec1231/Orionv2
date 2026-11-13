@@ -1,6 +1,8 @@
-# Industrial Craft for Orion — stage 0
+# Industrial Craft for Orion — stage 0 (v0.1.1-stage0)
 
 Technical foundation mod for Orion Sandbox Enhanced, built on the accepted texture pack v0.5.
+Patch `0.1.1-stage0` fixes the tree-resin drop and the Russian item name ("Смола",
+not "Резина") — see `verification/RESIN_FIX.md`.
 
 - `src/industrialcraft/` — AS3 mod code (content registry, machine manager/state, block/item, panel UI, bootstrap).
 - `data/` — content and atlas-region metadata.

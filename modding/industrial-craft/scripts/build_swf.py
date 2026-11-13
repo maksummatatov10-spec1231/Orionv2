@@ -5,7 +5,7 @@ Changes: two atlas images, their XML metadata, reviewed localization overrides,
 frame2 ABC hooks and appended mod ABC. AIR stubs and test grants are not included.
 """
 from pathlib import Path
-import argparse,hashlib,json,struct,zlib,sys
+import argparse,hashlib,json,struct,zlib,sys,xml.etree.ElementTree as ET
 sys.path.insert(0,'/tmp/orionpy')
 from PIL import Image
 from abc_utils import parse_tags,encode_tag
@@ -36,16 +36,27 @@ def main():
  replacements={};changed=[]
  for atlas,cid in atlas_cid.items():
   t,raw,w,h,stride=image_tag(tags,cid);new=raw;mask=bytearray(len(raw));rs=[r for r in regions if r['atlas']==atlas]
+  xt=next(t for t in tags if t['code']==87 and struct.unpack_from('<H',t['data'],0)[0]==xml_cid[atlas])
+  xml=xt['data'][6:].decode('utf-8')
+  old_regions=ET.fromstring(xml)
   for r in rs:
+   for node in old_regions:
+    a=node.attrib
+    if not all(k in a for k in ('x','y','width','height')):continue
+    x,y,rw,rh=(int(a[k]) for k in ('x','y','width','height'))
+    if r['x']<x+rw and x<r['x']+r['w'] and r['y']<y+rh and y<r['y']+r['h']:
+     raise ValueError(('atlas region overlaps original',r['name'],a.get('name')))
    im=Image.open(ROOT/'assets'/r['file']).convert('RGBA')
-   if im.size!=(r['w'],r['h']):raise ValueError(r)
+   if im.size!=(r['w'],r['h']) or r['x']<0 or r['y']<0 or r['x']+r['w']>w or r['y']+r['h']>h:raise ValueError(('invalid atlas region',r))
+   for j in range(r['h']):
+    for i in range(r['w']):
+     pos=(r['y']+j)*stride+(r['x']+i)*4
+     if raw[pos]!=0 or mask[pos]:raise ValueError(('atlas region occupied',r['name'],r['x']+i,r['y']+j))
    data=premul(im);new=put(new,stride,r['x'],r['y'],r['w'],r['h'],data)
    for j in range(r['h']):
     s=(r['y']+j)*stride+r['x']*4;mask[s:s+r['w']*4]=b'\1'*(r['w']*4)
   if any(a!=b for i,(a,b) in enumerate(zip(raw,new)) if not mask[i]):raise ValueError('pixels outside regions')
   replacements[cid]=encode_tag(t['code'],t['data'][:7]+zlib.compress(new,9));changed.append({'kind':'atlas_image','char':cid,'regions':len(rs)})
-  xt=next(t for t in tags if t['code']==87 and struct.unpack_from('<H',t['data'],0)[0]==xml_cid[atlas])
-  xml=xt['data'][6:].decode('utf-8')
   for r in rs:
    if f'name="{r["name"]}"' in xml:raise ValueError(('duplicate region',r['name']))
    node=f'    <SubTexture name="{r["name"]}" x="{r["x"]}" y="{r["y"]}" width="{r["w"]}" height="{r["h"]}"/>\n'

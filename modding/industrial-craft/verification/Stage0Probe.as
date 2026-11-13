@@ -5,6 +5,7 @@ package {
  import flash.utils.Timer;
  import flash.events.TimerEvent;
  import flash.utils.setTimeout;
+ import flash.utils.getTimer;
  import flash.utils.getDefinitionByName;
  import flash.net.SharedObject;
  import orion.worlds.Item;
@@ -35,6 +36,7 @@ package {
     var w:World=C.world;var px:int=int(C.game.player.center.x/32);var py:int=int(C.game.player.center.y/32);
     if(MODE=="reload"){setTimeout(verifyReload,1200);return;}
     if(MODE=="resin"){setTimeout(verifyResin,1200);return;}
+    if(MODE=="timing"){setTimeout(verifyTiming,1200);return;}
     // Test-only grant and site preparation. Not present in dev/release content.
     var gy:int=py;for(var yy:int=py;yy<py+12;yy++){var t:* =w.tiles[px+yy*w.tilesX];if(t.blockId!=0 && Block.BLOCKS[t.blockId].hard){gy=yy;break;}}
     mx=px+2;my=gy-1;bx=mx+3;by=my;
@@ -61,6 +63,19 @@ package {
     s.running=false;storeExpected(s);
     C.game.showInventory_Crafting(1);trace("IC_TEST_OPEN_WORKBENCH");
    } catch(e:Error){trace("IC_TEST_INSPECT_ERROR "+e.name+" "+e.message+"\n"+e.getStackTrace());}
+  }
+  private static function verifyTiming():void {
+   try {
+    var C:* =getDefinitionByName("Context");var B:* =getDefinitionByName("industrialcraft.ContentRegistry");var M:* =getDefinitionByName("industrialcraft.MachineManager");
+    var w:World=C.world;var px:int=int(C.game.player.center.x/32);var py:int=int(C.game.player.center.y/32);
+    var x:int=px+3;var y:int=py-2;
+    w.setBlock(x,y,B.PROBE_BLOCK);var s:* =M.getOrCreate(x,y);
+    s.items[0]=new ItemStack(Item.RESIN,0,1);s.running=true;
+    var start:int=getTimer();
+    trace("IC_TIMING_START x="+x+" y="+y+" blockData="+w.tiles[x+y*w.tilesX].blockData);
+    setTimeout(function():void {trace("IC_TIMING_3S completed="+s.completed+" progress="+s.progress+" frame="+(w.tiles[x+y*w.tilesX].blockData & 3)+" elapsed="+(getTimer()-start));},3000);
+    setTimeout(function():void {var ms:int=getTimer()-start;trace("IC_TIMING_"+(s.completed==1?"PASS":"FAIL")+" completed="+s.completed+" progress="+s.progress+" elapsed="+ms);},5600);
+   } catch(e:Error){trace("IC_TIMING_ERROR "+e.name+" "+e.message+"\n"+e.getStackTrace());}
   }
   private static function countNewResin(w:World,start:int):int {
    var n:int=0;for(var i:int=start;i<w.entitiesOnGround.length;i++){var e:* = w.entitiesOnGround[i];if(e.itemStack!=null && e.itemStack.item==Item.RESIN)n+=e.itemStack.count;}return n;

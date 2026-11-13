@@ -2,9 +2,9 @@
   "input": "/home/user/Orionv2/modding/textures-v0.5/build/Orion.mod.swf",
   "output": "/home/user/Orionv2/modding/industrial-craft/build/Orion.ic-dev.swf",
   "input_sha256": "12ee72d5acf5cc9ef5f48dc4566636a5f2ed2faed2c64efd8fe08dc4ae55940a",
-  "output_sha256": "6ead6a180650440d74d049d72913356015ae3f15b1e0bd9a36fc32c5f0cb9f0a",
+  "output_sha256": "7f837f3f8686db91d0f3a3d0c22fd1c063fff4a0983b59448a4e08f804e804f2",
   "input_size": 62465568,
-  "output_size": 62474268,
+  "output_size": 62474729,
   "changes": [
     {
       "kind": "atlas_image",

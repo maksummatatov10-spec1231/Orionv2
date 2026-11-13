@@ -13,6 +13,15 @@ package industrialcraft {
   public var progress:int=0;
   public var completed:int=0;
   public var running:Boolean=false;
+  // Fraction of a work second; deliberately not persisted in ICW1 v1.
+  private var elapsedMs:int=0;
+  public function updateTime(deltaMs:int):void {
+   if(!running){elapsedMs=0;return;}
+   if(!canRun()){running=false;elapsedMs=0;return;}
+   elapsedMs+=deltaMs;
+   while(elapsedMs>=1000 && running){elapsedMs-=1000;tick();}
+   if(!running)elapsedMs=0;
+  }
   public function MachineState(x:int=0,y:int=0){this.x=x;this.y=y;}
   public function canRun():Boolean {
    var input:ItemStack=items[INPUT]; var output:ItemStack=items[OUTPUT];

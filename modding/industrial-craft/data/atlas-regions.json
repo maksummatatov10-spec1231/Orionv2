@@ -21,10 +21,10 @@
     {
       "atlas": "tiles",
       "name": "block_239",
-      "x": 972,
-      "y": 1682,
+      "x": 989,
+      "y": 1632,
       "w": 32,
-      "h": 32,
+      "h": 98,
       "file": "blocks/probe.png"
     }
   ]

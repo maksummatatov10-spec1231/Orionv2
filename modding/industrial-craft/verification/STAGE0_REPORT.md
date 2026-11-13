@@ -27,7 +27,7 @@ The `setup`/`reload` SWFs are test harness builds produced by `scripts/build_tes
 ```bash
 python3 scripts/compile_mod.py       # src -> build/IndustrialCraft.abc (stale-output gate)
 python3 scripts/build_assets.py      # stage-0 pixel art + data/atlas-regions.json
-python3 scripts/patch_hooks.py       # frame2 -> build/frame2-hooked.abc, verification/hooks.json
+python3 scripts/patch_hooks.py /tmp/ic-stage0/frame2.abc build/frame2-hooked.abc --mod-abc build/IndustrialCraft.abc --report verification/hooks.json
 python3 scripts/build_swf.py         # v0.5 base + atlases + hooks + mod ABC -> build/Orion.ic-dev.swf
 python3 scripts/build_test.py --mode setup   # test-only harness -> build/Orion.ic-setup.swf
 python3 scripts/build_test.py --mode reload  # test-only harness -> build/Orion.ic-reload.swf

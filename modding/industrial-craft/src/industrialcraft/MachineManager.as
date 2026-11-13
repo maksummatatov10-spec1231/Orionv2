@@ -7,11 +7,10 @@ package industrialcraft {
  public final class MachineManager {
   private static var machines:Dictionary=new Dictionary();
   private static var world:World;
-  private static var accumulator:int=0;
   public static const TICK_MS:int=1000;
   public static function bind(w:World,clear:Boolean=true):void {
    if(world==w && !clear)return;
-   world=w;machines=new Dictionary();accumulator=0;
+   world=w;machines=new Dictionary();
   }
   public static function key(x:int,y:int):String{return x+","+y;}
   public static function getOrCreate(x:int,y:int):MachineState {
@@ -36,8 +35,11 @@ package industrialcraft {
   }
   public static function update(deltaMs:int):void {
    if(world==null || Context.game==null || Context.game.gameLoopPause || !world.created)return;
-   accumulator+=deltaMs;
-   while(accumulator>=TICK_MS){accumulator-=TICK_MS;tickOnce();}
+   for each(var state:MachineState in machines){
+    var tile:* = world.tiles[state.x+state.y*world.tilesX];
+    if(tile.blockId!=ContentRegistry.PROBE_BLOCK.id){removed(state.x,state.y,false);continue;}
+    state.updateTime(deltaMs);
+   }
   }
   public static function tickOnce():void {
    for each(var s:MachineState in machines){

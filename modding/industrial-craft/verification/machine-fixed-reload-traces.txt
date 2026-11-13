@@ -1,0 +1,9 @@
+IC_LOAD machines=3
+IC_TEST_RELOAD_PASS x=302 y=48 progress=1 completed=1 running=false input=1 output=1
+IC_SAVE machines=3
+IC_LOAD machines=3
+IC_TEST_FULL_SAVE count=3
+IC_SAVE machines=3
+IC_LOAD machines=3
+IC_TEST_PARTIAL_SAVE count=3
+IC_PANEL_OPEN 302,48

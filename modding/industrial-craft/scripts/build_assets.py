@@ -34,13 +34,24 @@ def block_probe():
  d.rectangle((13,7,18,8),fill=PAL['brass']);d.point((14,7),fill=PAL['hi'])
  return im
 
+def block_probe_sheet():
+ # Orion samples frames 33 pixels apart. Idle plus two illuminated working frames.
+ idle=block_probe(); im=Image.new('RGBA',(32,98)); im.paste(idle,(0,0))
+ for frame in (1,2):
+  active=idle.copy();d=ImageDraw.Draw(active)
+  d.rectangle((9,13,22,21),fill=PAL['glass'] if frame==1 else PAL['teal'])
+  d.rectangle((10,15,21,16),fill=PAL['teal'] if frame==1 else PAL['glass'])
+  d.rectangle((11 if frame==1 else 16,18,16 if frame==1 else 21,20),fill=PAL['hi'])
+  im.paste(active,(0,33*frame))
+ return im
+
 def main():
  (OUT/'icons').mkdir(parents=True,exist_ok=True);(OUT/'blocks').mkdir(parents=True,exist_ok=True)
- icon_probe().save(OUT/'icons/probe.png');block_probe().save(OUT/'blocks/probe.png')
+ icon_probe().save(OUT/'icons/probe.png');block_probe_sheet().save(OUT/'blocks/probe.png')
  # Atlas placement is checked against every original region, with a 2px gutter.
  regions=[{'atlas':'items','name':'item_1242','x':16,'y':760,'w':32,'h':32,'file':'icons/probe.png'},
           {'atlas':'items','name':'item_495','x':64,'y':760,'w':32,'h':32,'file':'icons/probe.png'},
-          {'atlas':'tiles','name':'block_239','x':972,'y':1682,'w':32,'h':32,'file':'blocks/probe.png'}]
+          {'atlas':'tiles','name':'block_239','x':989,'y':1632,'w':32,'h':98,'file':'blocks/probe.png'}]
  data=json.loads((ROOT/'data/atlas-regions.json').read_text()) if (ROOT/'data/atlas-regions.json').exists() else {}
  data['regions']=regions;(ROOT/'data/atlas-regions.json').write_text(json.dumps(data,indent=2))
  print('wrote',len(regions),'regions')

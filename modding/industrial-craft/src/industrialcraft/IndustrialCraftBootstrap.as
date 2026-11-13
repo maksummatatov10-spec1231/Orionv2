@@ -35,7 +35,9 @@ package industrialcraft {
   }
   private static function onTimer(e:TimerEvent):void {
    var now:int=getTimer();var delta:int=now-lastTime;lastTime=now;
-   if(delta<0 || delta>1000)delta=100;
+   // Timer events may be delayed on a slow system. Preserve elapsed active time
+   // rather than treating every long frame as only 100 ms.
+   if(delta<0)delta=0;
    if(Context.world!=null)MachineManager.bind(Context.world,false);
    MachineManager.update(delta);
   }
